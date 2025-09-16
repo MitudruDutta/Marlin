@@ -1,0 +1,5855 @@
+{
+  "version": 3,
+  "sources": [
+    "../../yt_token/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA6BA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;AAiMK;;AAAA;AAAA;AAAA;;AAAA;AAjML;;;AAAA;;;AAiMK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAjBA;;AAAA;AAAA;AAAA;;AAAA;AAhLL;;;AAAA;AAAA;;;AAAA;AAgLK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AApBA;;AAAA;AAAA;AAAA;;AAAA;AA5JL;;;AAAA;;;AAAA;;;AAAA;;;AAAA;;;AAAA;AA4JK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAtJL;;;AAAA;;;AAAA;;;AAAA;;;AAsJK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AA9IL;;;AAAA;;;AAAA;;;AAAA;AA8IK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAfA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AArFL;;;AAAA;;;AAqFK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAjBA;;AAAA;AAAA;AAAA;;AAAA;AApEL;;;AAAA;;;AAAA;;;AAAA;AAoEK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAfA;;AAAA;AAAA;AAAA;;AAAA;AArDL;;;AAAA;AAqDK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAhBA;;AAAA;AAAA;AAAA;;AAAA;AArCL;;;AAAA;;;AAAA;;;AAAA;AAqCK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AArBA;;AAAA;AAAA;AAAA;;AAAA;AAhBL;;;AAAA;;;AAAA;;;AAAA;;;AAAA;;;AAAA;AAgBK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAhBL;;AAAA;;;;;;;;;AAgBA;;;AAQe;;AAAc;;AAAd;AAAP;AACO;;AAAqB;;AAArB;AAAP;AAEA;;AAAmB;;AAAnB;AACA;;AAAA;;AAAA;AACA;;AAAA;;AAAA;AACA;AAAA;;AAAA;AACA;AAA0B;AAA1B;AACA;;AAAsB;;AAAtB;AAE2C;;AAAA;AAAvC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAER;;;AAGe;;AAAoB;AAAA;;AAAA;AAAA;AAApB;AAAP;AACA;;AAAA;AAG0B;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA1B;AAAA;AAAA;AAIwC;;AAAb;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAd;;AAAb;AAAA;;AAAA;AAEqC;;AAAA;AAAjC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAER;;;AAGQ;;AAAA;AAE+B;;AAAb;AAAA;AAAA;AAAA;AACX;AAAA;;AAAA;AAAP;AAG2B;;AAAA;AAAd;;AAAb;AAAA;;AAAA;AAC0B;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA1B;AAAA;AAAA;AAEqC;;AAAA;AAAjC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAER;;;AAGQ;;AAAA;AAE8B;;AAAb;AAAA;AAAA;AAAA;AACV;AAAA;;AAAA;AAAP;AAG2B;;AAAA;AAAd;;AAAb;AAAA;;AAAA;AAK0C;;AAAA;AAAtC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAER;;;AAI4B;;AAAb;AAAA;AAAA;AAAA;AAAP;AAKO;AAAA;AAAA;AAAA;AAAP;AAKO;AAAA;AAAA;AAAA;AAAP;AAKG;;AAA2B;AAAA;AAAA;AAAA;AAA3B;AAAX;;;AACmB;AAAP;AAEO;AAAP;AAKD;;AAA0B;AAAA;AAAA;AAAA;AAA1B;AAAX;;;AACmB;AAAP;AAEO;AAAP;AAMY;AAAA;;AAAA;AAAA;AAAZ;AAAA;AAAA;AAAA;;;AAAA;AAAA;AACY;AAAA;;AAAA;AAAA;AAAZ;AAAA;AAAA;AAAA;;;AAAA;AAAA;AACY;AAAA;;AAAA;AAAA;AAAZ;AACY;AAAA;AAAA;AAAA;AAAZ;AAJG;;AAAA;AAAA;;AAAA;AAAA;AAAA;;;AAAA;;;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAP;AAOR;;;AAGuB;;AAAf;AACgB;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAEW;AAAA;AACR;;;AAAA;;AAAA;;AAAA;AAGf;;AAAA;AACA;AAAA;AACA;;AAAA;AAHG;;AAAA;AAAA;AAAA;AAAP;;AAAA;AAFqF;;;;AAQ7F;;;AAGuB;;AAAf;;AAAA;;AAAA;AAEiC;;AAAA;AAA7B;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAER;;;AAI8B;;AAAf;AAAA;;AAAA;AAAA;AAAP;AAER;;;AAGQ;;AAAA;AAGmC;;AAAf;AAAA;;AAAA;AAAA;AACb;AAAA;;AAAA;AAAP;AAG8B;;AAAb;AAAA;AAAA;AAAA;AACV;AAAA;;AAAA;AAAP;AAG2B;;AAAA;AAAd;;AAAb;AAAA;;AAAA;AAC6B;;AAAA;AAAd;;AAAf;;AAAA;;AAAA;AAE4C;;AAAA;AAAxC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAER;;;AAGuB;;AAAf;AACgB;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAEb;AAAX;;;AACmB;AAAP;;AAAA;AAEJ;;AAAA;;AAAiB;AAKF;;AAAA;;AAAA;AAAA;AAA+C;;;;;;;AAAhD;AACd;;AAAA;AAER;;;AAGe;;AAAoB;AAAA;;AAAA;AAAA;AAApB;AAAP;AAEA;;AAAA;;AAAA;AAEI;;;;;;;;;;;;;;;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.__algopy_entrypoint_with_init",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1"
+    },
+    "5": {
+      "op": "bytecblock 0x151f7c75 \"balance\" \"total_supply\" \"maturity\" \"owner\" \"allowance\" \"name\" \"symbol\" \"decimals\""
+    },
+    "79": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "81": {
+      "op": "bz main_bare_routing@21",
+      "stack_out": []
+    },
+    "84": {
+      "op": "pushbytess 0x4b986d3a 0x792da1ca 0x723c153b 0x7b5f6f57 0x60a55ce6 0x46909355 0x4f373e88 0x84ac58ad 0xe47055dd 0x4663afd1 0xb4d97f8c 0x5b1f97fe 0x2a15c988 0xc955fd83 0x530f40e9 0xbeeee619 // method \"initialize(string,string,uint64)string\", method \"mint(byte[],uint64)string\", method \"burn(uint64)string\", method \"transfer(byte[],uint64)string\", method \"balance_of(byte[])uint64\", method \"get_total_supply()uint64\", method \"get_maturity()uint64\", method \"is_mature()uint64\", method \"is_accruing_yield()uint64\", method \"get_token_info()(string,string,uint64,uint64)\", method \"get_yield_status()(uint64,uint64,uint64)\", method \"approve(byte[],uint64)string\", method \"get_allowance(byte[],byte[])uint64\", method \"transfer_from(byte[],byte[],uint64)string\", method \"calculate_yield_value(uint64,uint64)uint64\", method \"update_owner(byte[])string\"",
+      "defined_out": [
+        "Method(approve(byte[],uint64)string)",
+        "Method(balance_of(byte[])uint64)",
+        "Method(burn(uint64)string)",
+        "Method(calculate_yield_value(uint64,uint64)uint64)",
+        "Method(get_allowance(byte[],byte[])uint64)",
+        "Method(get_maturity()uint64)",
+        "Method(get_token_info()(string,string,uint64,uint64))",
+        "Method(get_total_supply()uint64)",
+        "Method(get_yield_status()(uint64,uint64,uint64))",
+        "Method(initialize(string,string,uint64)string)",
+        "Method(is_accruing_yield()uint64)",
+        "Method(is_mature()uint64)",
+        "Method(mint(byte[],uint64)string)",
+        "Method(transfer(byte[],uint64)string)",
+        "Method(transfer_from(byte[],byte[],uint64)string)",
+        "Method(update_owner(byte[])string)"
+      ],
+      "stack_out": [
+        "Method(initialize(string,string,uint64)string)",
+        "Method(mint(byte[],uint64)string)",
+        "Method(burn(uint64)string)",
+        "Method(transfer(byte[],uint64)string)",
+        "Method(balance_of(byte[])uint64)",
+        "Method(get_total_supply()uint64)",
+        "Method(get_maturity()uint64)",
+        "Method(is_mature()uint64)",
+        "Method(is_accruing_yield()uint64)",
+        "Method(get_token_info()(string,string,uint64,uint64))",
+        "Method(get_yield_status()(uint64,uint64,uint64))",
+        "Method(approve(byte[],uint64)string)",
+        "Method(get_allowance(byte[],byte[])uint64)",
+        "Method(transfer_from(byte[],byte[],uint64)string)",
+        "Method(calculate_yield_value(uint64,uint64)uint64)",
+        "Method(update_owner(byte[])string)"
+      ]
+    },
+    "166": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(approve(byte[],uint64)string)",
+        "Method(balance_of(byte[])uint64)",
+        "Method(burn(uint64)string)",
+        "Method(calculate_yield_value(uint64,uint64)uint64)",
+        "Method(get_allowance(byte[],byte[])uint64)",
+        "Method(get_maturity()uint64)",
+        "Method(get_token_info()(string,string,uint64,uint64))",
+        "Method(get_total_supply()uint64)",
+        "Method(get_yield_status()(uint64,uint64,uint64))",
+        "Method(initialize(string,string,uint64)string)",
+        "Method(is_accruing_yield()uint64)",
+        "Method(is_mature()uint64)",
+        "Method(mint(byte[],uint64)string)",
+        "Method(transfer(byte[],uint64)string)",
+        "Method(transfer_from(byte[],byte[],uint64)string)",
+        "Method(update_owner(byte[])string)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(initialize(string,string,uint64)string)",
+        "Method(mint(byte[],uint64)string)",
+        "Method(burn(uint64)string)",
+        "Method(transfer(byte[],uint64)string)",
+        "Method(balance_of(byte[])uint64)",
+        "Method(get_total_supply()uint64)",
+        "Method(get_maturity()uint64)",
+        "Method(is_mature()uint64)",
+        "Method(is_accruing_yield()uint64)",
+        "Method(get_token_info()(string,string,uint64,uint64))",
+        "Method(get_yield_status()(uint64,uint64,uint64))",
+        "Method(approve(byte[],uint64)string)",
+        "Method(get_allowance(byte[],byte[])uint64)",
+        "Method(transfer_from(byte[],byte[],uint64)string)",
+        "Method(calculate_yield_value(uint64,uint64)uint64)",
+        "Method(update_owner(byte[])string)",
+        "tmp%2#0"
+      ]
+    },
+    "169": {
+      "op": "match main_initialize_route@5 main_mint_route@6 main_burn_route@7 main_transfer_route@8 main_balance_of_route@9 main_get_total_supply_route@10 main_get_maturity_route@11 main_is_mature_route@12 main_is_accruing_yield_route@13 main_get_token_info_route@14 main_get_yield_status_route@15 main_approve_route@16 main_get_allowance_route@17 main_transfer_from_route@18 main_calculate_yield_value_route@19 main_update_owner_route@20",
+      "stack_out": []
+    },
+    "203": {
+      "block": "main_after_if_else@23",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "204": {
+      "op": "return",
+      "stack_out": []
+    },
+    "205": {
+      "block": "main_update_owner_route@20",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%108#0"
+      ],
+      "stack_out": [
+        "tmp%108#0"
+      ]
+    },
+    "207": {
+      "op": "!",
+      "defined_out": [
+        "tmp%109#0"
+      ],
+      "stack_out": [
+        "tmp%109#0"
+      ]
+    },
+    "208": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "209": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%110#0"
+      ],
+      "stack_out": [
+        "tmp%110#0"
+      ]
+    },
+    "211": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "212": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%112#0"
+      ],
+      "stack_out": [
+        "tmp%112#0"
+      ]
+    },
+    "215": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%113#0"
+      ],
+      "stack_out": [
+        "tmp%113#0"
+      ]
+    },
+    "218": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.update_owner",
+      "op": "callsub update_owner",
+      "defined_out": [
+        "to_encode%13#0"
+      ],
+      "stack_out": [
+        "to_encode%13#0"
+      ]
+    },
+    "221": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%13#0",
+        "to_encode%13#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%13#0",
+        "to_encode%13#0 (copy)"
+      ]
+    },
+    "222": {
+      "op": "len",
+      "defined_out": [
+        "length%6#0",
+        "to_encode%13#0"
+      ],
+      "stack_out": [
+        "to_encode%13#0",
+        "length%6#0"
+      ]
+    },
+    "223": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%6#0",
+        "to_encode%13#0"
+      ],
+      "stack_out": [
+        "to_encode%13#0",
+        "as_bytes%6#0"
+      ]
+    },
+    "224": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%6#0",
+        "to_encode%13#0"
+      ],
+      "stack_out": [
+        "to_encode%13#0",
+        "length_uint16%6#0"
+      ]
+    },
+    "227": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%6#0",
+        "to_encode%13#0"
+      ]
+    },
+    "228": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%6#0"
+      ],
+      "stack_out": [
+        "encoded_value%6#0"
+      ]
+    },
+    "229": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%6#0"
+      ],
+      "stack_out": [
+        "encoded_value%6#0",
+        "0x151f7c75"
+      ]
+    },
+    "230": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%6#0"
+      ]
+    },
+    "231": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%114#0"
+      ],
+      "stack_out": [
+        "tmp%114#0"
+      ]
+    },
+    "232": {
+      "op": "log",
+      "stack_out": []
+    },
+    "233": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "234": {
+      "op": "return",
+      "stack_out": []
+    },
+    "235": {
+      "block": "main_calculate_yield_value_route@19",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%101#0"
+      ],
+      "stack_out": [
+        "tmp%101#0"
+      ]
+    },
+    "237": {
+      "op": "!",
+      "defined_out": [
+        "tmp%102#0"
+      ],
+      "stack_out": [
+        "tmp%102#0"
+      ]
+    },
+    "238": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "239": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%103#0"
+      ],
+      "stack_out": [
+        "tmp%103#0"
+      ]
+    },
+    "241": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "242": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%6#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%6#0"
+      ]
+    },
+    "245": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%105#0"
+      ],
+      "stack_out": [
+        "tmp%105#0"
+      ]
+    },
+    "246": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%7#0",
+        "tmp%105#0"
+      ],
+      "stack_out": [
+        "tmp%105#0",
+        "reinterpret_bytes[8]%7#0"
+      ]
+    },
+    "249": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%105#0",
+        "tmp%106#0"
+      ],
+      "stack_out": [
+        "tmp%105#0",
+        "tmp%106#0"
+      ]
+    },
+    "250": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.calculate_yield_value",
+      "op": "callsub calculate_yield_value",
+      "defined_out": [
+        "to_encode%12#0"
+      ],
+      "stack_out": [
+        "to_encode%12#0"
+      ]
+    },
+    "253": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%6#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%6#0"
+      ]
+    },
+    "254": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%6#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%6#0",
+        "0x151f7c75"
+      ]
+    },
+    "255": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%6#0"
+      ]
+    },
+    "256": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%107#0"
+      ],
+      "stack_out": [
+        "tmp%107#0"
+      ]
+    },
+    "257": {
+      "op": "log",
+      "stack_out": []
+    },
+    "258": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "259": {
+      "op": "return",
+      "stack_out": []
+    },
+    "260": {
+      "block": "main_transfer_from_route@18",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%91#0"
+      ],
+      "stack_out": [
+        "tmp%91#0"
+      ]
+    },
+    "262": {
+      "op": "!",
+      "defined_out": [
+        "tmp%92#0"
+      ],
+      "stack_out": [
+        "tmp%92#0"
+      ]
+    },
+    "263": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "264": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%93#0"
+      ],
+      "stack_out": [
+        "tmp%93#0"
+      ]
+    },
+    "266": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "267": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%95#0"
+      ],
+      "stack_out": [
+        "tmp%95#0"
+      ]
+    },
+    "270": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%96#0"
+      ],
+      "stack_out": [
+        "tmp%96#0"
+      ]
+    },
+    "273": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%96#0",
+        "tmp%97#0"
+      ],
+      "stack_out": [
+        "tmp%96#0",
+        "tmp%97#0"
+      ]
+    },
+    "276": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%96#0",
+        "tmp%98#0"
+      ],
+      "stack_out": [
+        "tmp%96#0",
+        "tmp%98#0"
+      ]
+    },
+    "279": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "reinterpret_bytes[8]%5#0",
+        "tmp%96#0",
+        "tmp%98#0"
+      ],
+      "stack_out": [
+        "tmp%96#0",
+        "tmp%98#0",
+        "reinterpret_bytes[8]%5#0"
+      ]
+    },
+    "282": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%96#0",
+        "tmp%98#0",
+        "tmp%99#0"
+      ],
+      "stack_out": [
+        "tmp%96#0",
+        "tmp%98#0",
+        "tmp%99#0"
+      ]
+    },
+    "283": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.transfer_from",
+      "op": "callsub transfer_from",
+      "defined_out": [
+        "to_encode%11#0"
+      ],
+      "stack_out": [
+        "to_encode%11#0"
+      ]
+    },
+    "286": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%11#0",
+        "to_encode%11#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%11#0",
+        "to_encode%11#0 (copy)"
+      ]
+    },
+    "287": {
+      "op": "len",
+      "defined_out": [
+        "length%5#0",
+        "to_encode%11#0"
+      ],
+      "stack_out": [
+        "to_encode%11#0",
+        "length%5#0"
+      ]
+    },
+    "288": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%5#0",
+        "to_encode%11#0"
+      ],
+      "stack_out": [
+        "to_encode%11#0",
+        "as_bytes%5#0"
+      ]
+    },
+    "289": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%5#0",
+        "to_encode%11#0"
+      ],
+      "stack_out": [
+        "to_encode%11#0",
+        "length_uint16%5#0"
+      ]
+    },
+    "292": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%5#0",
+        "to_encode%11#0"
+      ]
+    },
+    "293": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%5#0"
+      ],
+      "stack_out": [
+        "encoded_value%5#0"
+      ]
+    },
+    "294": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%5#0"
+      ],
+      "stack_out": [
+        "encoded_value%5#0",
+        "0x151f7c75"
+      ]
+    },
+    "295": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%5#0"
+      ]
+    },
+    "296": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%100#0"
+      ],
+      "stack_out": [
+        "tmp%100#0"
+      ]
+    },
+    "297": {
+      "op": "log",
+      "stack_out": []
+    },
+    "298": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "299": {
+      "op": "return",
+      "stack_out": []
+    },
+    "300": {
+      "block": "main_get_allowance_route@17",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%82#0"
+      ],
+      "stack_out": [
+        "tmp%82#0"
+      ]
+    },
+    "302": {
+      "op": "!",
+      "defined_out": [
+        "tmp%83#0"
+      ],
+      "stack_out": [
+        "tmp%83#0"
+      ]
+    },
+    "303": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "304": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%84#0"
+      ],
+      "stack_out": [
+        "tmp%84#0"
+      ]
+    },
+    "306": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "307": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%86#0"
+      ],
+      "stack_out": [
+        "tmp%86#0"
+      ]
+    },
+    "310": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%87#0"
+      ],
+      "stack_out": [
+        "tmp%87#0"
+      ]
+    },
+    "313": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%87#0",
+        "tmp%88#0"
+      ],
+      "stack_out": [
+        "tmp%87#0",
+        "tmp%88#0"
+      ]
+    },
+    "316": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%87#0",
+        "tmp%89#0"
+      ],
+      "stack_out": [
+        "tmp%87#0",
+        "tmp%89#0"
+      ]
+    },
+    "319": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.get_allowance",
+      "op": "callsub get_allowance",
+      "defined_out": [
+        "to_encode%10#0"
+      ],
+      "stack_out": [
+        "to_encode%10#0"
+      ]
+    },
+    "322": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%5#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%5#0"
+      ]
+    },
+    "323": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%5#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%5#0",
+        "0x151f7c75"
+      ]
+    },
+    "324": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%5#0"
+      ]
+    },
+    "325": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%90#0"
+      ],
+      "stack_out": [
+        "tmp%90#0"
+      ]
+    },
+    "326": {
+      "op": "log",
+      "stack_out": []
+    },
+    "327": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "328": {
+      "op": "return",
+      "stack_out": []
+    },
+    "329": {
+      "block": "main_approve_route@16",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%74#0"
+      ],
+      "stack_out": [
+        "tmp%74#0"
+      ]
+    },
+    "331": {
+      "op": "!",
+      "defined_out": [
+        "tmp%75#0"
+      ],
+      "stack_out": [
+        "tmp%75#0"
+      ]
+    },
+    "332": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "333": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%76#0"
+      ],
+      "stack_out": [
+        "tmp%76#0"
+      ]
+    },
+    "335": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "336": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%78#0"
+      ],
+      "stack_out": [
+        "tmp%78#0"
+      ]
+    },
+    "339": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%79#0"
+      ],
+      "stack_out": [
+        "tmp%79#0"
+      ]
+    },
+    "342": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%4#0",
+        "tmp%79#0"
+      ],
+      "stack_out": [
+        "tmp%79#0",
+        "reinterpret_bytes[8]%4#0"
+      ]
+    },
+    "345": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%79#0",
+        "tmp%80#0"
+      ],
+      "stack_out": [
+        "tmp%79#0",
+        "tmp%80#0"
+      ]
+    },
+    "346": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.approve",
+      "op": "callsub approve",
+      "defined_out": [
+        "to_encode%9#0"
+      ],
+      "stack_out": [
+        "to_encode%9#0"
+      ]
+    },
+    "349": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%9#0",
+        "to_encode%9#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%9#0",
+        "to_encode%9#0 (copy)"
+      ]
+    },
+    "350": {
+      "op": "len",
+      "defined_out": [
+        "length%4#0",
+        "to_encode%9#0"
+      ],
+      "stack_out": [
+        "to_encode%9#0",
+        "length%4#0"
+      ]
+    },
+    "351": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%4#0",
+        "to_encode%9#0"
+      ],
+      "stack_out": [
+        "to_encode%9#0",
+        "as_bytes%4#0"
+      ]
+    },
+    "352": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%4#0",
+        "to_encode%9#0"
+      ],
+      "stack_out": [
+        "to_encode%9#0",
+        "length_uint16%4#0"
+      ]
+    },
+    "355": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%4#0",
+        "to_encode%9#0"
+      ]
+    },
+    "356": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%4#0"
+      ],
+      "stack_out": [
+        "encoded_value%4#0"
+      ]
+    },
+    "357": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%4#0"
+      ],
+      "stack_out": [
+        "encoded_value%4#0",
+        "0x151f7c75"
+      ]
+    },
+    "358": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%4#0"
+      ]
+    },
+    "359": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%81#0"
+      ],
+      "stack_out": [
+        "tmp%81#0"
+      ]
+    },
+    "360": {
+      "op": "log",
+      "stack_out": []
+    },
+    "361": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "362": {
+      "op": "return",
+      "stack_out": []
+    },
+    "363": {
+      "block": "main_get_yield_status_route@15",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%68#0"
+      ],
+      "stack_out": [
+        "tmp%68#0"
+      ]
+    },
+    "365": {
+      "op": "!",
+      "defined_out": [
+        "tmp%69#0"
+      ],
+      "stack_out": [
+        "tmp%69#0"
+      ]
+    },
+    "366": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "367": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%70#0"
+      ],
+      "stack_out": [
+        "tmp%70#0"
+      ]
+    },
+    "369": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "370": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.get_yield_status",
+      "op": "callsub get_yield_status",
+      "defined_out": [
+        "tmp%72#0"
+      ],
+      "stack_out": [
+        "tmp%72#0"
+      ]
+    },
+    "373": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%72#0"
+      ],
+      "stack_out": [
+        "tmp%72#0",
+        "0x151f7c75"
+      ]
+    },
+    "374": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%72#0"
+      ]
+    },
+    "375": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%73#0"
+      ],
+      "stack_out": [
+        "tmp%73#0"
+      ]
+    },
+    "376": {
+      "op": "log",
+      "stack_out": []
+    },
+    "377": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "378": {
+      "op": "return",
+      "stack_out": []
+    },
+    "379": {
+      "block": "main_get_token_info_route@14",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%62#0"
+      ],
+      "stack_out": [
+        "tmp%62#0"
+      ]
+    },
+    "381": {
+      "op": "!",
+      "defined_out": [
+        "tmp%63#0"
+      ],
+      "stack_out": [
+        "tmp%63#0"
+      ]
+    },
+    "382": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "383": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%64#0"
+      ],
+      "stack_out": [
+        "tmp%64#0"
+      ]
+    },
+    "385": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "386": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.get_token_info",
+      "op": "callsub get_token_info",
+      "defined_out": [
+        "tmp%66#0"
+      ],
+      "stack_out": [
+        "tmp%66#0"
+      ]
+    },
+    "389": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%66#0"
+      ],
+      "stack_out": [
+        "tmp%66#0",
+        "0x151f7c75"
+      ]
+    },
+    "390": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%66#0"
+      ]
+    },
+    "391": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%67#0"
+      ],
+      "stack_out": [
+        "tmp%67#0"
+      ]
+    },
+    "392": {
+      "op": "log",
+      "stack_out": []
+    },
+    "393": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "394": {
+      "op": "return",
+      "stack_out": []
+    },
+    "395": {
+      "block": "main_is_accruing_yield_route@13",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%57#0"
+      ],
+      "stack_out": [
+        "tmp%57#0"
+      ]
+    },
+    "397": {
+      "op": "!",
+      "defined_out": [
+        "tmp%58#0"
+      ],
+      "stack_out": [
+        "tmp%58#0"
+      ]
+    },
+    "398": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "399": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%59#0"
+      ],
+      "stack_out": [
+        "tmp%59#0"
+      ]
+    },
+    "401": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "402": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.is_accruing_yield",
+      "op": "callsub is_accruing_yield",
+      "defined_out": [
+        "to_encode%8#0"
+      ],
+      "stack_out": [
+        "to_encode%8#0"
+      ]
+    },
+    "405": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%4#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%4#0"
+      ]
+    },
+    "406": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%4#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%4#0",
+        "0x151f7c75"
+      ]
+    },
+    "407": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%4#0"
+      ]
+    },
+    "408": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%61#0"
+      ],
+      "stack_out": [
+        "tmp%61#0"
+      ]
+    },
+    "409": {
+      "op": "log",
+      "stack_out": []
+    },
+    "410": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "411": {
+      "op": "return",
+      "stack_out": []
+    },
+    "412": {
+      "block": "main_is_mature_route@12",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%52#0"
+      ],
+      "stack_out": [
+        "tmp%52#0"
+      ]
+    },
+    "414": {
+      "op": "!",
+      "defined_out": [
+        "tmp%53#0"
+      ],
+      "stack_out": [
+        "tmp%53#0"
+      ]
+    },
+    "415": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "416": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%54#0"
+      ],
+      "stack_out": [
+        "tmp%54#0"
+      ]
+    },
+    "418": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "419": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.is_mature",
+      "op": "callsub is_mature",
+      "defined_out": [
+        "to_encode%7#0"
+      ],
+      "stack_out": [
+        "to_encode%7#0"
+      ]
+    },
+    "422": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%3#0"
+      ]
+    },
+    "423": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%3#0",
+        "0x151f7c75"
+      ]
+    },
+    "424": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%3#0"
+      ]
+    },
+    "425": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%56#0"
+      ],
+      "stack_out": [
+        "tmp%56#0"
+      ]
+    },
+    "426": {
+      "op": "log",
+      "stack_out": []
+    },
+    "427": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "428": {
+      "op": "return",
+      "stack_out": []
+    },
+    "429": {
+      "block": "main_get_maturity_route@11",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%47#0"
+      ],
+      "stack_out": [
+        "tmp%47#0"
+      ]
+    },
+    "431": {
+      "op": "!",
+      "defined_out": [
+        "tmp%48#0"
+      ],
+      "stack_out": [
+        "tmp%48#0"
+      ]
+    },
+    "432": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "433": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0"
+      ]
+    },
+    "435": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "436": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.get_maturity",
+      "op": "callsub get_maturity",
+      "defined_out": [
+        "to_encode%6#0"
+      ],
+      "stack_out": [
+        "to_encode%6#0"
+      ]
+    },
+    "439": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%2#0"
+      ]
+    },
+    "440": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "441": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "442": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%51#0"
+      ],
+      "stack_out": [
+        "tmp%51#0"
+      ]
+    },
+    "443": {
+      "op": "log",
+      "stack_out": []
+    },
+    "444": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "445": {
+      "op": "return",
+      "stack_out": []
+    },
+    "446": {
+      "block": "main_get_total_supply_route@10",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%42#0"
+      ],
+      "stack_out": [
+        "tmp%42#0"
+      ]
+    },
+    "448": {
+      "op": "!",
+      "defined_out": [
+        "tmp%43#0"
+      ],
+      "stack_out": [
+        "tmp%43#0"
+      ]
+    },
+    "449": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "450": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%44#0"
+      ],
+      "stack_out": [
+        "tmp%44#0"
+      ]
+    },
+    "452": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "453": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.get_total_supply",
+      "op": "callsub get_total_supply",
+      "defined_out": [
+        "to_encode%5#0"
+      ],
+      "stack_out": [
+        "to_encode%5#0"
+      ]
+    },
+    "456": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%1#0"
+      ]
+    },
+    "457": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "458": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "459": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%46#0"
+      ],
+      "stack_out": [
+        "tmp%46#0"
+      ]
+    },
+    "460": {
+      "op": "log",
+      "stack_out": []
+    },
+    "461": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "462": {
+      "op": "return",
+      "stack_out": []
+    },
+    "463": {
+      "block": "main_balance_of_route@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0"
+      ]
+    },
+    "465": {
+      "op": "!",
+      "defined_out": [
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%36#0"
+      ]
+    },
+    "466": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "467": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%37#0"
+      ],
+      "stack_out": [
+        "tmp%37#0"
+      ]
+    },
+    "469": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "470": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%39#0"
+      ],
+      "stack_out": [
+        "tmp%39#0"
+      ]
+    },
+    "473": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0"
+      ]
+    },
+    "476": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.balance_of",
+      "op": "callsub balance_of",
+      "defined_out": [
+        "to_encode%4#0"
+      ],
+      "stack_out": [
+        "to_encode%4#0"
+      ]
+    },
+    "479": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "480": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "481": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "482": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%41#0"
+      ],
+      "stack_out": [
+        "tmp%41#0"
+      ]
+    },
+    "483": {
+      "op": "log",
+      "stack_out": []
+    },
+    "484": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "485": {
+      "op": "return",
+      "stack_out": []
+    },
+    "486": {
+      "block": "main_transfer_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "488": {
+      "op": "!",
+      "defined_out": [
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%28#0"
+      ]
+    },
+    "489": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "490": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "492": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "493": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "496": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "499": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%3#0",
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "reinterpret_bytes[8]%3#0"
+      ]
+    },
+    "502": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%32#0",
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "tmp%33#0"
+      ]
+    },
+    "503": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.transfer",
+      "op": "callsub transfer",
+      "defined_out": [
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0"
+      ]
+    },
+    "506": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%3#0",
+        "to_encode%3#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%3#0",
+        "to_encode%3#0 (copy)"
+      ]
+    },
+    "507": {
+      "op": "len",
+      "defined_out": [
+        "length%3#0",
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0",
+        "length%3#0"
+      ]
+    },
+    "508": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%3#0",
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0",
+        "as_bytes%3#0"
+      ]
+    },
+    "509": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%3#0",
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0",
+        "length_uint16%3#0"
+      ]
+    },
+    "512": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%3#0",
+        "to_encode%3#0"
+      ]
+    },
+    "513": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%3#0"
+      ],
+      "stack_out": [
+        "encoded_value%3#0"
+      ]
+    },
+    "514": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%3#0"
+      ],
+      "stack_out": [
+        "encoded_value%3#0",
+        "0x151f7c75"
+      ]
+    },
+    "515": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%3#0"
+      ]
+    },
+    "516": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%34#0"
+      ]
+    },
+    "517": {
+      "op": "log",
+      "stack_out": []
+    },
+    "518": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "519": {
+      "op": "return",
+      "stack_out": []
+    },
+    "520": {
+      "block": "main_burn_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "522": {
+      "op": "!",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "523": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "524": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "526": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "527": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%2#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%2#0"
+      ]
+    },
+    "530": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "531": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.burn",
+      "op": "callsub burn",
+      "defined_out": [
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0"
+      ]
+    },
+    "534": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ]
+    },
+    "535": {
+      "op": "len",
+      "defined_out": [
+        "length%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "length%2#0"
+      ]
+    },
+    "536": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "as_bytes%2#0"
+      ]
+    },
+    "537": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "length_uint16%2#0"
+      ]
+    },
+    "540": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%2#0",
+        "to_encode%2#0"
+      ]
+    },
+    "541": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%2#0"
+      ],
+      "stack_out": [
+        "encoded_value%2#0"
+      ]
+    },
+    "542": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%2#0"
+      ],
+      "stack_out": [
+        "encoded_value%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "543": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%2#0"
+      ]
+    },
+    "544": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
+      ]
+    },
+    "545": {
+      "op": "log",
+      "stack_out": []
+    },
+    "546": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "547": {
+      "op": "return",
+      "stack_out": []
+    },
+    "548": {
+      "block": "main_mint_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "550": {
+      "op": "!",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "551": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "552": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "554": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "555": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "558": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "561": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%1#0",
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0",
+        "reinterpret_bytes[8]%1#0"
+      ]
+    },
+    "564": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%18#0",
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%18#0",
+        "tmp%19#0"
+      ]
+    },
+    "565": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.mint",
+      "op": "callsub mint",
+      "defined_out": [
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0"
+      ]
+    },
+    "568": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ]
+    },
+    "569": {
+      "op": "len",
+      "defined_out": [
+        "length%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "length%1#0"
+      ]
+    },
+    "570": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "as_bytes%1#0"
+      ]
+    },
+    "571": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "length_uint16%1#0"
+      ]
+    },
+    "574": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%1#0",
+        "to_encode%1#0"
+      ]
+    },
+    "575": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%1#0"
+      ]
+    },
+    "576": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "577": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%1#0"
+      ]
+    },
+    "578": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "579": {
+      "op": "log",
+      "stack_out": []
+    },
+    "580": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "581": {
+      "op": "return",
+      "stack_out": []
+    },
+    "582": {
+      "block": "main_initialize_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "584": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "585": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "586": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "588": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "589": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "592": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "595": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "598": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0"
+      ]
+    },
+    "601": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0",
+        "tmp%10#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0",
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "604": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%11#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0",
+        "tmp%11#0"
+      ]
+    },
+    "605": {
+      "callsub": "smart_contracts.yt_token.contract.YTToken.initialize",
+      "op": "callsub initialize",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "608": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ]
+    },
+    "609": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length%0#0"
+      ]
+    },
+    "610": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "611": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "614": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ]
+    },
+    "615": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0"
+      ]
+    },
+    "616": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "617": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ]
+    },
+    "618": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "619": {
+      "op": "log",
+      "stack_out": []
+    },
+    "620": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "621": {
+      "op": "return",
+      "stack_out": []
+    },
+    "622": {
+      "block": "main_bare_routing@21",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%115#0"
+      ],
+      "stack_out": [
+        "tmp%115#0"
+      ]
+    },
+    "624": {
+      "op": "bnz main_after_if_else@23",
+      "stack_out": []
+    },
+    "627": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%116#0"
+      ],
+      "stack_out": [
+        "tmp%116#0"
+      ]
+    },
+    "629": {
+      "op": "!",
+      "defined_out": [
+        "tmp%117#0"
+      ],
+      "stack_out": [
+        "tmp%117#0"
+      ]
+    },
+    "630": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "631": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "632": {
+      "op": "return",
+      "stack_out": []
+    },
+    "633": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.initialize",
+      "params": {
+        "name#0": "bytes",
+        "symbol#0": "bytes",
+        "maturity_timestamp#0": "uint64"
+      },
+      "block": "initialize",
+      "stack_in": [],
+      "op": "proto 3 1"
+    },
+    "636": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "638": {
+      "op": "global CreatorAddress",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "640": {
+      "op": "==",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "641": {
+      "error": "Only creator can initialize",
+      "op": "assert // Only creator can initialize",
+      "stack_out": []
+    },
+    "642": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "maturity_timestamp#0 (copy)"
+      ],
+      "stack_out": [
+        "maturity_timestamp#0 (copy)"
+      ]
+    },
+    "644": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "maturity_timestamp#0 (copy)",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "maturity_timestamp#0 (copy)",
+        "tmp%3#0"
+      ]
+    },
+    "646": {
+      "op": ">",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "647": {
+      "error": "Maturity must be in future",
+      "op": "assert // Maturity must be in future",
+      "stack_out": []
+    },
+    "648": {
+      "op": "bytec 4 // \"owner\"",
+      "defined_out": [
+        "\"owner\""
+      ],
+      "stack_out": [
+        "\"owner\""
+      ]
+    },
+    "650": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"owner\"",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "\"owner\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "652": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "653": {
+      "op": "bytec 6 // \"name\"",
+      "defined_out": [
+        "\"name\""
+      ],
+      "stack_out": [
+        "\"name\""
+      ]
+    },
+    "655": {
+      "op": "frame_dig -3",
+      "defined_out": [
+        "\"name\"",
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "\"name\"",
+        "name#0 (copy)"
+      ]
+    },
+    "657": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "658": {
+      "op": "bytec 7 // \"symbol\"",
+      "defined_out": [
+        "\"symbol\""
+      ],
+      "stack_out": [
+        "\"symbol\""
+      ]
+    },
+    "660": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"symbol\"",
+        "symbol#0 (copy)"
+      ],
+      "stack_out": [
+        "\"symbol\"",
+        "symbol#0 (copy)"
+      ]
+    },
+    "662": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "663": {
+      "op": "bytec_3 // \"maturity\"",
+      "defined_out": [
+        "\"maturity\""
+      ],
+      "stack_out": [
+        "\"maturity\""
+      ]
+    },
+    "664": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "\"maturity\"",
+        "maturity_timestamp#0 (copy)"
+      ]
+    },
+    "666": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "667": {
+      "op": "bytec_2 // \"total_supply\"",
+      "defined_out": [
+        "\"total_supply\""
+      ],
+      "stack_out": [
+        "\"total_supply\""
+      ]
+    },
+    "668": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"total_supply\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"total_supply\"",
+        "0"
+      ]
+    },
+    "669": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "670": {
+      "op": "bytec 8 // \"decimals\"",
+      "defined_out": [
+        "\"decimals\""
+      ],
+      "stack_out": [
+        "\"decimals\""
+      ]
+    },
+    "672": {
+      "op": "pushint 8 // 8",
+      "defined_out": [
+        "\"decimals\"",
+        "8"
+      ],
+      "stack_out": [
+        "\"decimals\"",
+        "8"
+      ]
+    },
+    "674": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "675": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "maturity_timestamp#0 (copy)"
+      ]
+    },
+    "677": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "678": {
+      "op": "pushbytes 0x595420546f6b656e20696e697469616c697a6564202d204d617475726974793a20",
+      "defined_out": [
+        "0x595420546f6b656e20696e697469616c697a6564202d204d617475726974793a20",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0",
+        "0x595420546f6b656e20696e697469616c697a6564202d204d617475726974793a20"
+      ]
+    },
+    "713": {
+      "op": "swap",
+      "stack_out": [
+        "0x595420546f6b656e20696e697469616c697a6564202d204d617475726974793a20",
+        "tmp%5#0"
+      ]
+    },
+    "714": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "715": {
+      "op": "log",
+      "stack_out": []
+    },
+    "716": {
+      "op": "pushbytes \"YT Token initialized successfully\"",
+      "defined_out": [
+        "\"YT Token initialized successfully\""
+      ],
+      "stack_out": [
+        "\"YT Token initialized successfully\""
+      ]
+    },
+    "751": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "752": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.mint",
+      "params": {
+        "to#0": "bytes",
+        "amount#0": "uint64"
+      },
+      "block": "mint",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "755": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "757": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "758": {
+      "op": "bytec 4 // \"owner\"",
+      "defined_out": [
+        "\"owner\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"owner\""
+      ]
+    },
+    "760": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "761": {
+      "error": "check self.owner exists",
+      "op": "assert // check self.owner exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "762": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "763": {
+      "error": "Only owner can mint",
+      "op": "assert // Only owner can mint",
+      "stack_out": []
+    },
+    "764": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "amount#0 (copy)"
+      ],
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "766": {
+      "error": "Amount must be positive",
+      "op": "assert // Amount must be positive",
+      "stack_out": []
+    },
+    "767": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "768": {
+      "op": "bytec_2 // \"total_supply\"",
+      "defined_out": [
+        "\"total_supply\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_supply\""
+      ]
+    },
+    "769": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "770": {
+      "error": "check self.total_supply exists",
+      "op": "assert // check self.total_supply exists",
+      "stack_out": [
+        "maybe_value%1#0"
+      ]
+    },
+    "771": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "maybe_value%1#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "773": {
+      "op": "+",
+      "defined_out": [
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0"
+      ]
+    },
+    "774": {
+      "op": "bytec_2 // \"total_supply\"",
+      "stack_out": [
+        "materialized_values%0#0",
+        "\"total_supply\""
+      ]
+    },
+    "775": {
+      "op": "swap",
+      "stack_out": [
+        "\"total_supply\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "776": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "777": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "779": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%3#0",
+        "0"
+      ]
+    },
+    "780": {
+      "op": "bytec_1 // \"balance\"",
+      "defined_out": [
+        "\"balance\"",
+        "0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "0",
+        "\"balance\""
+      ]
+    },
+    "781": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "782": {
+      "error": "check self.balance exists for account",
+      "op": "assert // check self.balance exists for account",
+      "stack_out": [
+        "maybe_value%2#0"
+      ]
+    },
+    "783": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "maybe_value%2#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "785": {
+      "op": "+",
+      "defined_out": [
+        "materialized_values%1#0"
+      ],
+      "stack_out": [
+        "materialized_values%1#0"
+      ]
+    },
+    "786": {
+      "op": "txn Sender",
+      "defined_out": [
+        "materialized_values%1#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "materialized_values%1#0",
+        "tmp%4#0"
+      ]
+    },
+    "788": {
+      "op": "bytec_1 // \"balance\"",
+      "stack_out": [
+        "materialized_values%1#0",
+        "tmp%4#0",
+        "\"balance\""
+      ]
+    },
+    "789": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%4#0",
+        "\"balance\"",
+        "materialized_values%1#0"
+      ]
+    },
+    "791": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "792": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "794": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "795": {
+      "op": "pushbytes 0x595420746f6b656e73206d696e746564202d20416d6f756e743a20",
+      "defined_out": [
+        "0x595420746f6b656e73206d696e746564202d20416d6f756e743a20",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0",
+        "0x595420746f6b656e73206d696e746564202d20416d6f756e743a20"
+      ]
+    },
+    "824": {
+      "op": "swap",
+      "stack_out": [
+        "0x595420746f6b656e73206d696e746564202d20416d6f756e743a20",
+        "tmp%5#0"
+      ]
+    },
+    "825": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "826": {
+      "op": "log",
+      "stack_out": []
+    },
+    "827": {
+      "op": "pushbytes \"YT tokens minted successfully\"",
+      "defined_out": [
+        "\"YT tokens minted successfully\""
+      ],
+      "stack_out": [
+        "\"YT tokens minted successfully\""
+      ]
+    },
+    "858": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "859": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.burn",
+      "params": {
+        "amount#0": "uint64"
+      },
+      "block": "burn",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "862": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "amount#0 (copy)"
+      ],
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "864": {
+      "error": "Amount must be positive",
+      "op": "assert // Amount must be positive",
+      "stack_out": []
+    },
+    "865": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "867": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0",
+        "0"
+      ]
+    },
+    "868": {
+      "op": "bytec_1 // \"balance\"",
+      "defined_out": [
+        "\"balance\"",
+        "0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0",
+        "0",
+        "\"balance\""
+      ]
+    },
+    "869": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_balance#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "current_balance#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "870": {
+      "error": "check self.balance exists for account",
+      "op": "assert // check self.balance exists for account",
+      "stack_out": [
+        "current_balance#0"
+      ]
+    },
+    "871": {
+      "op": "dup",
+      "defined_out": [
+        "current_balance#0",
+        "current_balance#0 (copy)"
+      ],
+      "stack_out": [
+        "current_balance#0",
+        "current_balance#0 (copy)"
+      ]
+    },
+    "872": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "current_balance#0",
+        "current_balance#0 (copy)",
+        "amount#0 (copy)"
+      ]
+    },
+    "874": {
+      "op": ">=",
+      "defined_out": [
+        "current_balance#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "current_balance#0",
+        "tmp%2#0"
+      ]
+    },
+    "875": {
+      "error": "Insufficient balance",
+      "op": "assert // Insufficient balance",
+      "stack_out": [
+        "current_balance#0"
+      ]
+    },
+    "876": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "current_balance#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "878": {
+      "op": "-",
+      "defined_out": [
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0"
+      ]
+    },
+    "879": {
+      "op": "txn Sender",
+      "defined_out": [
+        "materialized_values%0#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%3#0"
+      ]
+    },
+    "881": {
+      "op": "bytec_1 // \"balance\"",
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%3#0",
+        "\"balance\""
+      ]
+    },
+    "882": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%3#0",
+        "\"balance\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "884": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "885": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "886": {
+      "op": "bytec_2 // \"total_supply\"",
+      "defined_out": [
+        "\"total_supply\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_supply\""
+      ]
+    },
+    "887": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "888": {
+      "error": "check self.total_supply exists",
+      "op": "assert // check self.total_supply exists",
+      "stack_out": [
+        "maybe_value%1#0"
+      ]
+    },
+    "889": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "maybe_value%1#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "891": {
+      "op": "-",
+      "defined_out": [
+        "materialized_values%1#0"
+      ],
+      "stack_out": [
+        "materialized_values%1#0"
+      ]
+    },
+    "892": {
+      "op": "bytec_2 // \"total_supply\"",
+      "stack_out": [
+        "materialized_values%1#0",
+        "\"total_supply\""
+      ]
+    },
+    "893": {
+      "op": "swap",
+      "stack_out": [
+        "\"total_supply\"",
+        "materialized_values%1#0"
+      ]
+    },
+    "894": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "895": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "897": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "898": {
+      "op": "pushbytes 0x595420746f6b656e73206275726e6564202d20416d6f756e743a20",
+      "defined_out": [
+        "0x595420746f6b656e73206275726e6564202d20416d6f756e743a20",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0",
+        "0x595420746f6b656e73206275726e6564202d20416d6f756e743a20"
+      ]
+    },
+    "927": {
+      "op": "swap",
+      "stack_out": [
+        "0x595420746f6b656e73206275726e6564202d20416d6f756e743a20",
+        "tmp%4#0"
+      ]
+    },
+    "928": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "929": {
+      "op": "log",
+      "stack_out": []
+    },
+    "930": {
+      "op": "pushbytes \"YT tokens burned successfully\"",
+      "defined_out": [
+        "\"YT tokens burned successfully\""
+      ],
+      "stack_out": [
+        "\"YT tokens burned successfully\""
+      ]
+    },
+    "961": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "962": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.transfer",
+      "params": {
+        "to#0": "bytes",
+        "amount#0": "uint64"
+      },
+      "block": "transfer",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "965": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "amount#0 (copy)"
+      ],
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "967": {
+      "error": "Amount must be positive",
+      "op": "assert // Amount must be positive",
+      "stack_out": []
+    },
+    "968": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "970": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0",
+        "0"
+      ]
+    },
+    "971": {
+      "op": "bytec_1 // \"balance\"",
+      "defined_out": [
+        "\"balance\"",
+        "0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0",
+        "0",
+        "\"balance\""
+      ]
+    },
+    "972": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "sender_balance#0"
+      ],
+      "stack_out": [
+        "sender_balance#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "973": {
+      "error": "check self.balance exists for account",
+      "op": "assert // check self.balance exists for account",
+      "stack_out": [
+        "sender_balance#0"
+      ]
+    },
+    "974": {
+      "op": "dup",
+      "defined_out": [
+        "sender_balance#0",
+        "sender_balance#0 (copy)"
+      ],
+      "stack_out": [
+        "sender_balance#0",
+        "sender_balance#0 (copy)"
+      ]
+    },
+    "975": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "sender_balance#0",
+        "sender_balance#0 (copy)",
+        "amount#0 (copy)"
+      ]
+    },
+    "977": {
+      "op": ">=",
+      "defined_out": [
+        "sender_balance#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "sender_balance#0",
+        "tmp%2#0"
+      ]
+    },
+    "978": {
+      "error": "Insufficient balance",
+      "op": "assert // Insufficient balance",
+      "stack_out": [
+        "sender_balance#0"
+      ]
+    },
+    "979": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "sender_balance#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "981": {
+      "op": "-",
+      "defined_out": [
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0"
+      ]
+    },
+    "982": {
+      "op": "txn Sender",
+      "defined_out": [
+        "materialized_values%0#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%3#0"
+      ]
+    },
+    "984": {
+      "op": "bytec_1 // \"balance\"",
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%3#0",
+        "\"balance\""
+      ]
+    },
+    "985": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%3#0",
+        "\"balance\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "987": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "988": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "990": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "991": {
+      "op": "pushbytes 0x595420746f6b656e73207472616e73666572726564202d20416d6f756e743a20",
+      "defined_out": [
+        "0x595420746f6b656e73207472616e73666572726564202d20416d6f756e743a20",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0",
+        "0x595420746f6b656e73207472616e73666572726564202d20416d6f756e743a20"
+      ]
+    },
+    "1025": {
+      "op": "swap",
+      "stack_out": [
+        "0x595420746f6b656e73207472616e73666572726564202d20416d6f756e743a20",
+        "tmp%4#0"
+      ]
+    },
+    "1026": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "1027": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1028": {
+      "op": "pushbytes \"YT tokens transferred successfully\"",
+      "defined_out": [
+        "\"YT tokens transferred successfully\""
+      ],
+      "stack_out": [
+        "\"YT tokens transferred successfully\""
+      ]
+    },
+    "1064": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1065": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.balance_of",
+      "params": {
+        "account#0": "bytes"
+      },
+      "block": "balance_of",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "1068": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1070": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1071": {
+      "op": "bytec_1 // \"balance\"",
+      "defined_out": [
+        "\"balance\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"balance\""
+      ]
+    },
+    "1072": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1073": {
+      "error": "check self.balance exists for account",
+      "op": "assert // check self.balance exists for account",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1074": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1075": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.get_total_supply",
+      "params": {},
+      "block": "get_total_supply",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1076": {
+      "op": "bytec_2 // \"total_supply\"",
+      "defined_out": [
+        "\"total_supply\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_supply\""
+      ]
+    },
+    "1077": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1078": {
+      "error": "check self.total_supply exists",
+      "op": "assert // check self.total_supply exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1079": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1080": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.get_maturity",
+      "params": {},
+      "block": "get_maturity",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1081": {
+      "op": "bytec_3 // \"maturity\"",
+      "defined_out": [
+        "\"maturity\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"maturity\""
+      ]
+    },
+    "1082": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1083": {
+      "error": "check self.maturity exists",
+      "op": "assert // check self.maturity exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1084": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1085": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.is_mature",
+      "params": {},
+      "block": "is_mature",
+      "stack_in": [],
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1087": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1088": {
+      "op": "bytec_3 // \"maturity\"",
+      "defined_out": [
+        "\"maturity\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"maturity\""
+      ]
+    },
+    "1089": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1090": {
+      "error": "check self.maturity exists",
+      "op": "assert // check self.maturity exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1091": {
+      "op": ">=",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1092": {
+      "op": "bz is_mature_else_body@2",
+      "stack_out": []
+    },
+    "1095": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "1096": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1097": {
+      "block": "is_mature_else_body@2",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1098": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1099": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.is_accruing_yield",
+      "params": {},
+      "block": "is_accruing_yield",
+      "stack_in": [],
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1101": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1102": {
+      "op": "bytec_3 // \"maturity\"",
+      "defined_out": [
+        "\"maturity\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"maturity\""
+      ]
+    },
+    "1103": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1104": {
+      "error": "check self.maturity exists",
+      "op": "assert // check self.maturity exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1105": {
+      "op": "<",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1106": {
+      "op": "bz is_accruing_yield_else_body@2",
+      "stack_out": []
+    },
+    "1109": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "1110": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1111": {
+      "block": "is_accruing_yield_else_body@2",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1112": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1113": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.get_token_info",
+      "params": {},
+      "block": "get_token_info",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1114": {
+      "op": "bytec 6 // \"name\"",
+      "defined_out": [
+        "\"name\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"name\""
+      ]
+    },
+    "1116": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1117": {
+      "error": "check self.name exists",
+      "op": "assert // check self.name exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1118": {
+      "op": "dup",
+      "defined_out": [
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "1119": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "length%0#0"
+      ]
+    },
+    "1120": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "1121": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "1124": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1125": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0"
+      ]
+    },
+    "1126": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "encoded_value%0#0",
+        "0"
+      ]
+    },
+    "1127": {
+      "op": "bytec 7 // \"symbol\"",
+      "defined_out": [
+        "\"symbol\"",
+        "0",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "0",
+        "\"symbol\""
+      ]
+    },
+    "1129": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "encoded_value%0#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1130": {
+      "error": "check self.symbol exists",
+      "op": "assert // check self.symbol exists",
+      "stack_out": [
+        "encoded_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1131": {
+      "op": "dup",
+      "defined_out": [
+        "encoded_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%1#0 (copy)"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%1#0 (copy)"
+      ]
+    },
+    "1132": {
+      "op": "len",
+      "defined_out": [
+        "encoded_value%0#0",
+        "length%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "maybe_value%1#0",
+        "length%1#0"
+      ]
+    },
+    "1133": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%1#0",
+        "encoded_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "maybe_value%1#0",
+        "as_bytes%1#0"
+      ]
+    },
+    "1134": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "encoded_value%0#0",
+        "length_uint16%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "maybe_value%1#0",
+        "length_uint16%1#0"
+      ]
+    },
+    "1137": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_value%0#0",
+        "length_uint16%1#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1138": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0"
+      ]
+    },
+    "1139": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "0"
+      ]
+    },
+    "1140": {
+      "op": "bytec 8 // \"decimals\"",
+      "defined_out": [
+        "\"decimals\"",
+        "0",
+        "encoded_value%0#0",
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "0",
+        "\"decimals\""
+      ]
+    },
+    "1142": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1143": {
+      "error": "check self.decimals exists",
+      "op": "assert // check self.decimals exists",
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "1144": {
+      "op": "itob",
+      "defined_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "1145": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "0"
+      ]
+    },
+    "1146": {
+      "op": "bytec_2 // \"total_supply\"",
+      "defined_out": [
+        "\"total_supply\"",
+        "0",
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "0",
+        "\"total_supply\""
+      ]
+    },
+    "1147": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "maybe_exists%3#0",
+        "maybe_value%3#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "1148": {
+      "error": "check self.total_supply exists",
+      "op": "assert // check self.total_supply exists",
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "1149": {
+      "op": "itob",
+      "defined_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "1150": {
+      "op": "dig 3",
+      "defined_out": [
+        "encoded_value%0#0",
+        "encoded_value%0#0 (copy)",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_value%0#0 (copy)"
+      ]
+    },
+    "1152": {
+      "op": "len",
+      "defined_out": [
+        "data_length%0#0",
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "data_length%0#0"
+      ]
+    },
+    "1153": {
+      "op": "pushint 20 // 20",
+      "defined_out": [
+        "20",
+        "data_length%0#0",
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "data_length%0#0",
+        "20"
+      ]
+    },
+    "1155": {
+      "op": "+",
+      "defined_out": [
+        "current_tail_offset%1#0",
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "current_tail_offset%1#0"
+      ]
+    },
+    "1156": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%3#0",
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "as_bytes%3#0"
+      ]
+    },
+    "1157": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "offset_as_uint16%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "offset_as_uint16%1#0"
+      ]
+    },
+    "1160": {
+      "op": "pushbytes 0x0014",
+      "defined_out": [
+        "0x0014",
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "offset_as_uint16%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "offset_as_uint16%1#0",
+        "0x0014"
+      ]
+    },
+    "1164": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0x0014",
+        "offset_as_uint16%1#0"
+      ]
+    },
+    "1165": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "1166": {
+      "op": "uncover 2",
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%1#0",
+        "encoded_tuple_buffer%2#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "1168": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "val_as_bytes%1#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "1169": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "encoded_tuple_buffer%3#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "1170": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0",
+        "encoded_value%0#0",
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_value%1#0",
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "1171": {
+      "op": "uncover 2",
+      "stack_out": [
+        "encoded_value%1#0",
+        "encoded_tuple_buffer%4#0",
+        "encoded_value%0#0"
+      ]
+    },
+    "1173": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%5#0",
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%1#0",
+        "encoded_tuple_buffer%5#0"
+      ]
+    },
+    "1174": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_tuple_buffer%5#0",
+        "encoded_value%1#0"
+      ]
+    },
+    "1175": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%6#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%6#0"
+      ]
+    },
+    "1176": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1177": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.get_yield_status",
+      "params": {},
+      "block": "get_yield_status",
+      "stack_in": [],
+      "op": "proto 0 1"
+    },
+    "1180": {
+      "op": "global LatestTimestamp"
+    },
+    "1182": {
+      "op": "dup"
+    },
+    "1183": {
+      "op": "intc_0 // 0"
+    },
+    "1184": {
+      "op": "bytec_3 // \"maturity\"",
+      "defined_out": [
+        "\"maturity\"",
+        "0",
+        "current_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "0",
+        "\"maturity\""
+      ]
+    },
+    "1185": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1186": {
+      "op": "swap",
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "maybe_exists%0#0",
+        "maturity_time#0"
+      ]
+    },
+    "1187": {
+      "op": "dup",
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "maybe_exists%0#0",
+        "maturity_time#0",
+        "maturity_time#0 (copy)"
+      ]
+    },
+    "1188": {
+      "op": "cover 2",
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0",
+        "maturity_time#0"
+      ]
+    },
+    "1190": {
+      "op": "cover 3",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1192": {
+      "error": "check self.maturity exists",
+      "op": "assert // check self.maturity exists",
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "current_time#0",
+        "maturity_time#0"
+      ]
+    },
+    "1193": {
+      "op": "<",
+      "defined_out": [
+        "current_time#0",
+        "is_accruing#0",
+        "maturity_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0"
+      ]
+    },
+    "1194": {
+      "op": "dup",
+      "defined_out": [
+        "current_time#0",
+        "is_accruing#0",
+        "maturity_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "is_accruing#0"
+      ]
+    },
+    "1195": {
+      "op": "bz get_yield_status_ternary_false@2",
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0"
+      ]
+    },
+    "1198": {
+      "op": "frame_dig 1",
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "maturity_time#0"
+      ]
+    },
+    "1200": {
+      "op": "frame_dig 0",
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "maturity_time#0",
+        "current_time#0"
+      ]
+    },
+    "1202": {
+      "op": "-",
+      "defined_out": [
+        "current_time#0",
+        "is_accruing#0",
+        "maturity_time#0",
+        "time_to_maturity#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "time_to_maturity#0"
+      ]
+    },
+    "1203": {
+      "block": "get_yield_status_ternary_merge@3",
+      "stack_in": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "time_to_maturity#0"
+      ],
+      "op": "frame_dig 2",
+      "defined_out": [
+        "is_accruing#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "time_to_maturity#0",
+        "is_accruing#0"
+      ]
+    },
+    "1205": {
+      "op": "itob",
+      "defined_out": [
+        "is_accruing#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "time_to_maturity#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "1206": {
+      "op": "swap",
+      "defined_out": [
+        "is_accruing#0",
+        "time_to_maturity#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "val_as_bytes%0#0",
+        "time_to_maturity#0"
+      ]
+    },
+    "1207": {
+      "op": "itob",
+      "defined_out": [
+        "is_accruing#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "1208": {
+      "op": "frame_dig 1",
+      "defined_out": [
+        "is_accruing#0",
+        "maturity_time#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "maturity_time#0"
+      ]
+    },
+    "1210": {
+      "op": "itob",
+      "defined_out": [
+        "is_accruing#0",
+        "maturity_time#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "1211": {
+      "op": "cover 2",
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "1213": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%2#0",
+        "is_accruing#0",
+        "maturity_time#0",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "val_as_bytes%2#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "1214": {
+      "op": "swap",
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "encoded_tuple_buffer%2#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "1215": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "is_accruing#0",
+        "maturity_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "1216": {
+      "op": "frame_bury 0"
+    },
+    "1218": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1219": {
+      "block": "get_yield_status_ternary_false@2",
+      "stack_in": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "time_to_maturity#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "is_accruing#0",
+        "time_to_maturity#0"
+      ]
+    },
+    "1220": {
+      "op": "b get_yield_status_ternary_merge@3"
+    },
+    "1223": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.approve",
+      "params": {
+        "spender#0": "bytes",
+        "amount#0": "uint64"
+      },
+      "block": "approve",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "1226": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1228": {
+      "op": "bytec 5 // \"allowance\"",
+      "defined_out": [
+        "\"allowance\"",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "\"allowance\""
+      ]
+    },
+    "1230": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"allowance\"",
+        "amount#0 (copy)",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "\"allowance\"",
+        "amount#0 (copy)"
+      ]
+    },
+    "1232": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "1233": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "1235": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1236": {
+      "op": "pushbytes 0x417070726f76616c20736574202d20416d6f756e743a20",
+      "defined_out": [
+        "0x417070726f76616c20736574202d20416d6f756e743a20",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0",
+        "0x417070726f76616c20736574202d20416d6f756e743a20"
+      ]
+    },
+    "1261": {
+      "op": "swap",
+      "stack_out": [
+        "0x417070726f76616c20736574202d20416d6f756e743a20",
+        "tmp%1#0"
+      ]
+    },
+    "1262": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "1263": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1264": {
+      "op": "pushbytes \"Approval set successfully\"",
+      "defined_out": [
+        "\"Approval set successfully\""
+      ],
+      "stack_out": [
+        "\"Approval set successfully\""
+      ]
+    },
+    "1291": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1292": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.get_allowance",
+      "params": {
+        "owner#0": "bytes",
+        "spender#0": "bytes"
+      },
+      "block": "get_allowance",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "1295": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1297": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1298": {
+      "op": "bytec 5 // \"allowance\"",
+      "defined_out": [
+        "\"allowance\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"allowance\""
+      ]
+    },
+    "1300": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1301": {
+      "error": "check self.allowance exists for account",
+      "op": "assert // check self.allowance exists for account",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1302": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1303": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.transfer_from",
+      "params": {
+        "from_addr#0": "bytes",
+        "to#0": "bytes",
+        "amount#0": "uint64"
+      },
+      "block": "transfer_from",
+      "stack_in": [],
+      "op": "proto 3 1"
+    },
+    "1306": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "amount#0 (copy)"
+      ],
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "1308": {
+      "error": "Amount must be positive",
+      "op": "assert // Amount must be positive",
+      "stack_out": []
+    },
+    "1309": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1311": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0",
+        "0"
+      ]
+    },
+    "1312": {
+      "op": "bytec 5 // \"allowance\"",
+      "defined_out": [
+        "\"allowance\"",
+        "0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0",
+        "0",
+        "\"allowance\""
+      ]
+    },
+    "1314": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_allowance#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1315": {
+      "error": "check self.allowance exists for account",
+      "op": "assert // check self.allowance exists for account",
+      "stack_out": [
+        "current_allowance#0"
+      ]
+    },
+    "1316": {
+      "op": "dup",
+      "defined_out": [
+        "current_allowance#0",
+        "current_allowance#0 (copy)"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "current_allowance#0 (copy)"
+      ]
+    },
+    "1317": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "current_allowance#0",
+        "current_allowance#0 (copy)",
+        "amount#0 (copy)"
+      ]
+    },
+    "1319": {
+      "op": ">=",
+      "defined_out": [
+        "current_allowance#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "tmp%2#0"
+      ]
+    },
+    "1320": {
+      "error": "Insufficient allowance",
+      "op": "assert // Insufficient allowance",
+      "stack_out": [
+        "current_allowance#0"
+      ]
+    },
+    "1321": {
+      "op": "txn Sender",
+      "defined_out": [
+        "current_allowance#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "tmp%3#0"
+      ]
+    },
+    "1323": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_allowance#0",
+        "tmp%3#0",
+        "0"
+      ]
+    },
+    "1324": {
+      "op": "bytec_1 // \"balance\"",
+      "defined_out": [
+        "\"balance\"",
+        "0",
+        "current_allowance#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "tmp%3#0",
+        "0",
+        "\"balance\""
+      ]
+    },
+    "1325": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_allowance#0",
+        "maybe_exists%1#0",
+        "sender_balance#0"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "sender_balance#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1326": {
+      "error": "check self.balance exists for account",
+      "op": "assert // check self.balance exists for account",
+      "stack_out": [
+        "current_allowance#0",
+        "sender_balance#0"
+      ]
+    },
+    "1327": {
+      "op": "dup",
+      "defined_out": [
+        "current_allowance#0",
+        "sender_balance#0",
+        "sender_balance#0 (copy)"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "sender_balance#0",
+        "sender_balance#0 (copy)"
+      ]
+    },
+    "1328": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "current_allowance#0",
+        "sender_balance#0",
+        "sender_balance#0 (copy)",
+        "amount#0 (copy)"
+      ]
+    },
+    "1330": {
+      "op": ">=",
+      "defined_out": [
+        "current_allowance#0",
+        "sender_balance#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "sender_balance#0",
+        "tmp%4#0"
+      ]
+    },
+    "1331": {
+      "error": "Insufficient balance",
+      "op": "assert // Insufficient balance",
+      "stack_out": [
+        "current_allowance#0",
+        "sender_balance#0"
+      ]
+    },
+    "1332": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "current_allowance#0",
+        "sender_balance#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "1334": {
+      "op": "-",
+      "defined_out": [
+        "current_allowance#0",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "materialized_values%0#0"
+      ]
+    },
+    "1335": {
+      "op": "txn Sender",
+      "defined_out": [
+        "current_allowance#0",
+        "materialized_values%0#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "current_allowance#0",
+        "materialized_values%0#0",
+        "tmp%5#0"
+      ]
+    },
+    "1337": {
+      "op": "bytec_1 // \"balance\"",
+      "stack_out": [
+        "current_allowance#0",
+        "materialized_values%0#0",
+        "tmp%5#0",
+        "\"balance\""
+      ]
+    },
+    "1338": {
+      "op": "uncover 2",
+      "stack_out": [
+        "current_allowance#0",
+        "tmp%5#0",
+        "\"balance\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "1340": {
+      "op": "app_local_put",
+      "stack_out": [
+        "current_allowance#0"
+      ]
+    },
+    "1341": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "current_allowance#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "1343": {
+      "op": "-",
+      "defined_out": [
+        "materialized_values%1#0"
+      ],
+      "stack_out": [
+        "materialized_values%1#0"
+      ]
+    },
+    "1344": {
+      "op": "txn Sender",
+      "defined_out": [
+        "materialized_values%1#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "materialized_values%1#0",
+        "tmp%6#0"
+      ]
+    },
+    "1346": {
+      "op": "bytec 5 // \"allowance\"",
+      "stack_out": [
+        "materialized_values%1#0",
+        "tmp%6#0",
+        "\"allowance\""
+      ]
+    },
+    "1348": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%6#0",
+        "\"allowance\"",
+        "materialized_values%1#0"
+      ]
+    },
+    "1350": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "1351": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "1353": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "1354": {
+      "op": "pushbytes 0x546f6b656e73207472616e736665727265642066726f6d202d20416d6f756e743a20",
+      "defined_out": [
+        "0x546f6b656e73207472616e736665727265642066726f6d202d20416d6f756e743a20",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "0x546f6b656e73207472616e736665727265642066726f6d202d20416d6f756e743a20"
+      ]
+    },
+    "1390": {
+      "op": "swap",
+      "stack_out": [
+        "0x546f6b656e73207472616e736665727265642066726f6d202d20416d6f756e743a20",
+        "tmp%7#0"
+      ]
+    },
+    "1391": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "1392": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1393": {
+      "op": "pushbytes \"Tokens transferred successfully\"",
+      "defined_out": [
+        "\"Tokens transferred successfully\""
+      ],
+      "stack_out": [
+        "\"Tokens transferred successfully\""
+      ]
+    },
+    "1426": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1427": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.calculate_yield_value",
+      "params": {
+        "base_amount#0": "uint64",
+        "yield_rate#0": "uint64"
+      },
+      "block": "calculate_yield_value",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "1430": {
+      "op": "global LatestTimestamp"
+    },
+    "1432": {
+      "op": "dup"
+    },
+    "1433": {
+      "op": "intc_0 // 0"
+    },
+    "1434": {
+      "op": "bytec_3 // \"maturity\"",
+      "defined_out": [
+        "\"maturity\"",
+        "0",
+        "current_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "0",
+        "\"maturity\""
+      ]
+    },
+    "1435": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1436": {
+      "op": "swap",
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "maybe_exists%0#0",
+        "maturity_time#0"
+      ]
+    },
+    "1437": {
+      "op": "dup",
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "maybe_exists%0#0",
+        "maturity_time#0",
+        "maturity_time#0 (copy)"
+      ]
+    },
+    "1438": {
+      "op": "cover 2",
+      "stack_out": [
+        "current_time#0",
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0",
+        "maturity_time#0"
+      ]
+    },
+    "1440": {
+      "op": "cover 3",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "current_time#0",
+        "maturity_time#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1442": {
+      "error": "check self.maturity exists",
+      "op": "assert // check self.maturity exists",
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "current_time#0",
+        "maturity_time#0"
+      ]
+    },
+    "1443": {
+      "op": ">=",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "tmp%0#0"
+      ]
+    },
+    "1444": {
+      "op": "bz calculate_yield_value_after_if_else@2",
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0"
+      ]
+    },
+    "1447": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "0"
+      ]
+    },
+    "1448": {
+      "op": "frame_bury 0"
+    },
+    "1450": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1451": {
+      "block": "calculate_yield_value_after_if_else@2",
+      "stack_in": [
+        "current_time#0",
+        "maturity_time#0"
+      ],
+      "op": "frame_dig 1",
+      "defined_out": [
+        "maturity_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "maturity_time#0"
+      ]
+    },
+    "1453": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "maturity_time#0",
+        "current_time#0"
+      ]
+    },
+    "1455": {
+      "op": "-",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "time_remaining#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "time_remaining#0"
+      ]
+    },
+    "1456": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "base_amount#0 (copy)",
+        "current_time#0",
+        "maturity_time#0",
+        "time_remaining#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "time_remaining#0",
+        "base_amount#0 (copy)"
+      ]
+    },
+    "1458": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "base_amount#0 (copy)",
+        "current_time#0",
+        "maturity_time#0",
+        "time_remaining#0",
+        "yield_rate#0 (copy)"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "time_remaining#0",
+        "base_amount#0 (copy)",
+        "yield_rate#0 (copy)"
+      ]
+    },
+    "1460": {
+      "op": "*",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "time_remaining#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "time_remaining#0",
+        "tmp%1#0"
+      ]
+    },
+    "1461": {
+      "op": "*",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "tmp%2#0"
+      ]
+    },
+    "1462": {
+      "op": "pushint 315360000000 // 315360000000",
+      "defined_out": [
+        "315360000000",
+        "current_time#0",
+        "maturity_time#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "tmp%2#0",
+        "315360000000"
+      ]
+    },
+    "1469": {
+      "op": "/",
+      "defined_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "yield_value#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "maturity_time#0",
+        "yield_value#0"
+      ]
+    },
+    "1470": {
+      "op": "frame_bury 0"
+    },
+    "1472": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1473": {
+      "subroutine": "smart_contracts.yt_token.contract.YTToken.update_owner",
+      "params": {
+        "new_owner#0": "bytes"
+      },
+      "block": "update_owner",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "1476": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1478": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1479": {
+      "op": "bytec 4 // \"owner\"",
+      "defined_out": [
+        "\"owner\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"owner\""
+      ]
+    },
+    "1481": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1482": {
+      "error": "check self.owner exists",
+      "op": "assert // check self.owner exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1483": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1484": {
+      "error": "Only owner can update",
+      "op": "assert // Only owner can update",
+      "stack_out": []
+    },
+    "1485": {
+      "op": "bytec 4 // \"owner\"",
+      "stack_out": [
+        "\"owner\""
+      ]
+    },
+    "1487": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"owner\"",
+        "new_owner#0 (copy)"
+      ],
+      "stack_out": [
+        "\"owner\"",
+        "new_owner#0 (copy)"
+      ]
+    },
+    "1489": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "1490": {
+      "op": "pushbytes 0x4f776e65722075706461746564",
+      "defined_out": [
+        "0x4f776e65722075706461746564"
+      ],
+      "stack_out": [
+        "0x4f776e65722075706461746564"
+      ]
+    },
+    "1505": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1506": {
+      "op": "pushbytes \"Owner updated successfully\"",
+      "defined_out": [
+        "\"Owner updated successfully\""
+      ],
+      "stack_out": [
+        "\"Owner updated successfully\""
+      ]
+    },
+    "1534": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}

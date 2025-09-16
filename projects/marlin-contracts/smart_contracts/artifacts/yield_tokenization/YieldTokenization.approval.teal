@@ -1,0 +1,802 @@
+#pragma version 10
+#pragma typetrack false
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.__algopy_entrypoint_with_init() -> uint64:
+main:
+    intcblock 0 1
+    bytecblock 0x151f7c75 "is_paused" "sy_balance" "pt_balance" "admin" "maturity_count" "yt_balance" 0x204d617475726974793a20 0x50726f746f636f6c20706175736564 0x50726f746f636f6c20756e706175736564
+    // smart_contracts/yield_tokenization/contract.py:35
+    // class YieldTokenization(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@15
+    pushbytess 0x0d0b3158 0xd6d28f04 0xcf0861d9 0x5f618fc6 0x8d542277 0x5299e0c4 0xfe0caf8a 0x4cc793c6 0xb3e6b45e 0x6560eddd // method "initialize(string,string)string", method "create_maturity(uint64)string", method "split_tokens(uint64,uint64)string", method "redeem_tokens(uint64,uint64)string", method "get_user_balances(byte[])(uint64,uint64,uint64)", method "get_maturity_count()uint64", method "is_protocol_paused()uint64", method "pause_protocol()string", method "unpause_protocol()string", method "deposit_sy_tokens(uint64)string"
+    txna ApplicationArgs 0
+    match main_initialize_route@5 main_create_maturity_route@6 main_split_tokens_route@7 main_redeem_tokens_route@8 main_get_user_balances_route@9 main_get_maturity_count_route@10 main_is_protocol_paused_route@11 main_pause_protocol_route@12 main_unpause_protocol_route@13 main_deposit_sy_tokens_route@14
+
+main_after_if_else@17:
+    // smart_contracts/yield_tokenization/contract.py:35
+    // class YieldTokenization(ARC4Contract):
+    intc_0 // 0
+    return
+
+main_deposit_sy_tokens_route@14:
+    // smart_contracts/yield_tokenization/contract.py:176
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yield_tokenization/contract.py:35
+    // class YieldTokenization(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/yield_tokenization/contract.py:176
+    // @arc4.abimethod
+    callsub deposit_sy_tokens
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_unpause_protocol_route@13:
+    // smart_contracts/yield_tokenization/contract.py:167
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub unpause_protocol
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_pause_protocol_route@12:
+    // smart_contracts/yield_tokenization/contract.py:158
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub pause_protocol
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_is_protocol_paused_route@11:
+    // smart_contracts/yield_tokenization/contract.py:153
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub is_protocol_paused
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_maturity_count_route@10:
+    // smart_contracts/yield_tokenization/contract.py:148
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_maturity_count
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_user_balances_route@9:
+    // smart_contracts/yield_tokenization/contract.py:137
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yield_tokenization/contract.py:35
+    // class YieldTokenization(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    // smart_contracts/yield_tokenization/contract.py:137
+    // @arc4.abimethod(readonly=True)
+    callsub get_user_balances
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_redeem_tokens_route@8:
+    // smart_contracts/yield_tokenization/contract.py:115
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yield_tokenization/contract.py:35
+    // class YieldTokenization(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/yield_tokenization/contract.py:115
+    // @arc4.abimethod
+    callsub redeem_tokens
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_split_tokens_route@7:
+    // smart_contracts/yield_tokenization/contract.py:92
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yield_tokenization/contract.py:35
+    // class YieldTokenization(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/yield_tokenization/contract.py:92
+    // @arc4.abimethod
+    callsub split_tokens
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_create_maturity_route@6:
+    // smart_contracts/yield_tokenization/contract.py:77
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yield_tokenization/contract.py:35
+    // class YieldTokenization(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/yield_tokenization/contract.py:77
+    // @arc4.abimethod
+    callsub create_maturity
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_initialize_route@5:
+    // smart_contracts/yield_tokenization/contract.py:54
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yield_tokenization/contract.py:35
+    // class YieldTokenization(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    extract 2 0
+    // smart_contracts/yield_tokenization/contract.py:54
+    // @arc4.abimethod
+    callsub initialize
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_bare_routing@15:
+    // smart_contracts/yield_tokenization/contract.py:35
+    // class YieldTokenization(ARC4Contract):
+    txn OnCompletion
+    bnz main_after_if_else@17
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_1 // 1
+    return
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.initialize(base_name: bytes, base_symbol: bytes) -> bytes:
+initialize:
+    // smart_contracts/yield_tokenization/contract.py:54-59
+    // @arc4.abimethod
+    // def initialize(
+    //     self,
+    //     base_name: String,
+    //     base_symbol: String,
+    // ) -> String:
+    proto 2 1
+    // smart_contracts/yield_tokenization/contract.py:61
+    // assert Txn.sender == Global.creator_address, "Only creator can initialize"
+    txn Sender
+    global CreatorAddress
+    ==
+    assert // Only creator can initialize
+    // smart_contracts/yield_tokenization/contract.py:63
+    // self.admin.value = Txn.sender.bytes
+    bytec 4 // "admin"
+    txn Sender
+    app_global_put
+    // smart_contracts/yield_tokenization/contract.py:64
+    // self.base_name.value = base_name
+    pushbytes "base_name"
+    frame_dig -2
+    app_global_put
+    // smart_contracts/yield_tokenization/contract.py:65
+    // self.base_symbol.value = base_symbol
+    pushbytes "base_symbol"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/yield_tokenization/contract.py:66
+    // self.is_paused.value = UInt64(0)
+    bytec_1 // "is_paused"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/yield_tokenization/contract.py:67
+    // self.maturity_count.value = UInt64(0)
+    bytec 5 // "maturity_count"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/yield_tokenization/contract.py:68
+    // self.maturities.value = Bytes(b"")
+    pushbytess "maturities" 0x // "maturities", 0x
+    app_global_put
+    // smart_contracts/yield_tokenization/contract.py:70-71
+    // # Create initial 30-day maturity (30 * 24 * 60 * 60 = 2592000 seconds)
+    // initial_maturity = Global.latest_timestamp + UInt64(2592000)
+    global LatestTimestamp
+    pushint 2592000 // 2592000
+    +
+    // smart_contracts/yield_tokenization/contract.py:72
+    // self._create_maturity_internal(initial_maturity)
+    callsub _create_maturity_internal
+    // smart_contracts/yield_tokenization/contract.py:74
+    // log(b"YieldTokenization initialized")
+    pushbytes 0x5969656c64546f6b656e697a6174696f6e20696e697469616c697a6564
+    log
+    // smart_contracts/yield_tokenization/contract.py:75
+    // return String("Protocol initialized successfully")
+    pushbytes "Protocol initialized successfully"
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.create_maturity(maturity_timestamp: uint64) -> bytes:
+create_maturity:
+    // smart_contracts/yield_tokenization/contract.py:77-78
+    // @arc4.abimethod
+    // def create_maturity(self, maturity_timestamp: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/yield_tokenization/contract.py:80
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can create maturity"
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can create maturity
+    // smart_contracts/yield_tokenization/contract.py:81
+    // assert maturity_timestamp > Global.latest_timestamp, "Maturity must be in future"
+    frame_dig -1
+    global LatestTimestamp
+    >
+    assert // Maturity must be in future
+    // smart_contracts/yield_tokenization/contract.py:82
+    // assert self.is_paused.value == UInt64(0), "Protocol is paused"
+    intc_0 // 0
+    bytec_1 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // Protocol is paused
+    // smart_contracts/yield_tokenization/contract.py:84-85
+    // # Check if maturity already exists (simplified check)
+    // assert not self._maturity_exists(maturity_timestamp), "Maturity already exists"
+    frame_dig -1
+    callsub _maturity_exists
+    !
+    assert // Maturity already exists
+    // smart_contracts/yield_tokenization/contract.py:87
+    // self._create_maturity_internal(maturity_timestamp)
+    frame_dig -1
+    callsub _create_maturity_internal
+    // smart_contracts/yield_tokenization/contract.py:89
+    // log(b"New maturity created: " + op.itob(maturity_timestamp))
+    frame_dig -1
+    itob
+    pushbytes 0x4e6577206d6174757269747920637265617465643a20
+    swap
+    concat
+    log
+    // smart_contracts/yield_tokenization/contract.py:90
+    // return String("Maturity created successfully")
+    pushbytes "Maturity created successfully"
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.split_tokens(amount: uint64, maturity: uint64) -> bytes:
+split_tokens:
+    // smart_contracts/yield_tokenization/contract.py:92-97
+    // @arc4.abimethod
+    // def split_tokens(
+    //     self,
+    //     amount: UInt64,
+    //     maturity: UInt64,
+    // ) -> String:
+    proto 2 1
+    // smart_contracts/yield_tokenization/contract.py:99
+    // assert self.is_paused.value == UInt64(0), "Protocol is paused"
+    intc_0 // 0
+    bytec_1 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // Protocol is paused
+    // smart_contracts/yield_tokenization/contract.py:100
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -2
+    assert // Amount must be positive
+    // smart_contracts/yield_tokenization/contract.py:101
+    // assert self._maturity_exists(maturity), "Maturity not found"
+    frame_dig -1
+    callsub _maturity_exists
+    assert // Maturity not found
+    // smart_contracts/yield_tokenization/contract.py:103-104
+    // # Check user has sufficient SY balance
+    // current_sy_balance = self.user_sy_balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "sy_balance"
+    app_local_get_ex
+    assert // check self.user_sy_balance exists for account
+    // smart_contracts/yield_tokenization/contract.py:105
+    // assert current_sy_balance >= amount, "Insufficient SY balance"
+    dup
+    frame_dig -2
+    >=
+    assert // Insufficient SY balance
+    // smart_contracts/yield_tokenization/contract.py:107-108
+    // # Update balances
+    // self.user_sy_balance[Txn.sender] = current_sy_balance - amount
+    frame_dig -2
+    -
+    txn Sender
+    bytec_2 // "sy_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/yield_tokenization/contract.py:109
+    // self.user_pt_balance[Txn.sender] = self.user_pt_balance[Txn.sender] + amount
+    txn Sender
+    intc_0 // 0
+    bytec_3 // "pt_balance"
+    app_local_get_ex
+    assert // check self.user_pt_balance exists for account
+    frame_dig -2
+    +
+    txn Sender
+    bytec_3 // "pt_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/yield_tokenization/contract.py:110
+    // self.user_yt_balance[Txn.sender] = self.user_yt_balance[Txn.sender] + amount
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "yt_balance"
+    app_local_get_ex
+    assert // check self.user_yt_balance exists for account
+    frame_dig -2
+    +
+    txn Sender
+    bytec 6 // "yt_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/yield_tokenization/contract.py:112
+    // log(b"Tokens split - Amount: " + op.itob(amount) + b" Maturity: " + op.itob(maturity))
+    frame_dig -2
+    itob
+    pushbytes 0x546f6b656e732073706c6974202d20416d6f756e743a20
+    swap
+    concat
+    bytec 7 // 0x204d617475726974793a20
+    concat
+    frame_dig -1
+    itob
+    concat
+    log
+    // smart_contracts/yield_tokenization/contract.py:113
+    // return String("Tokens split successfully")
+    pushbytes "Tokens split successfully"
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.redeem_tokens(amount: uint64, maturity: uint64) -> bytes:
+redeem_tokens:
+    // smart_contracts/yield_tokenization/contract.py:115-120
+    // @arc4.abimethod
+    // def redeem_tokens(
+    //     self,
+    //     amount: UInt64,
+    //     maturity: UInt64,
+    // ) -> String:
+    proto 2 1
+    // smart_contracts/yield_tokenization/contract.py:122
+    // assert self.is_paused.value == UInt64(0), "Protocol is paused"
+    intc_0 // 0
+    bytec_1 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // Protocol is paused
+    // smart_contracts/yield_tokenization/contract.py:123
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -2
+    assert // Amount must be positive
+    // smart_contracts/yield_tokenization/contract.py:124
+    // assert Global.latest_timestamp >= maturity, "Maturity not reached"
+    global LatestTimestamp
+    frame_dig -1
+    >=
+    assert // Maturity not reached
+    // smart_contracts/yield_tokenization/contract.py:126-127
+    // # Check user has sufficient PT balance
+    // current_pt_balance = self.user_pt_balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_3 // "pt_balance"
+    app_local_get_ex
+    assert // check self.user_pt_balance exists for account
+    // smart_contracts/yield_tokenization/contract.py:128
+    // assert current_pt_balance >= amount, "Insufficient PT balance"
+    dup
+    frame_dig -2
+    >=
+    assert // Insufficient PT balance
+    // smart_contracts/yield_tokenization/contract.py:130-131
+    // # Update balances
+    // self.user_pt_balance[Txn.sender] = current_pt_balance - amount
+    frame_dig -2
+    -
+    txn Sender
+    bytec_3 // "pt_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/yield_tokenization/contract.py:132
+    // self.user_sy_balance[Txn.sender] = self.user_sy_balance[Txn.sender] + amount
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "sy_balance"
+    app_local_get_ex
+    assert // check self.user_sy_balance exists for account
+    frame_dig -2
+    +
+    txn Sender
+    bytec_2 // "sy_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/yield_tokenization/contract.py:134
+    // log(b"Tokens redeemed - Amount: " + op.itob(amount) + b" Maturity: " + op.itob(maturity))
+    frame_dig -2
+    itob
+    pushbytes 0x546f6b656e732072656465656d6564202d20416d6f756e743a20
+    swap
+    concat
+    bytec 7 // 0x204d617475726974793a20
+    concat
+    frame_dig -1
+    itob
+    concat
+    log
+    // smart_contracts/yield_tokenization/contract.py:135
+    // return String("Tokens redeemed successfully")
+    pushbytes "Tokens redeemed successfully"
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.get_user_balances(user: bytes) -> bytes:
+get_user_balances:
+    // smart_contracts/yield_tokenization/contract.py:137-138
+    // @arc4.abimethod(readonly=True)
+    // def get_user_balances(self, user: Bytes) -> arc4.Tuple[arc4.UInt64, arc4.UInt64, arc4.UInt64]:
+    proto 1 1
+    // smart_contracts/yield_tokenization/contract.py:143
+    // arc4.UInt64(self.user_sy_balance[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "sy_balance"
+    app_local_get_ex
+    assert // check self.user_sy_balance exists for account
+    itob
+    // smart_contracts/yield_tokenization/contract.py:144
+    // arc4.UInt64(self.user_pt_balance[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec_3 // "pt_balance"
+    app_local_get_ex
+    assert // check self.user_pt_balance exists for account
+    itob
+    // smart_contracts/yield_tokenization/contract.py:145
+    // arc4.UInt64(self.user_yt_balance[Txn.sender])
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "yt_balance"
+    app_local_get_ex
+    assert // check self.user_yt_balance exists for account
+    itob
+    // smart_contracts/yield_tokenization/contract.py:140-146
+    // # Note: In production, would need proper user lookup
+    // # For simplicity, returning sender's balances
+    // return arc4.Tuple((
+    //     arc4.UInt64(self.user_sy_balance[Txn.sender]),
+    //     arc4.UInt64(self.user_pt_balance[Txn.sender]),
+    //     arc4.UInt64(self.user_yt_balance[Txn.sender])
+    // ))
+    cover 2
+    concat
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.get_maturity_count() -> uint64:
+get_maturity_count:
+    // smart_contracts/yield_tokenization/contract.py:151
+    // return self.maturity_count.value
+    intc_0 // 0
+    bytec 5 // "maturity_count"
+    app_global_get_ex
+    assert // check self.maturity_count exists
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.is_protocol_paused() -> uint64:
+is_protocol_paused:
+    // smart_contracts/yield_tokenization/contract.py:156
+    // return self.is_paused.value
+    intc_0 // 0
+    bytec_1 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.pause_protocol() -> bytes:
+pause_protocol:
+    // smart_contracts/yield_tokenization/contract.py:161
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can pause"
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can pause
+    // smart_contracts/yield_tokenization/contract.py:162
+    // self.is_paused.value = UInt64(1)
+    bytec_1 // "is_paused"
+    intc_1 // 1
+    app_global_put
+    // smart_contracts/yield_tokenization/contract.py:164
+    // log(b"Protocol paused")
+    bytec 8 // 0x50726f746f636f6c20706175736564
+    log
+    // smart_contracts/yield_tokenization/contract.py:165
+    // return String("Protocol paused")
+    bytec 8 // "Protocol paused"
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.unpause_protocol() -> bytes:
+unpause_protocol:
+    // smart_contracts/yield_tokenization/contract.py:170
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can unpause"
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can unpause
+    // smart_contracts/yield_tokenization/contract.py:171
+    // self.is_paused.value = UInt64(0)
+    bytec_1 // "is_paused"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/yield_tokenization/contract.py:173
+    // log(b"Protocol unpaused")
+    bytec 9 // 0x50726f746f636f6c20756e706175736564
+    log
+    // smart_contracts/yield_tokenization/contract.py:174
+    // return String("Protocol unpaused")
+    bytec 9 // "Protocol unpaused"
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization.deposit_sy_tokens(amount: uint64) -> bytes:
+deposit_sy_tokens:
+    // smart_contracts/yield_tokenization/contract.py:176-177
+    // @arc4.abimethod
+    // def deposit_sy_tokens(self, amount: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/yield_tokenization/contract.py:179
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/yield_tokenization/contract.py:181
+    // self.user_sy_balance[Txn.sender] = self.user_sy_balance[Txn.sender] + amount
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "sy_balance"
+    app_local_get_ex
+    assert // check self.user_sy_balance exists for account
+    frame_dig -1
+    +
+    txn Sender
+    bytec_2 // "sy_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/yield_tokenization/contract.py:183
+    // log(b"SY tokens deposited - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x535920746f6b656e73206465706f7369746564202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/yield_tokenization/contract.py:184
+    // return String("SY tokens deposited successfully")
+    pushbytes "SY tokens deposited successfully"
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization._create_maturity_internal(maturity_timestamp: uint64) -> void:
+_create_maturity_internal:
+    // smart_contracts/yield_tokenization/contract.py:186-187
+    // @subroutine
+    // def _create_maturity_internal(self, maturity_timestamp: UInt64) -> None:
+    proto 1 0
+    // smart_contracts/yield_tokenization/contract.py:189-190
+    // # Increment maturity count
+    // current_count = self.maturity_count.value
+    intc_0 // 0
+    bytec 5 // "maturity_count"
+    app_global_get_ex
+    assert // check self.maturity_count exists
+    // smart_contracts/yield_tokenization/contract.py:191
+    // self.maturity_count.value = current_count + UInt64(1)
+    intc_1 // 1
+    +
+    bytec 5 // "maturity_count"
+    swap
+    app_global_put
+    retsub
+
+
+// smart_contracts.yield_tokenization.contract.YieldTokenization._maturity_exists(maturity_timestamp: uint64) -> uint64:
+_maturity_exists:
+    // smart_contracts/yield_tokenization/contract.py:196-197
+    // @subroutine
+    // def _maturity_exists(self, maturity_timestamp: UInt64) -> bool:
+    proto 1 1
+    // smart_contracts/yield_tokenization/contract.py:203
+    // maturity_timestamp > Global.latest_timestamp and
+    frame_dig -1
+    global LatestTimestamp
+    >
+    // smart_contracts/yield_tokenization/contract.py:203-204
+    // maturity_timestamp > Global.latest_timestamp and
+    // maturity_timestamp <= Global.latest_timestamp + one_year
+    bz _maturity_exists_bool_false@3
+    // smart_contracts/yield_tokenization/contract.py:204
+    // maturity_timestamp <= Global.latest_timestamp + one_year
+    global LatestTimestamp
+    // smart_contracts/yield_tokenization/contract.py:199-201
+    // # Simplified check - in production would check against stored maturities
+    // # For now, assume maturity exists if it's reasonable (within 1 year)
+    // one_year = UInt64(365 * 24 * 60 * 60)
+    pushint 31536000 // 31536000
+    // smart_contracts/yield_tokenization/contract.py:204
+    // maturity_timestamp <= Global.latest_timestamp + one_year
+    +
+    frame_dig -1
+    >=
+    // smart_contracts/yield_tokenization/contract.py:203-204
+    // maturity_timestamp > Global.latest_timestamp and
+    // maturity_timestamp <= Global.latest_timestamp + one_year
+    bz _maturity_exists_bool_false@3
+    intc_1 // 1
+    // smart_contracts/yield_tokenization/contract.py:202-205
+    // return (
+    //     maturity_timestamp > Global.latest_timestamp and
+    //     maturity_timestamp <= Global.latest_timestamp + one_year
+    // )
+    retsub
+
+_maturity_exists_bool_false@3:
+    intc_0 // 0
+    // smart_contracts/yield_tokenization/contract.py:202-205
+    // return (
+    //     maturity_timestamp > Global.latest_timestamp and
+    //     maturity_timestamp <= Global.latest_timestamp + one_year
+    // )
+    retsub

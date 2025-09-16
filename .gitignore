@@ -121,12 +121,35 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Algorand specific sensitive files
+*.mnemonic
+*mnemonic*
+private_keys/
+keys/
+wallets/
+*.wallet
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Algorand node data
+data/
+kmd-*/
+goal.log
+
+# Local configuration files that might contain secrets
+config.local.*
+local_config.*
+secrets.*
 
 # Spyder project settings
 .spyderproject

@@ -1,0 +1,1099 @@
+#pragma version 10
+#pragma typetrack false
+
+// smart_contracts.staking_dapp.contract.StakingDapp.__algopy_entrypoint_with_init() -> uint64:
+main:
+    intcblock 0 1
+    bytecblock 0x151f7c75 "total_staked" "staked_amount" "is_paused" "reward_balance" "reward_amount" "reward_interval" "last_reward_time" "admin" "total_rewards_distributed" "precision_factor" 0x5374616b696e6720706175736564 0x5374616b696e6720756e706175736564
+    txn ApplicationID
+    bnz main_after_if_else@2
+    // smart_contracts/staking_dapp/contract.py:42-43
+    // # Reward constants
+    // self.reward_amount = UInt64(5)  # 5 tokens per interval
+    bytec 5 // "reward_amount"
+    pushint 5 // 5
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:44
+    // self.reward_interval = UInt64(10)  # 10 seconds
+    bytec 6 // "reward_interval"
+    pushint 10 // 10
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:45
+    // self.precision_factor = UInt64(1000000000)  # 10^9 for precision
+    bytec 10 // "precision_factor"
+    pushint 1000000000 // 1000000000
+    app_global_put
+
+main_after_if_else@2:
+    // smart_contracts/staking_dapp/contract.py:30
+    // class StakingDapp(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@19
+    pushbytess 0x0d0b3158 0xb4e2b487 0x2bef4a4d 0x54616de1 0x717057cd 0x43b15f88 0xdd36e45d 0x308f4a8a 0xf54d74e9 0x4d4815e7 0x66dc396a 0x230c80df 0x6cc537f2 0xdc494e03 // method "initialize(string,string)string", method "stake(uint64)string", method "unstake(uint64)string", method "claim_rewards()string", method "calculate_pending_rewards()uint64", method "get_user_info()(uint64,uint64,uint64)", method "get_staking_info()(uint64,uint64,uint64,uint64)", method "get_reward_rate()uint64", method "update_reward_parameters(uint64,uint64)string", method "emergency_withdraw()string", method "pause_staking()string", method "unpause_staking()string", method "is_staking_paused()uint64", method "compound_rewards()string"
+    txna ApplicationArgs 0
+    match main_initialize_route@5 main_stake_route@6 main_unstake_route@7 main_claim_rewards_route@8 main_calculate_pending_rewards_route@9 main_get_user_info_route@10 main_get_staking_info_route@11 main_get_reward_rate_route@12 main_update_reward_parameters_route@13 main_emergency_withdraw_route@14 main_pause_staking_route@15 main_unpause_staking_route@16 main_is_staking_paused_route@17 main_compound_rewards_route@18
+
+main_after_if_else@21:
+    // smart_contracts/staking_dapp/contract.py:30
+    // class StakingDapp(ARC4Contract):
+    intc_0 // 0
+    return
+
+main_compound_rewards_route@18:
+    // smart_contracts/staking_dapp/contract.py:255
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub compound_rewards
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_is_staking_paused_route@17:
+    // smart_contracts/staking_dapp/contract.py:217
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub is_staking_paused
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_unpause_staking_route@16:
+    // smart_contracts/staking_dapp/contract.py:208
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub unpause_staking
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_pause_staking_route@15:
+    // smart_contracts/staking_dapp/contract.py:199
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub pause_staking
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_emergency_withdraw_route@14:
+    // smart_contracts/staking_dapp/contract.py:186
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub emergency_withdraw
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_update_reward_parameters_route@13:
+    // smart_contracts/staking_dapp/contract.py:166
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/staking_dapp/contract.py:30
+    // class StakingDapp(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/staking_dapp/contract.py:166
+    // @arc4.abimethod
+    callsub update_reward_parameters
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_reward_rate_route@12:
+    // smart_contracts/staking_dapp/contract.py:160
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_reward_rate
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_staking_info_route@11:
+    // smart_contracts/staking_dapp/contract.py:150
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_staking_info
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_user_info_route@10:
+    // smart_contracts/staking_dapp/contract.py:138
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_user_info
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_calculate_pending_rewards_route@9:
+    // smart_contracts/staking_dapp/contract.py:133
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub calculate_pending_rewards
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_claim_rewards_route@8:
+    // smart_contracts/staking_dapp/contract.py:113
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub claim_rewards
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_unstake_route@7:
+    // smart_contracts/staking_dapp/contract.py:91
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/staking_dapp/contract.py:30
+    // class StakingDapp(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/staking_dapp/contract.py:91
+    // @arc4.abimethod
+    callsub unstake
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_stake_route@6:
+    // smart_contracts/staking_dapp/contract.py:71
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/staking_dapp/contract.py:30
+    // class StakingDapp(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/staking_dapp/contract.py:71
+    // @arc4.abimethod
+    callsub stake
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_initialize_route@5:
+    // smart_contracts/staking_dapp/contract.py:52
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/staking_dapp/contract.py:30
+    // class StakingDapp(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    extract 2 0
+    // smart_contracts/staking_dapp/contract.py:52
+    // @arc4.abimethod
+    callsub initialize
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_bare_routing@19:
+    // smart_contracts/staking_dapp/contract.py:30
+    // class StakingDapp(ARC4Contract):
+    txn OnCompletion
+    bnz main_after_if_else@21
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_1 // 1
+    return
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.initialize(reward_name: bytes, reward_symbol: bytes) -> bytes:
+initialize:
+    // smart_contracts/staking_dapp/contract.py:52-57
+    // @arc4.abimethod
+    // def initialize(
+    //     self,
+    //     reward_name: String,
+    //     reward_symbol: String,
+    // ) -> String:
+    proto 2 1
+    // smart_contracts/staking_dapp/contract.py:59
+    // assert Txn.sender == Global.creator_address, "Only creator can initialize"
+    txn Sender
+    global CreatorAddress
+    ==
+    assert // Only creator can initialize
+    // smart_contracts/staking_dapp/contract.py:61
+    // self.admin.value = Txn.sender.bytes
+    bytec 8 // "admin"
+    txn Sender
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:62
+    // self.reward_name.value = reward_name
+    pushbytes "reward_name"
+    frame_dig -2
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:63
+    // self.reward_symbol.value = reward_symbol
+    pushbytes "reward_symbol"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:64
+    // self.is_paused.value = UInt64(0)
+    bytec_3 // "is_paused"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:65
+    // self.total_staked.value = UInt64(0)
+    bytec_1 // "total_staked"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:66
+    // self.total_rewards_distributed.value = UInt64(0)
+    bytec 9 // "total_rewards_distributed"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:68
+    // log(b"StakingDapp initialized")
+    pushbytes 0x5374616b696e674461707020696e697469616c697a6564
+    log
+    // smart_contracts/staking_dapp/contract.py:69
+    // return String("Staking contract initialized successfully")
+    pushbytes "Staking contract initialized successfully"
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.stake(amount: uint64) -> bytes:
+stake:
+    // smart_contracts/staking_dapp/contract.py:71-72
+    // @arc4.abimethod
+    // def stake(self, amount: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/staking_dapp/contract.py:74
+    // assert self.is_paused.value == UInt64(0), "Staking is paused"
+    intc_0 // 0
+    bytec_3 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // Staking is paused
+    // smart_contracts/staking_dapp/contract.py:75
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/staking_dapp/contract.py:77-78
+    // # Update pending rewards before changing stake
+    // self._update_rewards()
+    callsub _update_rewards
+    // smart_contracts/staking_dapp/contract.py:80-81
+    // # Update staking amounts
+    // current_staked = self.staked_amount[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "staked_amount"
+    app_local_get_ex
+    assert // check self.staked_amount exists for account
+    // smart_contracts/staking_dapp/contract.py:82
+    // self.staked_amount[Txn.sender] = current_staked + amount
+    frame_dig -1
+    +
+    txn Sender
+    bytec_2 // "staked_amount"
+    uncover 2
+    app_local_put
+    // smart_contracts/staking_dapp/contract.py:83
+    // self.total_staked.value = self.total_staked.value + amount
+    intc_0 // 0
+    bytec_1 // "total_staked"
+    app_global_get_ex
+    assert // check self.total_staked exists
+    frame_dig -1
+    +
+    bytec_1 // "total_staked"
+    swap
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:85-86
+    // # Update last reward time
+    // self.last_reward_time[Txn.sender] = Global.latest_timestamp
+    txn Sender
+    bytec 7 // "last_reward_time"
+    global LatestTimestamp
+    app_local_put
+    // smart_contracts/staking_dapp/contract.py:88
+    // log(b"Tokens staked - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x546f6b656e73207374616b6564202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/staking_dapp/contract.py:89
+    // return String("Tokens staked successfully")
+    pushbytes "Tokens staked successfully"
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.unstake(amount: uint64) -> bytes:
+unstake:
+    // smart_contracts/staking_dapp/contract.py:91-92
+    // @arc4.abimethod
+    // def unstake(self, amount: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/staking_dapp/contract.py:94
+    // assert self.is_paused.value == UInt64(0), "Staking is paused"
+    intc_0 // 0
+    bytec_3 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // Staking is paused
+    // smart_contracts/staking_dapp/contract.py:95
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/staking_dapp/contract.py:97
+    // current_staked = self.staked_amount[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "staked_amount"
+    app_local_get_ex
+    assert // check self.staked_amount exists for account
+    // smart_contracts/staking_dapp/contract.py:98
+    // assert current_staked >= amount, "Insufficient staked amount"
+    dup
+    frame_dig -1
+    >=
+    assert // Insufficient staked amount
+    // smart_contracts/staking_dapp/contract.py:100-101
+    // # Update pending rewards before changing stake
+    // self._update_rewards()
+    callsub _update_rewards
+    // smart_contracts/staking_dapp/contract.py:103-104
+    // # Update staking amounts
+    // self.staked_amount[Txn.sender] = current_staked - amount
+    frame_dig -1
+    -
+    txn Sender
+    bytec_2 // "staked_amount"
+    uncover 2
+    app_local_put
+    // smart_contracts/staking_dapp/contract.py:105
+    // self.total_staked.value = self.total_staked.value - amount
+    intc_0 // 0
+    bytec_1 // "total_staked"
+    app_global_get_ex
+    assert // check self.total_staked exists
+    frame_dig -1
+    -
+    bytec_1 // "total_staked"
+    swap
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:107-108
+    // # Update last reward time
+    // self.last_reward_time[Txn.sender] = Global.latest_timestamp
+    txn Sender
+    bytec 7 // "last_reward_time"
+    global LatestTimestamp
+    app_local_put
+    // smart_contracts/staking_dapp/contract.py:110
+    // log(b"Tokens unstaked - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x546f6b656e7320756e7374616b6564202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/staking_dapp/contract.py:111
+    // return String("Tokens unstaked successfully")
+    pushbytes "Tokens unstaked successfully"
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.claim_rewards() -> bytes:
+claim_rewards:
+    // smart_contracts/staking_dapp/contract.py:116
+    // assert self.is_paused.value == UInt64(0), "Staking is paused"
+    intc_0 // 0
+    bytec_3 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // Staking is paused
+    // smart_contracts/staking_dapp/contract.py:118-119
+    // # Update pending rewards
+    // self._update_rewards()
+    callsub _update_rewards
+    // smart_contracts/staking_dapp/contract.py:121
+    // current_reward_balance = self.reward_balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "reward_balance"
+    app_local_get_ex
+    assert // check self.reward_balance exists for account
+    // smart_contracts/staking_dapp/contract.py:122
+    // assert current_reward_balance > UInt64(0), "No rewards to claim"
+    dup
+    assert // No rewards to claim
+    // smart_contracts/staking_dapp/contract.py:124-125
+    // # Reset reward balance
+    // self.reward_balance[Txn.sender] = UInt64(0)
+    txn Sender
+    bytec 4 // "reward_balance"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/staking_dapp/contract.py:127-128
+    // # Update total rewards distributed
+    // self.total_rewards_distributed.value = self.total_rewards_distributed.value + current_reward_balance
+    intc_0 // 0
+    bytec 9 // "total_rewards_distributed"
+    app_global_get_ex
+    assert // check self.total_rewards_distributed exists
+    dig 1
+    +
+    bytec 9 // "total_rewards_distributed"
+    swap
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:130
+    // log(b"Rewards claimed - Amount: " + op.itob(current_reward_balance))
+    itob
+    pushbytes 0x5265776172647320636c61696d6564202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/staking_dapp/contract.py:131
+    // return String("Rewards claimed successfully")
+    pushbytes "Rewards claimed successfully"
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.calculate_pending_rewards() -> uint64:
+calculate_pending_rewards:
+    // smart_contracts/staking_dapp/contract.py:136
+    // return self._calculate_reward_internal()
+    callsub _calculate_reward_internal
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.get_user_info() -> bytes:
+get_user_info:
+    // smart_contracts/staking_dapp/contract.py:141
+    // pending_rewards = self._calculate_reward_internal()
+    callsub _calculate_reward_internal
+    // smart_contracts/staking_dapp/contract.py:142
+    // total_rewards = self.reward_balance[Txn.sender] + pending_rewards
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "reward_balance"
+    app_local_get_ex
+    assert // check self.reward_balance exists for account
+    +
+    // smart_contracts/staking_dapp/contract.py:145
+    // arc4.UInt64(self.staked_amount[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "staked_amount"
+    app_local_get_ex
+    assert // check self.staked_amount exists for account
+    itob
+    // smart_contracts/staking_dapp/contract.py:146
+    // arc4.UInt64(self.reward_balance[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "reward_balance"
+    app_local_get_ex
+    assert // check self.reward_balance exists for account
+    itob
+    // smart_contracts/staking_dapp/contract.py:147
+    // arc4.UInt64(total_rewards)
+    uncover 2
+    itob
+    // smart_contracts/staking_dapp/contract.py:144-148
+    // return arc4.Tuple((
+    //     arc4.UInt64(self.staked_amount[Txn.sender]),
+    //     arc4.UInt64(self.reward_balance[Txn.sender]),
+    //     arc4.UInt64(total_rewards)
+    // ))
+    cover 2
+    concat
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.get_staking_info() -> bytes:
+get_staking_info:
+    // smart_contracts/staking_dapp/contract.py:154
+    // arc4.UInt64(self.total_staked.value),
+    intc_0 // 0
+    bytec_1 // "total_staked"
+    app_global_get_ex
+    assert // check self.total_staked exists
+    itob
+    // smart_contracts/staking_dapp/contract.py:155
+    // arc4.UInt64(self.total_rewards_distributed.value),
+    intc_0 // 0
+    bytec 9 // "total_rewards_distributed"
+    app_global_get_ex
+    assert // check self.total_rewards_distributed exists
+    itob
+    // smart_contracts/staking_dapp/contract.py:156
+    // arc4.UInt64(self.reward_amount),
+    intc_0 // 0
+    bytec 5 // "reward_amount"
+    app_global_get_ex
+    assert // check self.reward_amount exists
+    itob
+    // smart_contracts/staking_dapp/contract.py:157
+    // arc4.UInt64(self.reward_interval)
+    intc_0 // 0
+    bytec 6 // "reward_interval"
+    app_global_get_ex
+    assert // check self.reward_interval exists
+    itob
+    // smart_contracts/staking_dapp/contract.py:153-158
+    // return arc4.Tuple((
+    //     arc4.UInt64(self.total_staked.value),
+    //     arc4.UInt64(self.total_rewards_distributed.value),
+    //     arc4.UInt64(self.reward_amount),
+    //     arc4.UInt64(self.reward_interval)
+    // ))
+    uncover 3
+    uncover 3
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.get_reward_rate() -> uint64:
+get_reward_rate:
+    // smart_contracts/staking_dapp/contract.py:163-164
+    // # Returns rewards per second scaled by precision factor
+    // return (self.reward_amount * self.precision_factor) // self.reward_interval
+    intc_0 // 0
+    bytec 5 // "reward_amount"
+    app_global_get_ex
+    assert // check self.reward_amount exists
+    intc_0 // 0
+    bytec 10 // "precision_factor"
+    app_global_get_ex
+    assert // check self.precision_factor exists
+    *
+    intc_0 // 0
+    bytec 6 // "reward_interval"
+    app_global_get_ex
+    assert // check self.reward_interval exists
+    /
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.update_reward_parameters(new_reward_amount: uint64, new_reward_interval: uint64) -> bytes:
+update_reward_parameters:
+    // smart_contracts/staking_dapp/contract.py:166-171
+    // @arc4.abimethod
+    // def update_reward_parameters(
+    //     self,
+    //     new_reward_amount: UInt64,
+    //     new_reward_interval: UInt64,
+    // ) -> String:
+    proto 2 1
+    // smart_contracts/staking_dapp/contract.py:173
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can update"
+    txn Sender
+    intc_0 // 0
+    bytec 8 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can update
+    // smart_contracts/staking_dapp/contract.py:174
+    // assert new_reward_amount > UInt64(0), "Reward amount must be positive"
+    frame_dig -2
+    assert // Reward amount must be positive
+    // smart_contracts/staking_dapp/contract.py:175
+    // assert new_reward_interval > UInt64(0), "Reward interval must be positive"
+    frame_dig -1
+    assert // Reward interval must be positive
+    // smart_contracts/staking_dapp/contract.py:180
+    // self.reward_amount = new_reward_amount
+    bytec 5 // "reward_amount"
+    frame_dig -2
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:181
+    // self.reward_interval = new_reward_interval
+    bytec 6 // "reward_interval"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:183
+    // log(b"Reward parameters updated")
+    pushbytes 0x52657761726420706172616d65746572732075706461746564
+    log
+    // smart_contracts/staking_dapp/contract.py:184
+    // return String("Reward parameters updated successfully")
+    pushbytes "Reward parameters updated successfully"
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.emergency_withdraw() -> bytes:
+emergency_withdraw:
+    // smart_contracts/staking_dapp/contract.py:189
+    // current_staked = self.staked_amount[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "staked_amount"
+    app_local_get_ex
+    assert // check self.staked_amount exists for account
+    // smart_contracts/staking_dapp/contract.py:190
+    // assert current_staked > UInt64(0), "No tokens staked"
+    dup
+    assert // No tokens staked
+    // smart_contracts/staking_dapp/contract.py:192-193
+    // # Reset user's stake without updating rewards
+    // self.staked_amount[Txn.sender] = UInt64(0)
+    txn Sender
+    bytec_2 // "staked_amount"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/staking_dapp/contract.py:194
+    // self.total_staked.value = self.total_staked.value - current_staked
+    intc_0 // 0
+    bytec_1 // "total_staked"
+    app_global_get_ex
+    assert // check self.total_staked exists
+    dig 1
+    -
+    bytec_1 // "total_staked"
+    swap
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:196
+    // log(b"Emergency withdrawal - Amount: " + op.itob(current_staked))
+    itob
+    pushbytes 0x456d657267656e6379207769746864726177616c202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/staking_dapp/contract.py:197
+    // return String("Emergency withdrawal completed")
+    pushbytes "Emergency withdrawal completed"
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.pause_staking() -> bytes:
+pause_staking:
+    // smart_contracts/staking_dapp/contract.py:202
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can pause"
+    txn Sender
+    intc_0 // 0
+    bytec 8 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can pause
+    // smart_contracts/staking_dapp/contract.py:203
+    // self.is_paused.value = UInt64(1)
+    bytec_3 // "is_paused"
+    intc_1 // 1
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:205
+    // log(b"Staking paused")
+    bytec 11 // 0x5374616b696e6720706175736564
+    log
+    // smart_contracts/staking_dapp/contract.py:206
+    // return String("Staking paused")
+    bytec 11 // "Staking paused"
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.unpause_staking() -> bytes:
+unpause_staking:
+    // smart_contracts/staking_dapp/contract.py:211
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can unpause"
+    txn Sender
+    intc_0 // 0
+    bytec 8 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can unpause
+    // smart_contracts/staking_dapp/contract.py:212
+    // self.is_paused.value = UInt64(0)
+    bytec_3 // "is_paused"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:214
+    // log(b"Staking unpaused")
+    bytec 12 // 0x5374616b696e6720756e706175736564
+    log
+    // smart_contracts/staking_dapp/contract.py:215
+    // return String("Staking unpaused")
+    bytec 12 // "Staking unpaused"
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.is_staking_paused() -> uint64:
+is_staking_paused:
+    // smart_contracts/staking_dapp/contract.py:220
+    // return self.is_paused.value
+    intc_0 // 0
+    bytec_3 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp._update_rewards() -> void:
+_update_rewards:
+    // smart_contracts/staking_dapp/contract.py:222-223
+    // @subroutine
+    // def _update_rewards(self) -> None:
+    proto 0 0
+    // smart_contracts/staking_dapp/contract.py:225
+    // pending_reward = self._calculate_reward_internal()
+    callsub _calculate_reward_internal
+    dup
+    // smart_contracts/staking_dapp/contract.py:227
+    // if pending_reward > UInt64(0):
+    bz _update_rewards_after_if_else@2
+    // smart_contracts/staking_dapp/contract.py:228
+    // current_balance = self.reward_balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "reward_balance"
+    app_local_get_ex
+    assert // check self.reward_balance exists for account
+    // smart_contracts/staking_dapp/contract.py:229
+    // self.reward_balance[Txn.sender] = current_balance + pending_reward
+    frame_dig 0
+    +
+    txn Sender
+    bytec 4 // "reward_balance"
+    uncover 2
+    app_local_put
+
+_update_rewards_after_if_else@2:
+    // smart_contracts/staking_dapp/contract.py:231
+    // self.last_reward_time[Txn.sender] = Global.latest_timestamp
+    txn Sender
+    bytec 7 // "last_reward_time"
+    global LatestTimestamp
+    app_local_put
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp._calculate_reward_internal() -> uint64:
+_calculate_reward_internal:
+    // smart_contracts/staking_dapp/contract.py:233-234
+    // @subroutine
+    // def _calculate_reward_internal(self) -> UInt64:
+    proto 0 1
+    pushbytes ""
+    dup
+    // smart_contracts/staking_dapp/contract.py:236
+    // user_staked = self.staked_amount[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "staked_amount"
+    app_local_get_ex
+    swap
+    dup
+    uncover 2
+    assert // check self.staked_amount exists for account
+    // smart_contracts/staking_dapp/contract.py:238
+    // if user_staked == UInt64(0):
+    bnz _calculate_reward_internal_after_if_else@2
+    // smart_contracts/staking_dapp/contract.py:239
+    // return UInt64(0)
+    intc_0 // 0
+    frame_bury 0
+    retsub
+
+_calculate_reward_internal_after_if_else@2:
+    // smart_contracts/staking_dapp/contract.py:241
+    // last_time = self.last_reward_time[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 7 // "last_reward_time"
+    app_local_get_ex
+    swap
+    dup
+    cover 2
+    frame_bury 1
+    assert // check self.last_reward_time exists for account
+    // smart_contracts/staking_dapp/contract.py:242
+    // current_time = Global.latest_timestamp
+    global LatestTimestamp
+    dup
+    frame_bury 0
+    // smart_contracts/staking_dapp/contract.py:244
+    // if current_time <= last_time:
+    >=
+    bz _calculate_reward_internal_after_if_else@4
+    // smart_contracts/staking_dapp/contract.py:245
+    // return UInt64(0)
+    intc_0 // 0
+    frame_bury 0
+    retsub
+
+_calculate_reward_internal_after_if_else@4:
+    // smart_contracts/staking_dapp/contract.py:247
+    // time_passed = current_time - last_time
+    frame_dig 0
+    frame_dig 1
+    -
+    // smart_contracts/staking_dapp/contract.py:248
+    // intervals = time_passed // self.reward_interval
+    intc_0 // 0
+    bytec 6 // "reward_interval"
+    app_global_get_ex
+    assert // check self.reward_interval exists
+    /
+    // smart_contracts/staking_dapp/contract.py:250-251
+    // # Calculate reward: intervals * reward_amount * user_staked / precision_factor
+    // reward = (intervals * self.reward_amount * user_staked) // self.precision_factor
+    intc_0 // 0
+    bytec 5 // "reward_amount"
+    app_global_get_ex
+    assert // check self.reward_amount exists
+    *
+    frame_dig 2
+    *
+    intc_0 // 0
+    bytec 10 // "precision_factor"
+    app_global_get_ex
+    assert // check self.precision_factor exists
+    /
+    // smart_contracts/staking_dapp/contract.py:253
+    // return reward
+    frame_bury 0
+    retsub
+
+
+// smart_contracts.staking_dapp.contract.StakingDapp.compound_rewards() -> bytes:
+compound_rewards:
+    // smart_contracts/staking_dapp/contract.py:258
+    // assert self.is_paused.value == UInt64(0), "Staking is paused"
+    intc_0 // 0
+    bytec_3 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // Staking is paused
+    // smart_contracts/staking_dapp/contract.py:260-261
+    // # Update pending rewards
+    // self._update_rewards()
+    callsub _update_rewards
+    // smart_contracts/staking_dapp/contract.py:263
+    // current_reward_balance = self.reward_balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "reward_balance"
+    app_local_get_ex
+    assert // check self.reward_balance exists for account
+    // smart_contracts/staking_dapp/contract.py:264
+    // assert current_reward_balance > UInt64(0), "No rewards to compound"
+    dup
+    assert // No rewards to compound
+    // smart_contracts/staking_dapp/contract.py:266-267
+    // # Reset reward balance and add to staked amount
+    // self.reward_balance[Txn.sender] = UInt64(0)
+    txn Sender
+    bytec 4 // "reward_balance"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/staking_dapp/contract.py:268
+    // self.staked_amount[Txn.sender] = self.staked_amount[Txn.sender] + current_reward_balance
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "staked_amount"
+    app_local_get_ex
+    assert // check self.staked_amount exists for account
+    dig 1
+    +
+    txn Sender
+    bytec_2 // "staked_amount"
+    uncover 2
+    app_local_put
+    // smart_contracts/staking_dapp/contract.py:269
+    // self.total_staked.value = self.total_staked.value + current_reward_balance
+    intc_0 // 0
+    bytec_1 // "total_staked"
+    app_global_get_ex
+    assert // check self.total_staked exists
+    dig 1
+    +
+    bytec_1 // "total_staked"
+    swap
+    app_global_put
+    // smart_contracts/staking_dapp/contract.py:271-272
+    // # Update last reward time
+    // self.last_reward_time[Txn.sender] = Global.latest_timestamp
+    txn Sender
+    bytec 7 // "last_reward_time"
+    global LatestTimestamp
+    app_local_put
+    // smart_contracts/staking_dapp/contract.py:274
+    // log(b"Rewards compounded - Amount: " + op.itob(current_reward_balance))
+    itob
+    pushbytes 0x5265776172647320636f6d706f756e646564202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/staking_dapp/contract.py:275
+    // return String("Rewards compounded successfully")
+    pushbytes "Rewards compounded successfully"
+    retsub

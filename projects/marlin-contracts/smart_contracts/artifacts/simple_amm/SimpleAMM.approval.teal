@@ -1,0 +1,1376 @@
+#pragma version 10
+#pragma typetrack false
+
+// smart_contracts.simple_amm.contract.SimpleAMM.__algopy_entrypoint_with_init() -> uint64:
+main:
+    intcblock 0 1 2
+    bytecblock "reserve_a" "reserve_b" 0x151f7c75 "total_liquidity" "is_paused" "liquidity_balance" "token_a_deposited" "token_b_deposited" "fee_rate" "admin" "fee_denominator" 0x20423a20 0x204f75743a20 "Swap completed successfully" 0x414d4d20706175736564 0x414d4d20756e706175736564
+    txn ApplicationID
+    bnz main_after_if_else@2
+    // smart_contracts/simple_amm/contract.py:43-44
+    // # Constants
+    // self.fee_denominator = UInt64(1000)
+    bytec 10 // "fee_denominator"
+    pushint 1000 // 1000
+    app_global_put
+
+main_after_if_else@2:
+    // smart_contracts/simple_amm/contract.py:31
+    // class SimpleAMM(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@17
+    pushbytess 0x897ad1a7 0x68d5e54f 0x6c5e6bcb 0xc5530c9a 0xb5a43eeb 0xb99ac0aa 0xfbe59977 0x4bf55db6 0xb916083a 0x91f12543 0xb8a7f680 0x38609c9b // method "initialize()string", method "add_liquidity(uint64,uint64)string", method "swap_a_for_b(uint64)string", method "swap_b_for_a(uint64)string", method "get_reserves()(uint64,uint64)", method "get_amount_out(uint64,uint64,uint64)uint64", method "get_user_liquidity()(uint64,uint64,uint64)", method "get_pool_info()(uint64,uint64,uint64,uint64)", method "remove_liquidity(uint64)string", method "set_fee_rate(uint64)string", method "pause_amm()string", method "unpause_amm()string"
+    txna ApplicationArgs 0
+    match main_initialize_route@5 main_add_liquidity_route@6 main_swap_a_for_b_route@7 main_swap_b_for_a_route@8 main_get_reserves_route@9 main_get_amount_out_route@10 main_get_user_liquidity_route@11 main_get_pool_info_route@12 main_remove_liquidity_route@13 main_set_fee_rate_route@14 main_pause_amm_route@15 main_unpause_amm_route@16
+
+main_after_if_else@19:
+    // smart_contracts/simple_amm/contract.py:31
+    // class SimpleAMM(ARC4Contract):
+    intc_0 // 0
+    return
+
+main_unpause_amm_route@16:
+    // smart_contracts/simple_amm/contract.py:255
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub unpause_amm
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_pause_amm_route@15:
+    // smart_contracts/simple_amm/contract.py:246
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub pause_amm
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_set_fee_rate_route@14:
+    // smart_contracts/simple_amm/contract.py:234
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/simple_amm/contract.py:31
+    // class SimpleAMM(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/simple_amm/contract.py:234
+    // @arc4.abimethod
+    callsub set_fee_rate
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_remove_liquidity_route@13:
+    // smart_contracts/simple_amm/contract.py:201
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/simple_amm/contract.py:31
+    // class SimpleAMM(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/simple_amm/contract.py:201
+    // @arc4.abimethod
+    callsub remove_liquidity
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_pool_info_route@12:
+    // smart_contracts/simple_amm/contract.py:191
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_pool_info
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_user_liquidity_route@11:
+    // smart_contracts/simple_amm/contract.py:182
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_user_liquidity
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_amount_out_route@10:
+    // smart_contracts/simple_amm/contract.py:172
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/simple_amm/contract.py:31
+    // class SimpleAMM(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    txna ApplicationArgs 3
+    btoi
+    // smart_contracts/simple_amm/contract.py:172
+    // @arc4.abimethod(readonly=True)
+    callsub get_amount_out
+    itob
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_reserves_route@9:
+    // smart_contracts/simple_amm/contract.py:167
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_reserves
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_swap_b_for_a_route@8:
+    // smart_contracts/simple_amm/contract.py:144
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/simple_amm/contract.py:31
+    // class SimpleAMM(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/simple_amm/contract.py:144
+    // @arc4.abimethod
+    callsub swap_b_for_a
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_swap_a_for_b_route@7:
+    // smart_contracts/simple_amm/contract.py:121
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/simple_amm/contract.py:31
+    // class SimpleAMM(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/simple_amm/contract.py:121
+    // @arc4.abimethod
+    callsub swap_a_for_b
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_add_liquidity_route@6:
+    // smart_contracts/simple_amm/contract.py:66
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/simple_amm/contract.py:31
+    // class SimpleAMM(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/simple_amm/contract.py:66
+    // @arc4.abimethod
+    callsub add_liquidity
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_initialize_route@5:
+    // smart_contracts/simple_amm/contract.py:51
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub initialize
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_2 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_bare_routing@17:
+    // smart_contracts/simple_amm/contract.py:31
+    // class SimpleAMM(ARC4Contract):
+    txn OnCompletion
+    bnz main_after_if_else@19
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_1 // 1
+    return
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.initialize() -> bytes:
+initialize:
+    // smart_contracts/simple_amm/contract.py:54
+    // assert Txn.sender == Global.creator_address, "Only creator can initialize"
+    txn Sender
+    global CreatorAddress
+    ==
+    assert // Only creator can initialize
+    // smart_contracts/simple_amm/contract.py:56
+    // self.admin.value = Txn.sender.bytes
+    bytec 9 // "admin"
+    txn Sender
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:57
+    // self.reserve_a.value = UInt64(0)
+    bytec_0 // "reserve_a"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:58
+    // self.reserve_b.value = UInt64(0)
+    bytec_1 // "reserve_b"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:59
+    // self.fee_rate.value = UInt64(3)  # 0.3%
+    bytec 8 // "fee_rate"
+    pushint 3 // 3
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:60
+    // self.is_paused.value = UInt64(0)
+    bytec 4 // "is_paused"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:61
+    // self.total_liquidity.value = UInt64(0)
+    bytec_3 // "total_liquidity"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:63
+    // log(b"SimpleAMM initialized")
+    pushbytes 0x53696d706c65414d4d20696e697469616c697a6564
+    log
+    // smart_contracts/simple_amm/contract.py:64
+    // return String("AMM initialized successfully")
+    pushbytes "AMM initialized successfully"
+    retsub
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.add_liquidity(amount_a: uint64, amount_b: uint64) -> bytes:
+add_liquidity:
+    // smart_contracts/simple_amm/contract.py:66-71
+    // @arc4.abimethod
+    // def add_liquidity(
+    //     self,
+    //     amount_a: UInt64,
+    //     amount_b: UInt64,
+    // ) -> String:
+    proto 2 1
+    pushbytes ""
+    dupn 7
+    // smart_contracts/simple_amm/contract.py:73
+    // assert self.is_paused.value == UInt64(0), "AMM is paused"
+    intc_0 // 0
+    bytec 4 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // AMM is paused
+    // smart_contracts/simple_amm/contract.py:74
+    // assert amount_a > UInt64(0) and amount_b > UInt64(0), "Amounts must be positive"
+    frame_dig -2
+    bz add_liquidity_bool_false@3
+    frame_dig -1
+    bz add_liquidity_bool_false@3
+    intc_1 // 1
+
+add_liquidity_bool_merge@4:
+    // smart_contracts/simple_amm/contract.py:74
+    // assert amount_a > UInt64(0) and amount_b > UInt64(0), "Amounts must be positive"
+    assert // Amounts must be positive
+    // smart_contracts/simple_amm/contract.py:76
+    // current_reserve_a = self.reserve_a.value
+    intc_0 // 0
+    bytec_0 // "reserve_a"
+    app_global_get_ex
+    swap
+    dup
+    cover 2
+    frame_bury 1
+    assert // check self.reserve_a exists
+    // smart_contracts/simple_amm/contract.py:77
+    // current_reserve_b = self.reserve_b.value
+    intc_0 // 0
+    bytec_1 // "reserve_b"
+    app_global_get_ex
+    swap
+    frame_bury 2
+    assert // check self.reserve_b exists
+    // smart_contracts/simple_amm/contract.py:79-80
+    // # For first liquidity provision, accept any ratio
+    // if current_reserve_a == UInt64(0) and current_reserve_b == UInt64(0):
+    bnz add_liquidity_else_body@7
+    frame_dig 2
+    bnz add_liquidity_else_body@7
+    // smart_contracts/simple_amm/contract.py:81
+    // self.reserve_a.value = amount_a
+    bytec_0 // "reserve_a"
+    frame_dig -2
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:82
+    // self.reserve_b.value = amount_b
+    bytec_1 // "reserve_b"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:84-85
+    // # Calculate initial liquidity tokens (geometric mean)
+    // liquidity_tokens = self._sqrt(amount_a * amount_b)
+    frame_dig -2
+    frame_dig -1
+    *
+    dup
+    frame_bury 5
+    // smart_contracts/simple_amm/contract.py:288
+    // if x == UInt64(0):
+    bnz add_liquidity_after_if_else@14
+    // smart_contracts/simple_amm/contract.py:289
+    // return UInt64(0)
+    intc_0 // 0
+
+add_liquidity_after_inlined_smart_contracts.simple_amm.contract.SimpleAMM._sqrt@19:
+    // smart_contracts/simple_amm/contract.py:87
+    // self.liquidity_balance[Txn.sender] = liquidity_tokens
+    txn Sender
+    bytec 5 // "liquidity_balance"
+    dig 2
+    app_local_put
+    // smart_contracts/simple_amm/contract.py:88
+    // self.total_liquidity.value = liquidity_tokens
+    bytec_3 // "total_liquidity"
+    swap
+    app_global_put
+
+add_liquidity_after_if_else@11:
+    // smart_contracts/simple_amm/contract.py:114-115
+    // # Track user deposits
+    // self.token_a_deposited[Txn.sender] = self.token_a_deposited[Txn.sender] + amount_a
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "token_a_deposited"
+    app_local_get_ex
+    assert // check self.token_a_deposited exists for account
+    frame_dig -2
+    +
+    txn Sender
+    bytec 6 // "token_a_deposited"
+    uncover 2
+    app_local_put
+    // smart_contracts/simple_amm/contract.py:116
+    // self.token_b_deposited[Txn.sender] = self.token_b_deposited[Txn.sender] + amount_b
+    txn Sender
+    intc_0 // 0
+    bytec 7 // "token_b_deposited"
+    app_local_get_ex
+    assert // check self.token_b_deposited exists for account
+    frame_dig -1
+    +
+    txn Sender
+    bytec 7 // "token_b_deposited"
+    uncover 2
+    app_local_put
+    // smart_contracts/simple_amm/contract.py:118
+    // log(b"Liquidity added - A: " + op.itob(amount_a) + b" B: " + op.itob(amount_b))
+    frame_dig -2
+    itob
+    pushbytes 0x4c6971756964697479206164646564202d20413a20
+    swap
+    concat
+    bytec 11 // 0x20423a20
+    concat
+    frame_dig -1
+    itob
+    concat
+    log
+    // smart_contracts/simple_amm/contract.py:119
+    // return String("Liquidity added successfully")
+    pushbytes "Liquidity added successfully"
+    frame_bury 0
+    retsub
+
+add_liquidity_after_if_else@14:
+    // smart_contracts/simple_amm/contract.py:293
+    // y = (x + UInt64(1)) // UInt64(2)
+    frame_dig 5
+    dup
+    intc_1 // 1
+    +
+    intc_2 // 2
+    /
+    frame_bury 6
+    // smart_contracts/simple_amm/contract.py:295-296
+    // # Newton's method iterations (limited for gas efficiency)
+    // counter = UInt64(0)
+    intc_0 // 0
+    frame_bury 0
+    frame_bury 7
+
+add_liquidity_while_top@15:
+    // smart_contracts/simple_amm/contract.py:297
+    // while y < z and counter < UInt64(10):
+    frame_dig 6
+    frame_dig 7
+    <
+    bz add_liquidity_after_while@18
+    frame_dig 0
+    pushint 10 // 10
+    <
+    bz add_liquidity_after_while@18
+    // smart_contracts/simple_amm/contract.py:299
+    // y = (x // y + y) // UInt64(2)
+    frame_dig 5
+    frame_dig 6
+    dup
+    cover 2
+    /
+    dig 1
+    +
+    intc_2 // 2
+    /
+    // smart_contracts/simple_amm/contract.py:300
+    // counter = counter + UInt64(1)
+    frame_dig 0
+    intc_1 // 1
+    +
+    frame_bury 0
+    frame_bury 6
+    frame_bury 7
+    b add_liquidity_while_top@15
+
+add_liquidity_after_while@18:
+    frame_dig 7
+    // smart_contracts/simple_amm/contract.py:84-85
+    // # Calculate initial liquidity tokens (geometric mean)
+    // liquidity_tokens = self._sqrt(amount_a * amount_b)
+    b add_liquidity_after_inlined_smart_contracts.simple_amm.contract.SimpleAMM._sqrt@19
+
+add_liquidity_else_body@7:
+    // smart_contracts/simple_amm/contract.py:90-92
+    // # Maintain current ratio for subsequent additions
+    // # Calculate required amounts to maintain ratio
+    // required_b = (amount_a * current_reserve_b) // current_reserve_a
+    frame_dig -2
+    frame_dig 2
+    dup
+    cover 2
+    *
+    frame_dig 1
+    dup
+    cover 2
+    /
+    dup
+    cover 2
+    frame_bury 4
+    // smart_contracts/simple_amm/contract.py:93
+    // required_a = (amount_b * current_reserve_a) // current_reserve_b
+    frame_dig -1
+    *
+    uncover 2
+    /
+    frame_bury 3
+    // smart_contracts/simple_amm/contract.py:95-96
+    // # Use the smaller ratio to avoid over-depositing
+    // if required_b <= amount_b:
+    frame_dig -1
+    <=
+    bz add_liquidity_else_body@9
+    // smart_contracts/simple_amm/contract.py:97-98
+    // # Use amount_a and calculated required_b
+    // self.reserve_a.value = current_reserve_a + amount_a
+    frame_dig 1
+    dup
+    frame_dig -2
+    +
+    bytec_0 // "reserve_a"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:99
+    // self.reserve_b.value = current_reserve_b + required_b
+    frame_dig 2
+    frame_dig 4
+    +
+    bytec_1 // "reserve_b"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:101-102
+    // # Calculate liquidity tokens proportional to contribution
+    // liquidity_tokens = (amount_a * self.total_liquidity.value) // current_reserve_a
+    intc_0 // 0
+    bytec_3 // "total_liquidity"
+    app_global_get_ex
+    assert // check self.total_liquidity exists
+    frame_dig -2
+    *
+    swap
+    /
+
+add_liquidity_after_if_else@10:
+    // smart_contracts/simple_amm/contract.py:111
+    // self.liquidity_balance[Txn.sender] = self.liquidity_balance[Txn.sender] + liquidity_tokens
+    txn Sender
+    intc_0 // 0
+    bytec 5 // "liquidity_balance"
+    app_local_get_ex
+    assert // check self.liquidity_balance exists for account
+    dig 1
+    +
+    txn Sender
+    bytec 5 // "liquidity_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/simple_amm/contract.py:112
+    // self.total_liquidity.value = self.total_liquidity.value + liquidity_tokens
+    intc_0 // 0
+    bytec_3 // "total_liquidity"
+    app_global_get_ex
+    assert // check self.total_liquidity exists
+    +
+    bytec_3 // "total_liquidity"
+    swap
+    app_global_put
+    b add_liquidity_after_if_else@11
+
+add_liquidity_else_body@9:
+    // smart_contracts/simple_amm/contract.py:104-105
+    // # Use amount_b and calculated required_a
+    // self.reserve_a.value = current_reserve_a + required_a
+    frame_dig 1
+    frame_dig 3
+    +
+    bytec_0 // "reserve_a"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:106
+    // self.reserve_b.value = current_reserve_b + amount_b
+    frame_dig 2
+    dup
+    frame_dig -1
+    +
+    bytec_1 // "reserve_b"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:108-109
+    // # Calculate liquidity tokens proportional to contribution
+    // liquidity_tokens = (amount_b * self.total_liquidity.value) // current_reserve_b
+    intc_0 // 0
+    bytec_3 // "total_liquidity"
+    app_global_get_ex
+    assert // check self.total_liquidity exists
+    frame_dig -1
+    *
+    swap
+    /
+    b add_liquidity_after_if_else@10
+
+add_liquidity_bool_false@3:
+    intc_0 // 0
+    b add_liquidity_bool_merge@4
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.swap_a_for_b(amount_in: uint64) -> bytes:
+swap_a_for_b:
+    // smart_contracts/simple_amm/contract.py:121-122
+    // @arc4.abimethod
+    // def swap_a_for_b(self, amount_in: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/simple_amm/contract.py:124
+    // assert self.is_paused.value == UInt64(0), "AMM is paused"
+    intc_0 // 0
+    bytec 4 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // AMM is paused
+    // smart_contracts/simple_amm/contract.py:125
+    // assert amount_in > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/simple_amm/contract.py:127
+    // current_reserve_a = self.reserve_a.value
+    intc_0 // 0
+    bytec_0 // "reserve_a"
+    app_global_get_ex
+    swap
+    dup
+    uncover 2
+    assert // check self.reserve_a exists
+    // smart_contracts/simple_amm/contract.py:128
+    // current_reserve_b = self.reserve_b.value
+    intc_0 // 0
+    bytec_1 // "reserve_b"
+    app_global_get_ex
+    swap
+    cover 2
+    assert // check self.reserve_b exists
+    // smart_contracts/simple_amm/contract.py:130
+    // assert current_reserve_a > UInt64(0) and current_reserve_b > UInt64(0), "Insufficient liquidity"
+    bz swap_a_for_b_bool_false@3
+    frame_dig 1
+    bz swap_a_for_b_bool_false@3
+    intc_1 // 1
+
+swap_a_for_b_bool_merge@4:
+    // smart_contracts/simple_amm/contract.py:130
+    // assert current_reserve_a > UInt64(0) and current_reserve_b > UInt64(0), "Insufficient liquidity"
+    assert // Insufficient liquidity
+    // smart_contracts/simple_amm/contract.py:132-133
+    // # Calculate output amount using constant product formula with fees
+    // amount_out = self._get_amount_out(amount_in, current_reserve_a, current_reserve_b)
+    frame_dig -1
+    frame_dig 0
+    dup
+    cover 2
+    frame_dig 1
+    dup
+    cover 3
+    callsub _get_amount_out
+    // smart_contracts/simple_amm/contract.py:134
+    // assert amount_out > UInt64(0), "Insufficient output amount"
+    dup
+    assert // Insufficient output amount
+    // smart_contracts/simple_amm/contract.py:135
+    // assert amount_out <= current_reserve_b, "Insufficient liquidity"
+    dup
+    dig 2
+    <=
+    assert // Insufficient liquidity
+    // smart_contracts/simple_amm/contract.py:137-138
+    // # Update reserves
+    // self.reserve_a.value = current_reserve_a + amount_in
+    uncover 2
+    frame_dig -1
+    +
+    bytec_0 // "reserve_a"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:139
+    // self.reserve_b.value = current_reserve_b - amount_out
+    swap
+    dig 1
+    -
+    bytec_1 // "reserve_b"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:141
+    // log(b"Swap A->B - In: " + op.itob(amount_in) + b" Out: " + op.itob(amount_out))
+    frame_dig -1
+    itob
+    pushbytes 0x5377617020412d3e42202d20496e3a20
+    swap
+    concat
+    bytec 12 // 0x204f75743a20
+    concat
+    swap
+    itob
+    concat
+    log
+    // smart_contracts/simple_amm/contract.py:142
+    // return String("Swap completed successfully")
+    bytec 13 // "Swap completed successfully"
+    frame_bury 0
+    retsub
+
+swap_a_for_b_bool_false@3:
+    intc_0 // 0
+    b swap_a_for_b_bool_merge@4
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.swap_b_for_a(amount_in: uint64) -> bytes:
+swap_b_for_a:
+    // smart_contracts/simple_amm/contract.py:144-145
+    // @arc4.abimethod
+    // def swap_b_for_a(self, amount_in: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/simple_amm/contract.py:147
+    // assert self.is_paused.value == UInt64(0), "AMM is paused"
+    intc_0 // 0
+    bytec 4 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // AMM is paused
+    // smart_contracts/simple_amm/contract.py:148
+    // assert amount_in > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/simple_amm/contract.py:150
+    // current_reserve_a = self.reserve_a.value
+    intc_0 // 0
+    bytec_0 // "reserve_a"
+    app_global_get_ex
+    swap
+    dup
+    uncover 2
+    assert // check self.reserve_a exists
+    // smart_contracts/simple_amm/contract.py:151
+    // current_reserve_b = self.reserve_b.value
+    intc_0 // 0
+    bytec_1 // "reserve_b"
+    app_global_get_ex
+    swap
+    cover 2
+    assert // check self.reserve_b exists
+    // smart_contracts/simple_amm/contract.py:153
+    // assert current_reserve_a > UInt64(0) and current_reserve_b > UInt64(0), "Insufficient liquidity"
+    bz swap_b_for_a_bool_false@3
+    frame_dig 1
+    bz swap_b_for_a_bool_false@3
+    intc_1 // 1
+
+swap_b_for_a_bool_merge@4:
+    // smart_contracts/simple_amm/contract.py:153
+    // assert current_reserve_a > UInt64(0) and current_reserve_b > UInt64(0), "Insufficient liquidity"
+    assert // Insufficient liquidity
+    // smart_contracts/simple_amm/contract.py:155-156
+    // # Calculate output amount using constant product formula with fees
+    // amount_out = self._get_amount_out(amount_in, current_reserve_b, current_reserve_a)
+    frame_dig -1
+    frame_dig 1
+    dup
+    cover 2
+    frame_dig 0
+    dup
+    cover 3
+    callsub _get_amount_out
+    // smart_contracts/simple_amm/contract.py:157
+    // assert amount_out > UInt64(0), "Insufficient output amount"
+    dup
+    assert // Insufficient output amount
+    // smart_contracts/simple_amm/contract.py:158
+    // assert amount_out <= current_reserve_a, "Insufficient liquidity"
+    dup
+    dig 2
+    <=
+    assert // Insufficient liquidity
+    // smart_contracts/simple_amm/contract.py:160-161
+    // # Update reserves
+    // self.reserve_b.value = current_reserve_b + amount_in
+    uncover 2
+    frame_dig -1
+    +
+    bytec_1 // "reserve_b"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:162
+    // self.reserve_a.value = current_reserve_a - amount_out
+    swap
+    dig 1
+    -
+    bytec_0 // "reserve_a"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:164
+    // log(b"Swap B->A - In: " + op.itob(amount_in) + b" Out: " + op.itob(amount_out))
+    frame_dig -1
+    itob
+    pushbytes 0x5377617020422d3e41202d20496e3a20
+    swap
+    concat
+    bytec 12 // 0x204f75743a20
+    concat
+    swap
+    itob
+    concat
+    log
+    // smart_contracts/simple_amm/contract.py:165
+    // return String("Swap completed successfully")
+    bytec 13 // "Swap completed successfully"
+    frame_bury 0
+    retsub
+
+swap_b_for_a_bool_false@3:
+    intc_0 // 0
+    b swap_b_for_a_bool_merge@4
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.get_reserves() -> bytes:
+get_reserves:
+    // smart_contracts/simple_amm/contract.py:170
+    // return arc4.Tuple((arc4.UInt64(self.reserve_a.value), arc4.UInt64(self.reserve_b.value)))
+    intc_0 // 0
+    bytec_0 // "reserve_a"
+    app_global_get_ex
+    assert // check self.reserve_a exists
+    itob
+    intc_0 // 0
+    bytec_1 // "reserve_b"
+    app_global_get_ex
+    assert // check self.reserve_b exists
+    itob
+    concat
+    retsub
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.get_amount_out(amount_in: uint64, reserve_in: uint64, reserve_out: uint64) -> uint64:
+get_amount_out:
+    // smart_contracts/simple_amm/contract.py:172-178
+    // @arc4.abimethod(readonly=True)
+    // def get_amount_out(
+    //     self,
+    //     amount_in: UInt64,
+    //     reserve_in: UInt64,
+    //     reserve_out: UInt64,
+    // ) -> UInt64:
+    proto 3 1
+    // smart_contracts/simple_amm/contract.py:180
+    // return self._get_amount_out(amount_in, reserve_in, reserve_out)
+    frame_dig -3
+    frame_dig -2
+    frame_dig -1
+    callsub _get_amount_out
+    retsub
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.get_user_liquidity() -> bytes:
+get_user_liquidity:
+    // smart_contracts/simple_amm/contract.py:186
+    // arc4.UInt64(self.liquidity_balance[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec 5 // "liquidity_balance"
+    app_local_get_ex
+    assert // check self.liquidity_balance exists for account
+    itob
+    // smart_contracts/simple_amm/contract.py:187
+    // arc4.UInt64(self.token_a_deposited[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "token_a_deposited"
+    app_local_get_ex
+    assert // check self.token_a_deposited exists for account
+    itob
+    // smart_contracts/simple_amm/contract.py:188
+    // arc4.UInt64(self.token_b_deposited[Txn.sender])
+    txn Sender
+    intc_0 // 0
+    bytec 7 // "token_b_deposited"
+    app_local_get_ex
+    assert // check self.token_b_deposited exists for account
+    itob
+    // smart_contracts/simple_amm/contract.py:185-189
+    // return arc4.Tuple((
+    //     arc4.UInt64(self.liquidity_balance[Txn.sender]),
+    //     arc4.UInt64(self.token_a_deposited[Txn.sender]),
+    //     arc4.UInt64(self.token_b_deposited[Txn.sender])
+    // ))
+    cover 2
+    concat
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.get_pool_info() -> bytes:
+get_pool_info:
+    // smart_contracts/simple_amm/contract.py:195
+    // arc4.UInt64(self.reserve_a.value),
+    intc_0 // 0
+    bytec_0 // "reserve_a"
+    app_global_get_ex
+    assert // check self.reserve_a exists
+    itob
+    // smart_contracts/simple_amm/contract.py:196
+    // arc4.UInt64(self.reserve_b.value),
+    intc_0 // 0
+    bytec_1 // "reserve_b"
+    app_global_get_ex
+    assert // check self.reserve_b exists
+    itob
+    // smart_contracts/simple_amm/contract.py:197
+    // arc4.UInt64(self.total_liquidity.value),
+    intc_0 // 0
+    bytec_3 // "total_liquidity"
+    app_global_get_ex
+    assert // check self.total_liquidity exists
+    itob
+    // smart_contracts/simple_amm/contract.py:198
+    // arc4.UInt64(self.fee_rate.value)
+    intc_0 // 0
+    bytec 8 // "fee_rate"
+    app_global_get_ex
+    assert // check self.fee_rate exists
+    itob
+    // smart_contracts/simple_amm/contract.py:194-199
+    // return arc4.Tuple((
+    //     arc4.UInt64(self.reserve_a.value),
+    //     arc4.UInt64(self.reserve_b.value),
+    //     arc4.UInt64(self.total_liquidity.value),
+    //     arc4.UInt64(self.fee_rate.value)
+    // ))
+    uncover 3
+    uncover 3
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.remove_liquidity(liquidity_amount: uint64) -> bytes:
+remove_liquidity:
+    // smart_contracts/simple_amm/contract.py:201-202
+    // @arc4.abimethod
+    // def remove_liquidity(self, liquidity_amount: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/simple_amm/contract.py:204
+    // assert self.is_paused.value == UInt64(0), "AMM is paused"
+    intc_0 // 0
+    bytec 4 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // AMM is paused
+    // smart_contracts/simple_amm/contract.py:205
+    // assert liquidity_amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/simple_amm/contract.py:207
+    // user_liquidity = self.liquidity_balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 5 // "liquidity_balance"
+    app_local_get_ex
+    assert // check self.liquidity_balance exists for account
+    // smart_contracts/simple_amm/contract.py:208
+    // assert user_liquidity >= liquidity_amount, "Insufficient liquidity balance"
+    dup
+    frame_dig -1
+    >=
+    assert // Insufficient liquidity balance
+    // smart_contracts/simple_amm/contract.py:210
+    // current_reserve_a = self.reserve_a.value
+    intc_0 // 0
+    bytec_0 // "reserve_a"
+    app_global_get_ex
+    assert // check self.reserve_a exists
+    // smart_contracts/simple_amm/contract.py:211
+    // current_reserve_b = self.reserve_b.value
+    intc_0 // 0
+    bytec_1 // "reserve_b"
+    app_global_get_ex
+    assert // check self.reserve_b exists
+    // smart_contracts/simple_amm/contract.py:212
+    // total_liquidity = self.total_liquidity.value
+    intc_0 // 0
+    bytec_3 // "total_liquidity"
+    app_global_get_ex
+    assert // check self.total_liquidity exists
+    // smart_contracts/simple_amm/contract.py:214-215
+    // # Calculate proportional amounts to withdraw
+    // amount_a = (liquidity_amount * current_reserve_a) // total_liquidity
+    frame_dig -1
+    dig 3
+    *
+    dig 1
+    /
+    dup
+    cover 2
+    cover 5
+    // smart_contracts/simple_amm/contract.py:216
+    // amount_b = (liquidity_amount * current_reserve_b) // total_liquidity
+    frame_dig -1
+    dig 3
+    *
+    dig 1
+    /
+    dup
+    cover 6
+    // smart_contracts/simple_amm/contract.py:218-219
+    // # Update reserves and liquidity
+    // self.reserve_a.value = current_reserve_a - amount_a
+    uncover 4
+    dig 3
+    -
+    bytec_0 // "reserve_a"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:220
+    // self.reserve_b.value = current_reserve_b - amount_b
+    uncover 3
+    swap
+    -
+    bytec_1 // "reserve_b"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:221
+    // self.liquidity_balance[Txn.sender] = user_liquidity - liquidity_amount
+    uncover 2
+    frame_dig -1
+    -
+    txn Sender
+    bytec 5 // "liquidity_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/simple_amm/contract.py:222
+    // self.total_liquidity.value = total_liquidity - liquidity_amount
+    frame_dig -1
+    -
+    bytec_3 // "total_liquidity"
+    swap
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:224-225
+    // # Update user deposits
+    // if self.token_a_deposited[Txn.sender] >= amount_a:
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "token_a_deposited"
+    app_local_get_ex
+    assert // check self.token_a_deposited exists for account
+    <=
+    bz remove_liquidity_after_if_else@2
+    // smart_contracts/simple_amm/contract.py:226
+    // self.token_a_deposited[Txn.sender] = self.token_a_deposited[Txn.sender] - amount_a
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "token_a_deposited"
+    app_local_get_ex
+    assert // check self.token_a_deposited exists for account
+    frame_dig 0
+    -
+    txn Sender
+    bytec 6 // "token_a_deposited"
+    uncover 2
+    app_local_put
+
+remove_liquidity_after_if_else@2:
+    // smart_contracts/simple_amm/contract.py:228
+    // if self.token_b_deposited[Txn.sender] >= amount_b:
+    txn Sender
+    intc_0 // 0
+    bytec 7 // "token_b_deposited"
+    app_local_get_ex
+    assert // check self.token_b_deposited exists for account
+    frame_dig 1
+    >=
+    bz remove_liquidity_after_if_else@4
+    // smart_contracts/simple_amm/contract.py:229
+    // self.token_b_deposited[Txn.sender] = self.token_b_deposited[Txn.sender] - amount_b
+    txn Sender
+    intc_0 // 0
+    bytec 7 // "token_b_deposited"
+    app_local_get_ex
+    assert // check self.token_b_deposited exists for account
+    frame_dig 1
+    -
+    txn Sender
+    bytec 7 // "token_b_deposited"
+    uncover 2
+    app_local_put
+
+remove_liquidity_after_if_else@4:
+    // smart_contracts/simple_amm/contract.py:231
+    // log(b"Liquidity removed - A: " + op.itob(amount_a) + b" B: " + op.itob(amount_b))
+    frame_dig 0
+    itob
+    pushbytes 0x4c69717569646974792072656d6f766564202d20413a20
+    swap
+    concat
+    bytec 11 // 0x20423a20
+    concat
+    frame_dig 1
+    itob
+    concat
+    log
+    // smart_contracts/simple_amm/contract.py:232
+    // return String("Liquidity removed successfully")
+    pushbytes "Liquidity removed successfully"
+    frame_bury 0
+    retsub
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.set_fee_rate(new_fee: uint64) -> bytes:
+set_fee_rate:
+    // smart_contracts/simple_amm/contract.py:234-235
+    // @arc4.abimethod
+    // def set_fee_rate(self, new_fee: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/simple_amm/contract.py:237
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can set fee"
+    txn Sender
+    intc_0 // 0
+    bytec 9 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can set fee
+    // smart_contracts/simple_amm/contract.py:238
+    // assert new_fee < self.fee_denominator, "Fee too high"
+    intc_0 // 0
+    bytec 10 // "fee_denominator"
+    app_global_get_ex
+    assert // check self.fee_denominator exists
+    frame_dig -1
+    >
+    assert // Fee too high
+    // smart_contracts/simple_amm/contract.py:240
+    // old_fee = self.fee_rate.value
+    intc_0 // 0
+    bytec 8 // "fee_rate"
+    app_global_get_ex
+    assert // check self.fee_rate exists
+    // smart_contracts/simple_amm/contract.py:241
+    // self.fee_rate.value = new_fee
+    bytec 8 // "fee_rate"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:243
+    // log(b"Fee updated - Old: " + op.itob(old_fee) + b" New: " + op.itob(new_fee))
+    itob
+    pushbytes 0x4665652075706461746564202d204f6c643a20
+    swap
+    concat
+    pushbytes 0x204e65773a20
+    concat
+    frame_dig -1
+    itob
+    concat
+    log
+    // smart_contracts/simple_amm/contract.py:244
+    // return String("Fee rate updated successfully")
+    pushbytes "Fee rate updated successfully"
+    retsub
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.pause_amm() -> bytes:
+pause_amm:
+    // smart_contracts/simple_amm/contract.py:249
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can pause"
+    txn Sender
+    intc_0 // 0
+    bytec 9 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can pause
+    // smart_contracts/simple_amm/contract.py:250
+    // self.is_paused.value = UInt64(1)
+    bytec 4 // "is_paused"
+    intc_1 // 1
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:252
+    // log(b"AMM paused")
+    bytec 14 // 0x414d4d20706175736564
+    log
+    // smart_contracts/simple_amm/contract.py:253
+    // return String("AMM paused")
+    bytec 14 // "AMM paused"
+    retsub
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM.unpause_amm() -> bytes:
+unpause_amm:
+    // smart_contracts/simple_amm/contract.py:258
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can unpause"
+    txn Sender
+    intc_0 // 0
+    bytec 9 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can unpause
+    // smart_contracts/simple_amm/contract.py:259
+    // self.is_paused.value = UInt64(0)
+    bytec 4 // "is_paused"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/simple_amm/contract.py:261
+    // log(b"AMM unpaused")
+    bytec 15 // 0x414d4d20756e706175736564
+    log
+    // smart_contracts/simple_amm/contract.py:262
+    // return String("AMM unpaused")
+    bytec 15 // "AMM unpaused"
+    retsub
+
+
+// smart_contracts.simple_amm.contract.SimpleAMM._get_amount_out(amount_in: uint64, reserve_in: uint64, reserve_out: uint64) -> uint64:
+_get_amount_out:
+    // smart_contracts/simple_amm/contract.py:264-270
+    // @subroutine
+    // def _get_amount_out(
+    //     self,
+    //     amount_in: UInt64,
+    //     reserve_in: UInt64,
+    //     reserve_out: UInt64,
+    // ) -> UInt64:
+    proto 3 1
+    // smart_contracts/simple_amm/contract.py:272
+    // assert amount_in > UInt64(0), "Amount must be positive"
+    frame_dig -3
+    assert // Amount must be positive
+    // smart_contracts/simple_amm/contract.py:273
+    // assert reserve_in > UInt64(0) and reserve_out > UInt64(0), "Insufficient liquidity"
+    frame_dig -2
+    bz _get_amount_out_bool_false@3
+    frame_dig -1
+    bz _get_amount_out_bool_false@3
+    intc_1 // 1
+
+_get_amount_out_bool_merge@4:
+    // smart_contracts/simple_amm/contract.py:273
+    // assert reserve_in > UInt64(0) and reserve_out > UInt64(0), "Insufficient liquidity"
+    assert // Insufficient liquidity
+    // smart_contracts/simple_amm/contract.py:275-276
+    // # Apply fee: amount_in_with_fee = amount_in * (1000 - fee_rate)
+    // amount_in_with_fee = amount_in * (self.fee_denominator - self.fee_rate.value)
+    intc_0 // 0
+    bytec 10 // "fee_denominator"
+    app_global_get_ex
+    assert // check self.fee_denominator exists
+    intc_0 // 0
+    bytec 8 // "fee_rate"
+    app_global_get_ex
+    assert // check self.fee_rate exists
+    dig 1
+    swap
+    -
+    frame_dig -3
+    *
+    // smart_contracts/simple_amm/contract.py:278-280
+    // # Constant product formula: (x + dx) * (y - dy) = x * y
+    // # Solving for dy: dy = (y * dx) / (x + dx)
+    // numerator = amount_in_with_fee * reserve_out
+    dup
+    frame_dig -1
+    *
+    // smart_contracts/simple_amm/contract.py:281
+    // denominator = reserve_in * self.fee_denominator + amount_in_with_fee
+    frame_dig -2
+    uncover 3
+    *
+    uncover 2
+    +
+    // smart_contracts/simple_amm/contract.py:283
+    // return numerator // denominator
+    /
+    retsub
+
+_get_amount_out_bool_false@3:
+    intc_0 // 0
+    b _get_amount_out_bool_merge@4

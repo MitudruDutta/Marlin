@@ -1,0 +1,1383 @@
+#pragma version 10
+#pragma typetrack false
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.__algopy_entrypoint_with_init() -> uint64:
+main:
+    intcblock 0 1 10000
+    bytecblock 0x151f7c75 "conversion_fee" "yt_balance" "admin" "is_paused" "conversion_enabled" "threshold_price" "conversion_executed" "pt_balance" "total_conversions" "user_maturity" "fee_denominator" "oracle_address" "tokenization_address" "amm_address" 0x436f6e76657274657220706175736564 0x436f6e76657274657220756e706175736564
+    txn ApplicationID
+    bnz main_after_if_else@2
+    // smart_contracts/yt_auto_converter/contract.py:44-45
+    // # Constants
+    // self.max_slippage = UInt64(500)  # 5%
+    pushbytes "max_slippage"
+    pushint 500 // 500
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:46
+    // self.fee_denominator = UInt64(10000)
+    bytec 11 // "fee_denominator"
+    intc_2 // 10000
+    app_global_put
+
+main_after_if_else@2:
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@23
+    pushbytess 0x6a69df5d 0x6b9aaf34 0x39e88c59 0x6ad7c302 0xa657e2f9 0x6676d951 0xfe4edfd9 0x6bd1428c 0x54fbec35 0x5991a301 0xc730d22c 0x1af03700 0x452654b4 0xd3282043 0x11638ec2 0xc0205dad 0x69ff0150 0x7161350f // method "initialize(byte[],byte[],byte[])string", method "configure_conversion(uint64,uint64,uint64)string", method "deposit_yt_tokens(uint64)string", method "execute_conversion(byte[],uint64,uint64)string", method "can_execute_conversion(byte[])uint64", method "get_user_config()(uint64,uint64,uint64,uint64)", method "get_user_balances()(uint64,uint64)", method "get_conversion_info()(uint64,uint64,uint64)", method "calculate_conversion_output(uint64)(uint64,uint64)", method "add_maturity(uint64)string", method "remove_maturity()string", method "set_conversion_fee(uint64)string", method "pause_converter()string", method "unpause_converter()string", method "emergency_disable_conversion()string", method "withdraw_pt_tokens(uint64)string", method "get_ai_recommendation(uint64,uint64)(uint64,string)", method "update_addresses(byte[],byte[],byte[])string"
+    txna ApplicationArgs 0
+    match main_initialize_route@5 main_configure_conversion_route@6 main_deposit_yt_tokens_route@7 main_execute_conversion_route@8 main_can_execute_conversion_route@9 main_get_user_config_route@10 main_get_user_balances_route@11 main_get_conversion_info_route@12 main_calculate_conversion_output_route@13 main_add_maturity_route@14 main_remove_maturity_route@15 main_set_conversion_fee_route@16 main_pause_converter_route@17 main_unpause_converter_route@18 main_emergency_disable_conversion_route@19 main_withdraw_pt_tokens_route@20 main_get_ai_recommendation_route@21 main_update_addresses_route@22
+
+main_after_if_else@25:
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    intc_0 // 0
+    return
+
+main_update_addresses_route@22:
+    // smart_contracts/yt_auto_converter/contract.py:312
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    extract 2 0
+    txna ApplicationArgs 3
+    extract 2 0
+    // smart_contracts/yt_auto_converter/contract.py:312
+    // @arc4.abimethod
+    callsub update_addresses
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_ai_recommendation_route@21:
+    // smart_contracts/yt_auto_converter/contract.py:295
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/yt_auto_converter/contract.py:295
+    // @arc4.abimethod(readonly=True)
+    callsub get_ai_recommendation
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_withdraw_pt_tokens_route@20:
+    // smart_contracts/yt_auto_converter/contract.py:268
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/yt_auto_converter/contract.py:268
+    // @arc4.abimethod
+    callsub withdraw_pt_tokens
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_emergency_disable_conversion_route@19:
+    // smart_contracts/yt_auto_converter/contract.py:260
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub emergency_disable_conversion
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_unpause_converter_route@18:
+    // smart_contracts/yt_auto_converter/contract.py:251
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub unpause_converter
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_pause_converter_route@17:
+    // smart_contracts/yt_auto_converter/contract.py:242
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub pause_converter
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_set_conversion_fee_route@16:
+    // smart_contracts/yt_auto_converter/contract.py:230
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/yt_auto_converter/contract.py:230
+    // @arc4.abimethod
+    callsub set_conversion_fee
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_remove_maturity_route@15:
+    // smart_contracts/yt_auto_converter/contract.py:222
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub remove_maturity
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_add_maturity_route@14:
+    // smart_contracts/yt_auto_converter/contract.py:211
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/yt_auto_converter/contract.py:211
+    // @arc4.abimethod
+    callsub add_maturity
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_calculate_conversion_output_route@13:
+    // smart_contracts/yt_auto_converter/contract.py:196
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/yt_auto_converter/contract.py:196
+    // @arc4.abimethod(readonly=True)
+    callsub calculate_conversion_output
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_conversion_info_route@12:
+    // smart_contracts/yt_auto_converter/contract.py:187
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_conversion_info
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_user_balances_route@11:
+    // smart_contracts/yt_auto_converter/contract.py:179
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_user_balances
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_user_config_route@10:
+    // smart_contracts/yt_auto_converter/contract.py:169
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_user_config
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_can_execute_conversion_route@9:
+    // smart_contracts/yt_auto_converter/contract.py:150
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    // smart_contracts/yt_auto_converter/contract.py:150
+    // @arc4.abimethod(readonly=True)
+    callsub can_execute_conversion
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_execute_conversion_route@8:
+    // smart_contracts/yt_auto_converter/contract.py:106
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    btoi
+    txna ApplicationArgs 3
+    btoi
+    // smart_contracts/yt_auto_converter/contract.py:106
+    // @arc4.abimethod
+    callsub execute_conversion
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_deposit_yt_tokens_route@7:
+    // smart_contracts/yt_auto_converter/contract.py:96
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/yt_auto_converter/contract.py:96
+    // @arc4.abimethod
+    callsub deposit_yt_tokens
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_configure_conversion_route@6:
+    // smart_contracts/yt_auto_converter/contract.py:77
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    txna ApplicationArgs 3
+    btoi
+    // smart_contracts/yt_auto_converter/contract.py:77
+    // @arc4.abimethod
+    callsub configure_conversion
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_initialize_route@5:
+    // smart_contracts/yt_auto_converter/contract.py:56
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    extract 2 0
+    txna ApplicationArgs 3
+    extract 2 0
+    // smart_contracts/yt_auto_converter/contract.py:56
+    // @arc4.abimethod
+    callsub initialize
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_bare_routing@23:
+    // smart_contracts/yt_auto_converter/contract.py:31
+    // class YTAutoConverter(ARC4Contract):
+    txn OnCompletion
+    bnz main_after_if_else@25
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_1 // 1
+    return
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.initialize(oracle_address: bytes, tokenization_address: bytes, amm_address: bytes) -> bytes:
+initialize:
+    // smart_contracts/yt_auto_converter/contract.py:56-62
+    // @arc4.abimethod
+    // def initialize(
+    //     self,
+    //     oracle_address: Bytes,
+    //     tokenization_address: Bytes,
+    //     amm_address: Bytes,
+    // ) -> String:
+    proto 3 1
+    // smart_contracts/yt_auto_converter/contract.py:64
+    // assert Txn.sender == Global.creator_address, "Only creator can initialize"
+    txn Sender
+    global CreatorAddress
+    ==
+    assert // Only creator can initialize
+    // smart_contracts/yt_auto_converter/contract.py:66
+    // self.admin.value = Txn.sender.bytes
+    bytec_3 // "admin"
+    txn Sender
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:67
+    // self.oracle_address.value = oracle_address
+    bytec 12 // "oracle_address"
+    frame_dig -3
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:68
+    // self.tokenization_address.value = tokenization_address
+    bytec 13 // "tokenization_address"
+    frame_dig -2
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:69
+    // self.amm_address.value = amm_address
+    bytec 14 // "amm_address"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:70
+    // self.conversion_fee.value = UInt64(30)  # 0.3%
+    bytec_1 // "conversion_fee"
+    pushint 30 // 30
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:71
+    // self.is_paused.value = UInt64(0)
+    bytec 4 // "is_paused"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:72
+    // self.total_conversions.value = UInt64(0)
+    bytec 9 // "total_conversions"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:74
+    // log(b"YTAutoConverter initialized")
+    pushbytes 0x59544175746f436f6e76657274657220696e697469616c697a6564
+    log
+    // smart_contracts/yt_auto_converter/contract.py:75
+    // return String("Auto converter initialized successfully")
+    pushbytes "Auto converter initialized successfully"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.configure_conversion(enabled: uint64, threshold_price: uint64, maturity: uint64) -> bytes:
+configure_conversion:
+    // smart_contracts/yt_auto_converter/contract.py:77-83
+    // @arc4.abimethod
+    // def configure_conversion(
+    //     self,
+    //     enabled: UInt64,
+    //     threshold_price: UInt64,
+    //     maturity: UInt64,
+    // ) -> String:
+    proto 3 1
+    // smart_contracts/yt_auto_converter/contract.py:85
+    // assert threshold_price > UInt64(0), "Threshold price must be positive"
+    frame_dig -2
+    assert // Threshold price must be positive
+    // smart_contracts/yt_auto_converter/contract.py:86
+    // assert maturity > Global.latest_timestamp, "Maturity must be in future"
+    frame_dig -1
+    global LatestTimestamp
+    >
+    assert // Maturity must be in future
+    // smart_contracts/yt_auto_converter/contract.py:88
+    // self.conversion_enabled[Txn.sender] = enabled
+    txn Sender
+    bytec 5 // "conversion_enabled"
+    frame_dig -3
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:89
+    // self.threshold_price[Txn.sender] = threshold_price
+    txn Sender
+    bytec 6 // "threshold_price"
+    frame_dig -2
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:90
+    // self.user_maturity[Txn.sender] = maturity
+    txn Sender
+    bytec 10 // "user_maturity"
+    frame_dig -1
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:91
+    // self.conversion_executed[Txn.sender] = UInt64(0)  # Reset execution status
+    txn Sender
+    bytec 7 // "conversion_executed"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:93
+    // log(b"Conversion configured - Enabled: " + op.itob(enabled) + b" Threshold: " + op.itob(threshold_price))
+    frame_dig -3
+    itob
+    pushbytes 0x436f6e76657273696f6e20636f6e66696775726564202d20456e61626c65643a20
+    swap
+    concat
+    pushbytes 0x205468726573686f6c643a20
+    concat
+    frame_dig -2
+    itob
+    concat
+    log
+    // smart_contracts/yt_auto_converter/contract.py:94
+    // return String("Conversion configured successfully")
+    pushbytes "Conversion configured successfully"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.deposit_yt_tokens(amount: uint64) -> bytes:
+deposit_yt_tokens:
+    // smart_contracts/yt_auto_converter/contract.py:96-97
+    // @arc4.abimethod
+    // def deposit_yt_tokens(self, amount: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/yt_auto_converter/contract.py:99
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/yt_auto_converter/contract.py:101
+    // self.yt_balance[Txn.sender] = self.yt_balance[Txn.sender] + amount
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "yt_balance"
+    app_local_get_ex
+    assert // check self.yt_balance exists for account
+    frame_dig -1
+    +
+    txn Sender
+    bytec_2 // "yt_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:103
+    // log(b"YT tokens deposited - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x595420746f6b656e73206465706f7369746564202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/yt_auto_converter/contract.py:104
+    // return String("YT tokens deposited successfully")
+    pushbytes "YT tokens deposited successfully"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.execute_conversion(user: bytes, min_pt_amount: uint64, deadline: uint64) -> bytes:
+execute_conversion:
+    // smart_contracts/yt_auto_converter/contract.py:106-112
+    // @arc4.abimethod
+    // def execute_conversion(
+    //     self,
+    //     user: Bytes,
+    //     min_pt_amount: UInt64,
+    //     deadline: UInt64,
+    // ) -> String:
+    proto 3 1
+    // smart_contracts/yt_auto_converter/contract.py:114
+    // assert self.is_paused.value == UInt64(0), "Converter is paused"
+    intc_0 // 0
+    bytec 4 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    !
+    assert // Converter is paused
+    // smart_contracts/yt_auto_converter/contract.py:115
+    // assert Global.latest_timestamp <= deadline, "Transaction expired"
+    global LatestTimestamp
+    frame_dig -1
+    <=
+    assert // Transaction expired
+    // smart_contracts/yt_auto_converter/contract.py:120
+    // assert self.conversion_enabled[Txn.sender] == UInt64(1), "Conversion not enabled"
+    txn Sender
+    intc_0 // 0
+    bytec 5 // "conversion_enabled"
+    app_local_get_ex
+    assert // check self.conversion_enabled exists for account
+    intc_1 // 1
+    ==
+    assert // Conversion not enabled
+    // smart_contracts/yt_auto_converter/contract.py:121
+    // assert self.conversion_executed[Txn.sender] == UInt64(0), "Conversion already executed"
+    txn Sender
+    intc_0 // 0
+    bytec 7 // "conversion_executed"
+    app_local_get_ex
+    assert // check self.conversion_executed exists for account
+    !
+    assert // Conversion already executed
+    // smart_contracts/yt_auto_converter/contract.py:123-125
+    // # Check if threshold is reached (simplified - would call oracle contract)
+    // # For demo, assume threshold is reached if threshold_price > 0
+    // user_threshold = self.threshold_price[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "threshold_price"
+    app_local_get_ex
+    assert // check self.threshold_price exists for account
+    // smart_contracts/yt_auto_converter/contract.py:126
+    // assert user_threshold > UInt64(0), "Threshold not reached"
+    assert // Threshold not reached
+    // smart_contracts/yt_auto_converter/contract.py:128-129
+    // # Check YT balance
+    // user_yt_balance = self.yt_balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "yt_balance"
+    app_local_get_ex
+    assert // check self.yt_balance exists for account
+    // smart_contracts/yt_auto_converter/contract.py:130
+    // assert user_yt_balance > UInt64(0), "No YT tokens to convert"
+    dup
+    assert // No YT tokens to convert
+    // smart_contracts/yt_auto_converter/contract.py:132-133
+    // # Calculate conversion fee
+    // fee_amount = (user_yt_balance * self.conversion_fee.value) // self.fee_denominator
+    intc_0 // 0
+    bytec_1 // "conversion_fee"
+    app_global_get_ex
+    assert // check self.conversion_fee exists
+    dig 1
+    *
+    intc_0 // 0
+    bytec 11 // "fee_denominator"
+    app_global_get_ex
+    assert // check self.fee_denominator exists
+    /
+    // smart_contracts/yt_auto_converter/contract.py:134
+    // conversion_amount = user_yt_balance - fee_amount
+    dig 1
+    swap
+    -
+    // smart_contracts/yt_auto_converter/contract.py:287-288
+    // # Simulate slippage and market impact
+    // slippage_factor = UInt64(9950)  # 0.5% slippage
+    pushint 9950 // 9950
+    // smart_contracts/yt_auto_converter/contract.py:289
+    // market_rate = (amount * slippage_factor) // UInt64(10000)
+    *
+    intc_2 // 10000
+    /
+    // smart_contracts/yt_auto_converter/contract.py:291
+    // assert market_rate >= min_output, "Insufficient output amount"
+    dup
+    frame_dig -2
+    >=
+    assert // Insufficient output amount
+    // smart_contracts/yt_auto_converter/contract.py:139-140
+    // # Update balances
+    // self.yt_balance[Txn.sender] = UInt64(0)  # All YT tokens converted
+    txn Sender
+    bytec_2 // "yt_balance"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:141
+    // self.pt_balance[Txn.sender] = self.pt_balance[Txn.sender] + received_pt
+    txn Sender
+    intc_0 // 0
+    bytec 8 // "pt_balance"
+    app_local_get_ex
+    assert // check self.pt_balance exists for account
+    dig 1
+    +
+    txn Sender
+    bytec 8 // "pt_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:142
+    // self.conversion_executed[Txn.sender] = UInt64(1)
+    txn Sender
+    bytec 7 // "conversion_executed"
+    intc_1 // 1
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:144-145
+    // # Update global stats
+    // self.total_conversions.value = self.total_conversions.value + UInt64(1)
+    intc_0 // 0
+    bytec 9 // "total_conversions"
+    app_global_get_ex
+    assert // check self.total_conversions exists
+    intc_1 // 1
+    +
+    bytec 9 // "total_conversions"
+    swap
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:147
+    // log(b"Conversion executed - YT: " + op.itob(user_yt_balance) + b" PT: " + op.itob(received_pt))
+    swap
+    itob
+    pushbytes 0x436f6e76657273696f6e206578656375746564202d2059543a20
+    swap
+    concat
+    pushbytes 0x2050543a20
+    concat
+    swap
+    itob
+    concat
+    log
+    // smart_contracts/yt_auto_converter/contract.py:148
+    // return String("Conversion executed successfully")
+    pushbytes "Conversion executed successfully"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.can_execute_conversion(user: bytes) -> uint64:
+can_execute_conversion:
+    // smart_contracts/yt_auto_converter/contract.py:150-151
+    // @arc4.abimethod(readonly=True)
+    // def can_execute_conversion(self, user: Bytes) -> UInt64:
+    proto 1 1
+    // smart_contracts/yt_auto_converter/contract.py:153-154
+    // # Simplified check using sender's data
+    // if self.conversion_enabled[Txn.sender] == UInt64(0):
+    txn Sender
+    intc_0 // 0
+    bytec 5 // "conversion_enabled"
+    app_local_get_ex
+    assert // check self.conversion_enabled exists for account
+    bnz can_execute_conversion_after_if_else@2
+    // smart_contracts/yt_auto_converter/contract.py:155
+    // return UInt64(0)  # Not enabled
+    intc_0 // 0
+    retsub
+
+can_execute_conversion_after_if_else@2:
+    // smart_contracts/yt_auto_converter/contract.py:157
+    // if self.conversion_executed[Txn.sender] == UInt64(1):
+    txn Sender
+    intc_0 // 0
+    bytec 7 // "conversion_executed"
+    app_local_get_ex
+    assert // check self.conversion_executed exists for account
+    intc_1 // 1
+    ==
+    bz can_execute_conversion_after_if_else@4
+    // smart_contracts/yt_auto_converter/contract.py:158
+    // return UInt64(0)  # Already executed
+    intc_0 // 0
+    retsub
+
+can_execute_conversion_after_if_else@4:
+    // smart_contracts/yt_auto_converter/contract.py:160
+    // if self.yt_balance[Txn.sender] == UInt64(0):
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "yt_balance"
+    app_local_get_ex
+    assert // check self.yt_balance exists for account
+    bnz can_execute_conversion_after_if_else@6
+    // smart_contracts/yt_auto_converter/contract.py:161
+    // return UInt64(0)  # No YT tokens
+    intc_0 // 0
+    retsub
+
+can_execute_conversion_after_if_else@6:
+    // smart_contracts/yt_auto_converter/contract.py:163
+    // if self.threshold_price[Txn.sender] == UInt64(0):
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "threshold_price"
+    app_local_get_ex
+    assert // check self.threshold_price exists for account
+    bnz can_execute_conversion_after_if_else@8
+    // smart_contracts/yt_auto_converter/contract.py:164
+    // return UInt64(0)  # No threshold set
+    intc_0 // 0
+    retsub
+
+can_execute_conversion_after_if_else@8:
+    // smart_contracts/yt_auto_converter/contract.py:166-167
+    // # In production, would check oracle for actual threshold status
+    // return UInt64(1)  # Can execute
+    intc_1 // 1
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.get_user_config() -> bytes:
+get_user_config:
+    // smart_contracts/yt_auto_converter/contract.py:173
+    // arc4.UInt64(self.conversion_enabled[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec 5 // "conversion_enabled"
+    app_local_get_ex
+    assert // check self.conversion_enabled exists for account
+    itob
+    // smart_contracts/yt_auto_converter/contract.py:174
+    // arc4.UInt64(self.threshold_price[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "threshold_price"
+    app_local_get_ex
+    assert // check self.threshold_price exists for account
+    itob
+    // smart_contracts/yt_auto_converter/contract.py:175
+    // arc4.UInt64(self.user_maturity[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec 10 // "user_maturity"
+    app_local_get_ex
+    assert // check self.user_maturity exists for account
+    itob
+    // smart_contracts/yt_auto_converter/contract.py:176
+    // arc4.UInt64(self.conversion_executed[Txn.sender])
+    txn Sender
+    intc_0 // 0
+    bytec 7 // "conversion_executed"
+    app_local_get_ex
+    assert // check self.conversion_executed exists for account
+    itob
+    // smart_contracts/yt_auto_converter/contract.py:172-177
+    // return arc4.Tuple((
+    //     arc4.UInt64(self.conversion_enabled[Txn.sender]),
+    //     arc4.UInt64(self.threshold_price[Txn.sender]),
+    //     arc4.UInt64(self.user_maturity[Txn.sender]),
+    //     arc4.UInt64(self.conversion_executed[Txn.sender])
+    // ))
+    uncover 3
+    uncover 3
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.get_user_balances() -> bytes:
+get_user_balances:
+    // smart_contracts/yt_auto_converter/contract.py:183
+    // arc4.UInt64(self.yt_balance[Txn.sender]),
+    txn Sender
+    intc_0 // 0
+    bytec_2 // "yt_balance"
+    app_local_get_ex
+    assert // check self.yt_balance exists for account
+    itob
+    // smart_contracts/yt_auto_converter/contract.py:184
+    // arc4.UInt64(self.pt_balance[Txn.sender])
+    txn Sender
+    intc_0 // 0
+    bytec 8 // "pt_balance"
+    app_local_get_ex
+    assert // check self.pt_balance exists for account
+    itob
+    // smart_contracts/yt_auto_converter/contract.py:182-185
+    // return arc4.Tuple((
+    //     arc4.UInt64(self.yt_balance[Txn.sender]),
+    //     arc4.UInt64(self.pt_balance[Txn.sender])
+    // ))
+    concat
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.get_conversion_info() -> bytes:
+get_conversion_info:
+    // smart_contracts/yt_auto_converter/contract.py:191
+    // arc4.UInt64(self.conversion_fee.value),
+    intc_0 // 0
+    bytec_1 // "conversion_fee"
+    app_global_get_ex
+    assert // check self.conversion_fee exists
+    itob
+    // smart_contracts/yt_auto_converter/contract.py:192
+    // arc4.UInt64(self.total_conversions.value),
+    intc_0 // 0
+    bytec 9 // "total_conversions"
+    app_global_get_ex
+    assert // check self.total_conversions exists
+    itob
+    // smart_contracts/yt_auto_converter/contract.py:193
+    // arc4.UInt64(self.is_paused.value)
+    intc_0 // 0
+    bytec 4 // "is_paused"
+    app_global_get_ex
+    assert // check self.is_paused exists
+    itob
+    // smart_contracts/yt_auto_converter/contract.py:190-194
+    // return arc4.Tuple((
+    //     arc4.UInt64(self.conversion_fee.value),
+    //     arc4.UInt64(self.total_conversions.value),
+    //     arc4.UInt64(self.is_paused.value)
+    // ))
+    cover 2
+    concat
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.calculate_conversion_output(yt_amount: uint64) -> bytes:
+calculate_conversion_output:
+    // smart_contracts/yt_auto_converter/contract.py:196-197
+    // @arc4.abimethod(readonly=True)
+    // def calculate_conversion_output(self, yt_amount: UInt64) -> arc4.Tuple[arc4.UInt64, arc4.UInt64]:
+    proto 1 1
+    // smart_contracts/yt_auto_converter/contract.py:199
+    // if yt_amount == UInt64(0):
+    frame_dig -1
+    bnz calculate_conversion_output_after_if_else@2
+    // smart_contracts/yt_auto_converter/contract.py:200
+    // return arc4.Tuple((arc4.UInt64(0), arc4.UInt64(0)))
+    pushbytes 0x00000000000000000000000000000000
+    retsub
+
+calculate_conversion_output_after_if_else@2:
+    // smart_contracts/yt_auto_converter/contract.py:202
+    // fee_amount = (yt_amount * self.conversion_fee.value) // self.fee_denominator
+    intc_0 // 0
+    bytec_1 // "conversion_fee"
+    app_global_get_ex
+    assert // check self.conversion_fee exists
+    frame_dig -1
+    *
+    intc_0 // 0
+    bytec 11 // "fee_denominator"
+    app_global_get_ex
+    assert // check self.fee_denominator exists
+    /
+    // smart_contracts/yt_auto_converter/contract.py:203
+    // conversion_amount = yt_amount - fee_amount
+    frame_dig -1
+    dig 1
+    -
+    // smart_contracts/yt_auto_converter/contract.py:205-206
+    // # Simplified conversion rate (1:1 minus slippage)
+    // slippage_amount = (conversion_amount * UInt64(50)) // UInt64(10000)  # 0.5% slippage
+    dup
+    pushint 50 // 50
+    *
+    intc_2 // 10000
+    /
+    // smart_contracts/yt_auto_converter/contract.py:207
+    // expected_pt = conversion_amount - slippage_amount
+    -
+    // smart_contracts/yt_auto_converter/contract.py:209
+    // return arc4.Tuple((arc4.UInt64(expected_pt), arc4.UInt64(fee_amount)))
+    itob
+    swap
+    itob
+    concat
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.add_maturity(maturity: uint64) -> bytes:
+add_maturity:
+    // smart_contracts/yt_auto_converter/contract.py:211-212
+    // @arc4.abimethod
+    // def add_maturity(self, maturity: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/yt_auto_converter/contract.py:214
+    // assert maturity > Global.latest_timestamp, "Maturity must be in future"
+    frame_dig -1
+    global LatestTimestamp
+    >
+    assert // Maturity must be in future
+    // smart_contracts/yt_auto_converter/contract.py:216-217
+    // # For simplicity, just update user's maturity
+    // self.user_maturity[Txn.sender] = maturity
+    txn Sender
+    bytec 10 // "user_maturity"
+    frame_dig -1
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:219
+    // log(b"Maturity added - Value: " + op.itob(maturity))
+    frame_dig -1
+    itob
+    pushbytes 0x4d61747572697479206164646564202d2056616c75653a20
+    swap
+    concat
+    log
+    // smart_contracts/yt_auto_converter/contract.py:220
+    // return String("Maturity added successfully")
+    pushbytes "Maturity added successfully"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.remove_maturity() -> bytes:
+remove_maturity:
+    // smart_contracts/yt_auto_converter/contract.py:225
+    // self.user_maturity[Txn.sender] = UInt64(0)
+    txn Sender
+    bytec 10 // "user_maturity"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:227
+    // log(b"Maturity removed")
+    pushbytes 0x4d617475726974792072656d6f766564
+    log
+    // smart_contracts/yt_auto_converter/contract.py:228
+    // return String("Maturity removed successfully")
+    pushbytes "Maturity removed successfully"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.set_conversion_fee(new_fee: uint64) -> bytes:
+set_conversion_fee:
+    // smart_contracts/yt_auto_converter/contract.py:230-231
+    // @arc4.abimethod
+    // def set_conversion_fee(self, new_fee: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/yt_auto_converter/contract.py:233
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can set fee"
+    txn Sender
+    intc_0 // 0
+    bytec_3 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can set fee
+    // smart_contracts/yt_auto_converter/contract.py:234
+    // assert new_fee <= UInt64(1000), "Fee too high (max 10%)"
+    frame_dig -1
+    pushint 1000 // 1000
+    <=
+    assert // Fee too high (max 10%)
+    // smart_contracts/yt_auto_converter/contract.py:236
+    // old_fee = self.conversion_fee.value
+    intc_0 // 0
+    bytec_1 // "conversion_fee"
+    app_global_get_ex
+    assert // check self.conversion_fee exists
+    // smart_contracts/yt_auto_converter/contract.py:237
+    // self.conversion_fee.value = new_fee
+    bytec_1 // "conversion_fee"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:239
+    // log(b"Conversion fee updated - Old: " + op.itob(old_fee) + b" New: " + op.itob(new_fee))
+    itob
+    pushbytes 0x436f6e76657273696f6e206665652075706461746564202d204f6c643a20
+    swap
+    concat
+    pushbytes 0x204e65773a20
+    concat
+    frame_dig -1
+    itob
+    concat
+    log
+    // smart_contracts/yt_auto_converter/contract.py:240
+    // return String("Conversion fee updated successfully")
+    pushbytes "Conversion fee updated successfully"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.pause_converter() -> bytes:
+pause_converter:
+    // smart_contracts/yt_auto_converter/contract.py:245
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can pause"
+    txn Sender
+    intc_0 // 0
+    bytec_3 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can pause
+    // smart_contracts/yt_auto_converter/contract.py:246
+    // self.is_paused.value = UInt64(1)
+    bytec 4 // "is_paused"
+    intc_1 // 1
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:248
+    // log(b"Converter paused")
+    bytec 15 // 0x436f6e76657274657220706175736564
+    log
+    // smart_contracts/yt_auto_converter/contract.py:249
+    // return String("Converter paused")
+    bytec 15 // "Converter paused"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.unpause_converter() -> bytes:
+unpause_converter:
+    // smart_contracts/yt_auto_converter/contract.py:254
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can unpause"
+    txn Sender
+    intc_0 // 0
+    bytec_3 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can unpause
+    // smart_contracts/yt_auto_converter/contract.py:255
+    // self.is_paused.value = UInt64(0)
+    bytec 4 // "is_paused"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:257
+    // log(b"Converter unpaused")
+    bytec 16 // 0x436f6e76657274657220756e706175736564
+    log
+    // smart_contracts/yt_auto_converter/contract.py:258
+    // return String("Converter unpaused")
+    bytec 16 // "Converter unpaused"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.emergency_disable_conversion() -> bytes:
+emergency_disable_conversion:
+    // smart_contracts/yt_auto_converter/contract.py:263
+    // self.conversion_enabled[Txn.sender] = UInt64(0)
+    txn Sender
+    bytec 5 // "conversion_enabled"
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:265
+    // log(b"Conversion emergency disabled")
+    pushbytes 0x436f6e76657273696f6e20656d657267656e63792064697361626c6564
+    log
+    // smart_contracts/yt_auto_converter/contract.py:266
+    // return String("Conversion disabled for emergency")
+    pushbytes "Conversion disabled for emergency"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.withdraw_pt_tokens(amount: uint64) -> bytes:
+withdraw_pt_tokens:
+    // smart_contracts/yt_auto_converter/contract.py:268-269
+    // @arc4.abimethod
+    // def withdraw_pt_tokens(self, amount: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/yt_auto_converter/contract.py:271
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/yt_auto_converter/contract.py:273
+    // current_pt_balance = self.pt_balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 8 // "pt_balance"
+    app_local_get_ex
+    assert // check self.pt_balance exists for account
+    // smart_contracts/yt_auto_converter/contract.py:274
+    // assert current_pt_balance >= amount, "Insufficient PT balance"
+    dup
+    frame_dig -1
+    >=
+    assert // Insufficient PT balance
+    // smart_contracts/yt_auto_converter/contract.py:276
+    // self.pt_balance[Txn.sender] = current_pt_balance - amount
+    frame_dig -1
+    -
+    txn Sender
+    bytec 8 // "pt_balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/yt_auto_converter/contract.py:278
+    // log(b"PT tokens withdrawn - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x505420746f6b656e732077697468647261776e202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/yt_auto_converter/contract.py:279
+    // return String("PT tokens withdrawn successfully")
+    pushbytes "PT tokens withdrawn successfully"
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.get_ai_recommendation(yt_amount: uint64, current_price: uint64) -> bytes:
+get_ai_recommendation:
+    // smart_contracts/yt_auto_converter/contract.py:295-296
+    // @arc4.abimethod(readonly=True)
+    // def get_ai_recommendation(self, yt_amount: UInt64, current_price: UInt64) -> arc4.Tuple[arc4.UInt64, arc4.String]:
+    proto 2 1
+    pushbytes ""
+    // smart_contracts/yt_auto_converter/contract.py:298
+    // if yt_amount == UInt64(0):
+    frame_dig -2
+    bnz get_ai_recommendation_after_if_else@2
+    // smart_contracts/yt_auto_converter/contract.py:299
+    // return arc4.Tuple((arc4.UInt64(0), arc4.String("No YT tokens to convert")))
+    pushbytes 0x0000000000000000000a00174e6f20595420746f6b656e7320746f20636f6e76657274
+    swap
+    retsub
+
+get_ai_recommendation_after_if_else@2:
+    // smart_contracts/yt_auto_converter/contract.py:301
+    // user_threshold = self.threshold_price[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 6 // "threshold_price"
+    app_local_get_ex
+    swap
+    dup
+    cover 2
+    frame_bury 0
+    assert // check self.threshold_price exists for account
+    // smart_contracts/yt_auto_converter/contract.py:303
+    // if current_price >= user_threshold:
+    frame_dig -1
+    <=
+    bz get_ai_recommendation_else_body@4
+    // smart_contracts/yt_auto_converter/contract.py:304
+    // return arc4.Tuple((arc4.UInt64(1), arc4.String("Recommend conversion - threshold reached")))
+    pushbytes 0x0000000000000001000a00285265636f6d6d656e6420636f6e76657273696f6e202d207468726573686f6c642072656163686564
+    swap
+    retsub
+
+get_ai_recommendation_else_body@4:
+    // smart_contracts/yt_auto_converter/contract.py:306
+    // remaining_upside = ((user_threshold - current_price) * UInt64(100)) // current_price
+    frame_dig 0
+    frame_dig -1
+    -
+    pushint 100 // 100
+    *
+    frame_dig -1
+    /
+    // smart_contracts/yt_auto_converter/contract.py:307
+    // if remaining_upside < UInt64(5):  # Less than 5% to threshold
+    pushint 5 // 5
+    <
+    bz get_ai_recommendation_else_body@6
+    // smart_contracts/yt_auto_converter/contract.py:308
+    // return arc4.Tuple((arc4.UInt64(1), arc4.String("Recommend conversion - close to threshold")))
+    pushbytes 0x0000000000000001000a00295265636f6d6d656e6420636f6e76657273696f6e202d20636c6f736520746f207468726573686f6c64
+    swap
+    retsub
+
+get_ai_recommendation_else_body@6:
+    // smart_contracts/yt_auto_converter/contract.py:310
+    // return arc4.Tuple((arc4.UInt64(0), arc4.String("Hold YT tokens - threshold not reached")))
+    pushbytes 0x0000000000000000000a0026486f6c6420595420746f6b656e73202d207468726573686f6c64206e6f742072656163686564
+    swap
+    retsub
+
+
+// smart_contracts.yt_auto_converter.contract.YTAutoConverter.update_addresses(oracle_address: bytes, tokenization_address: bytes, amm_address: bytes) -> bytes:
+update_addresses:
+    // smart_contracts/yt_auto_converter/contract.py:312-318
+    // @arc4.abimethod
+    // def update_addresses(
+    //     self,
+    //     oracle_address: Bytes,
+    //     tokenization_address: Bytes,
+    //     amm_address: Bytes,
+    // ) -> String:
+    proto 3 1
+    // smart_contracts/yt_auto_converter/contract.py:320
+    // assert Txn.sender.bytes == self.admin.value, "Only admin can update addresses"
+    txn Sender
+    intc_0 // 0
+    bytec_3 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can update addresses
+    // smart_contracts/yt_auto_converter/contract.py:322
+    // self.oracle_address.value = oracle_address
+    bytec 12 // "oracle_address"
+    frame_dig -3
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:323
+    // self.tokenization_address.value = tokenization_address
+    bytec 13 // "tokenization_address"
+    frame_dig -2
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:324
+    // self.amm_address.value = amm_address
+    bytec 14 // "amm_address"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/yt_auto_converter/contract.py:326
+    // log(b"Contract addresses updated")
+    pushbytes 0x436f6e7472616374206164647265737365732075706461746564
+    log
+    // smart_contracts/yt_auto_converter/contract.py:327
+    // return String("Contract addresses updated successfully")
+    pushbytes "Contract addresses updated successfully"
+    retsub

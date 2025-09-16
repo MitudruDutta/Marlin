@@ -1,0 +1,6180 @@
+{
+  "version": 3,
+  "sources": [
+    "../../staking_dapp/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA0CQ;;AAAqB;;AAArB;AACA;;AAAuB;;AAAvB;AACA;;AAAwB;;;;;;AAAxB;AAfR;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;AAiOK;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAtCA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AATA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AATA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAbA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AApBA;;AAAA;AAAA;AAAA;;AAAA;AAxIL;;;AAAA;AAAA;;;AAAA;AAwIK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAZA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AALA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AApBA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAtBA;;AAAA;AAAA;AAAA;;AAAA;AA7DL;;;AAAA;AA6DK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AApBA;;AAAA;AAAA;AAAA;;AAAA;AAzCL;;;AAAA;AAyCK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAnBA;;AAAA;AAAA;AAAA;;AAAA;AAtBL;;;AAAA;;;AAAA;;;AAAA;;;AAsBK;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAtBL;;AAAA;;;;;;;;;AAsBA;;;AAOe;;AAAc;;AAAd;AAAP;AAEA;;AAAmB;;AAAnB;AACA;;;;;;;;;;;;;AAAA;;AAAA;AACA;;;;;;;;;;;;;;;AAAA;;AAAA;AACA;AAAuB;AAAvB;AACA;AAA0B;AAA1B;AACA;;AAAuC;AAAvC;AAEI;;;;;;;;;;;;;;;;;;;;;;;;;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAER;;;AAGe;AAAA;AAAA;AAAA;AAAA;AAAP;AACA;;AAAA;AAGA;;;AAGoC;;AAAnB;AAAA;AAAA;AAAA;AACgB;;AAAA;AAAd;;AAAnB;AAAA;;AAAA;AAC0B;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA1B;AAAA;AAAA;AAGsB;;AAAtB;;AAAoC;;AAApC;AAEkC;;AAAA;AAA9B;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAER;;;AAGe;AAAA;AAAA;AAAA;AAAA;AAAP;AACA;;AAAA;AAEoC;;AAAnB;AAAA;AAAA;AAAA;AACV;AAAA;;AAAA;AAAP;AAGA;;;AAGiC;;AAAA;AAAd;;AAAnB;AAAA;;AAAA;AAC0B;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA1B;AAAA;AAAA;AAGsB;;AAAtB;;AAAoC;;AAApC;AAEoC;;AAAA;AAAhC;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAKO;AAAA;AAAA;AAAA;AAAA;AAAP;AAGA;;;AAE6C;;AAApB;AAAA;;AAAA;AAAA;AACzB;AAAA;AAGoB;;AAApB;;AAAkC;AAAlC;AAGuC;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAvC;;AAAA;AAAA;AAEoC;AAAhC;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAKO;;;AAAP;AAKkB;;;AACkB;;AAApB;AAAA;;AAAA;AAAA;AAAA;AAGmB;;AAAnB;AAAA;AAAA;AAAA;AAAZ;AACgC;;AAApB;AAAA;;AAAA;AAAA;AAAZ;AACA;;AAAA;AAHG;;AAAA;AAAA;AAAA;AAAP;AAUgB;AAAA;AAAA;AAAA;AAAZ;AACY;AAAA;;AAAA;AAAA;AAAZ;AACY;AAAA;;AAAA;AAAA;AAAZ;AACY;AAAA;;AAAA;AAAA;AAAZ;AAJG;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAP;AAWQ;AAAA;;AAAA;AAAA;AAAqB;AAAA;;AAAA;AAAA;AAArB;AAA+C;AAAA;;AAAA;AAAA;AAAhD;AAAP;AAER;;;AAOe;;AAAoB;AAAA;;AAAA;AAAA;AAApB;AAAP;AACA;;AAAA;AACA;;AAAA;AAKA;;AAAA;;AAAA;AACA;;AAAA;;AAAA;AAEI;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAKoC;;AAAnB;AAAA;AAAA;AAAA;AACjB;AAAA;AAGmB;;AAAnB;AAAiC;AAAjC;AAC0B;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA1B;AAAA;AAAA;AAEyC;AAArC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAKO;;AAAoB;AAAA;;AAAA;AAAA;AAApB;AAAP;AACA;AAAuB;AAAvB;AAEI;;AAAJ;AACO;;AAAP;AAKO;;AAAoB;AAAA;;AAAA;AAAA;AAApB;AAAP;AACA;AAAuB;AAAvB;AAEI;;AAAJ;AACO;;AAAP;AAKO;AAAA;AAAA;AAAA;AAAP;AAER;;;AAGyB;;;AAAjB;AAER;;;AACkD;;AAApB;AAAA;;AAAA;AAAA;AACgB;;AAAA;AAAd;;AAApB;;AAAA;;AAAA;AAEkB;;AAAtB;;AAAoC;;AAApC;;AAER;;;;;;AAGyC;;AAAnB;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAEtB;;;AACmB;AAAP;;AAAA;AAE8B;;AAAtB;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AACZ;;AAAe;AAAf;;AAEG;AAAX;;;AACmB;AAAP;;AAAA;AAEJ;;AAAA;;AAAc;AACa;AAAA;;AAAA;AAAA;AAAf;AAGU;AAAA;;AAAA;AAAA;AAAZ;AAAA;;AAAA;AAAiD;AAAA;;AAAA;AAAA;AAAlD;AAET;;AAAA;AAKO;AAAA;AAAA;AAAA;AAAA;AAAP;AAGA;;;AAE6C;;AAApB;AAAA;;AAAA;AAAA;AACzB;AAAA;AAGoB;;AAApB;;AAAkC;AAAlC;AACoD;;AAAnB;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAd;;AAAnB;AAAA;;AAAA;AAC0B;AAAA;AAAA;AAAA;AAAA;;AAAA;AAA1B;AAAA;AAAA;AAGsB;;AAAtB;;AAAoC;;AAApC;AAEuC;AAAnC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAJ;AACO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.__algopy_entrypoint_with_init",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1"
+    },
+    "5": {
+      "op": "bytecblock 0x151f7c75 \"total_staked\" \"staked_amount\" \"is_paused\" \"reward_balance\" \"reward_amount\" \"reward_interval\" \"last_reward_time\" \"admin\" \"total_rewards_distributed\" \"precision_factor\" 0x5374616b696e6720706175736564 0x5374616b696e6720756e706175736564"
+    },
+    "192": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "194": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "197": {
+      "op": "bytec 5 // \"reward_amount\"",
+      "defined_out": [
+        "\"reward_amount\""
+      ],
+      "stack_out": [
+        "\"reward_amount\""
+      ]
+    },
+    "199": {
+      "op": "pushint 5 // 5",
+      "defined_out": [
+        "\"reward_amount\"",
+        "5"
+      ],
+      "stack_out": [
+        "\"reward_amount\"",
+        "5"
+      ]
+    },
+    "201": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "202": {
+      "op": "bytec 6 // \"reward_interval\"",
+      "defined_out": [
+        "\"reward_interval\""
+      ],
+      "stack_out": [
+        "\"reward_interval\""
+      ]
+    },
+    "204": {
+      "op": "pushint 10 // 10",
+      "defined_out": [
+        "\"reward_interval\"",
+        "10"
+      ],
+      "stack_out": [
+        "\"reward_interval\"",
+        "10"
+      ]
+    },
+    "206": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "207": {
+      "op": "bytec 10 // \"precision_factor\"",
+      "defined_out": [
+        "\"precision_factor\""
+      ],
+      "stack_out": [
+        "\"precision_factor\""
+      ]
+    },
+    "209": {
+      "op": "pushint 1000000000 // 1000000000",
+      "defined_out": [
+        "\"precision_factor\"",
+        "1000000000"
+      ],
+      "stack_out": [
+        "\"precision_factor\"",
+        "1000000000"
+      ]
+    },
+    "215": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "216": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#2"
+      ],
+      "stack_out": [
+        "tmp%0#2"
+      ]
+    },
+    "218": {
+      "op": "bz main_bare_routing@19",
+      "stack_out": []
+    },
+    "221": {
+      "op": "pushbytess 0x0d0b3158 0xb4e2b487 0x2bef4a4d 0x54616de1 0x717057cd 0x43b15f88 0xdd36e45d 0x308f4a8a 0xf54d74e9 0x4d4815e7 0x66dc396a 0x230c80df 0x6cc537f2 0xdc494e03 // method \"initialize(string,string)string\", method \"stake(uint64)string\", method \"unstake(uint64)string\", method \"claim_rewards()string\", method \"calculate_pending_rewards()uint64\", method \"get_user_info()(uint64,uint64,uint64)\", method \"get_staking_info()(uint64,uint64,uint64,uint64)\", method \"get_reward_rate()uint64\", method \"update_reward_parameters(uint64,uint64)string\", method \"emergency_withdraw()string\", method \"pause_staking()string\", method \"unpause_staking()string\", method \"is_staking_paused()uint64\", method \"compound_rewards()string\"",
+      "defined_out": [
+        "Method(calculate_pending_rewards()uint64)",
+        "Method(claim_rewards()string)",
+        "Method(compound_rewards()string)",
+        "Method(emergency_withdraw()string)",
+        "Method(get_reward_rate()uint64)",
+        "Method(get_staking_info()(uint64,uint64,uint64,uint64))",
+        "Method(get_user_info()(uint64,uint64,uint64))",
+        "Method(initialize(string,string)string)",
+        "Method(is_staking_paused()uint64)",
+        "Method(pause_staking()string)",
+        "Method(stake(uint64)string)",
+        "Method(unpause_staking()string)",
+        "Method(unstake(uint64)string)",
+        "Method(update_reward_parameters(uint64,uint64)string)"
+      ],
+      "stack_out": [
+        "Method(initialize(string,string)string)",
+        "Method(stake(uint64)string)",
+        "Method(unstake(uint64)string)",
+        "Method(claim_rewards()string)",
+        "Method(calculate_pending_rewards()uint64)",
+        "Method(get_user_info()(uint64,uint64,uint64))",
+        "Method(get_staking_info()(uint64,uint64,uint64,uint64))",
+        "Method(get_reward_rate()uint64)",
+        "Method(update_reward_parameters(uint64,uint64)string)",
+        "Method(emergency_withdraw()string)",
+        "Method(pause_staking()string)",
+        "Method(unpause_staking()string)",
+        "Method(is_staking_paused()uint64)",
+        "Method(compound_rewards()string)"
+      ]
+    },
+    "293": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(calculate_pending_rewards()uint64)",
+        "Method(claim_rewards()string)",
+        "Method(compound_rewards()string)",
+        "Method(emergency_withdraw()string)",
+        "Method(get_reward_rate()uint64)",
+        "Method(get_staking_info()(uint64,uint64,uint64,uint64))",
+        "Method(get_user_info()(uint64,uint64,uint64))",
+        "Method(initialize(string,string)string)",
+        "Method(is_staking_paused()uint64)",
+        "Method(pause_staking()string)",
+        "Method(stake(uint64)string)",
+        "Method(unpause_staking()string)",
+        "Method(unstake(uint64)string)",
+        "Method(update_reward_parameters(uint64,uint64)string)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(initialize(string,string)string)",
+        "Method(stake(uint64)string)",
+        "Method(unstake(uint64)string)",
+        "Method(claim_rewards()string)",
+        "Method(calculate_pending_rewards()uint64)",
+        "Method(get_user_info()(uint64,uint64,uint64))",
+        "Method(get_staking_info()(uint64,uint64,uint64,uint64))",
+        "Method(get_reward_rate()uint64)",
+        "Method(update_reward_parameters(uint64,uint64)string)",
+        "Method(emergency_withdraw()string)",
+        "Method(pause_staking()string)",
+        "Method(unpause_staking()string)",
+        "Method(is_staking_paused()uint64)",
+        "Method(compound_rewards()string)",
+        "tmp%2#0"
+      ]
+    },
+    "296": {
+      "op": "match main_initialize_route@5 main_stake_route@6 main_unstake_route@7 main_claim_rewards_route@8 main_calculate_pending_rewards_route@9 main_get_user_info_route@10 main_get_staking_info_route@11 main_get_reward_rate_route@12 main_update_reward_parameters_route@13 main_emergency_withdraw_route@14 main_pause_staking_route@15 main_unpause_staking_route@16 main_is_staking_paused_route@17 main_compound_rewards_route@18",
+      "stack_out": []
+    },
+    "326": {
+      "block": "main_after_if_else@21",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "327": {
+      "op": "return",
+      "stack_out": []
+    },
+    "328": {
+      "block": "main_compound_rewards_route@18",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%78#0"
+      ],
+      "stack_out": [
+        "tmp%78#0"
+      ]
+    },
+    "330": {
+      "op": "!",
+      "defined_out": [
+        "tmp%79#0"
+      ],
+      "stack_out": [
+        "tmp%79#0"
+      ]
+    },
+    "331": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "332": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%80#0"
+      ],
+      "stack_out": [
+        "tmp%80#0"
+      ]
+    },
+    "334": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "335": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.compound_rewards",
+      "op": "callsub compound_rewards",
+      "defined_out": [
+        "to_encode%11#0"
+      ],
+      "stack_out": [
+        "to_encode%11#0"
+      ]
+    },
+    "338": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%11#0",
+        "to_encode%11#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%11#0",
+        "to_encode%11#0 (copy)"
+      ]
+    },
+    "339": {
+      "op": "len",
+      "defined_out": [
+        "length%8#0",
+        "to_encode%11#0"
+      ],
+      "stack_out": [
+        "to_encode%11#0",
+        "length%8#0"
+      ]
+    },
+    "340": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%8#0",
+        "to_encode%11#0"
+      ],
+      "stack_out": [
+        "to_encode%11#0",
+        "as_bytes%8#0"
+      ]
+    },
+    "341": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%8#0",
+        "to_encode%11#0"
+      ],
+      "stack_out": [
+        "to_encode%11#0",
+        "length_uint16%8#0"
+      ]
+    },
+    "344": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%8#0",
+        "to_encode%11#0"
+      ]
+    },
+    "345": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%8#0"
+      ],
+      "stack_out": [
+        "encoded_value%8#0"
+      ]
+    },
+    "346": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%8#0"
+      ],
+      "stack_out": [
+        "encoded_value%8#0",
+        "0x151f7c75"
+      ]
+    },
+    "347": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%8#0"
+      ]
+    },
+    "348": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%82#0"
+      ],
+      "stack_out": [
+        "tmp%82#0"
+      ]
+    },
+    "349": {
+      "op": "log",
+      "stack_out": []
+    },
+    "350": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "351": {
+      "op": "return",
+      "stack_out": []
+    },
+    "352": {
+      "block": "main_is_staking_paused_route@17",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%73#0"
+      ],
+      "stack_out": [
+        "tmp%73#0"
+      ]
+    },
+    "354": {
+      "op": "!",
+      "defined_out": [
+        "tmp%74#0"
+      ],
+      "stack_out": [
+        "tmp%74#0"
+      ]
+    },
+    "355": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "356": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%75#0"
+      ],
+      "stack_out": [
+        "tmp%75#0"
+      ]
+    },
+    "358": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "359": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.is_staking_paused",
+      "op": "callsub is_staking_paused",
+      "defined_out": [
+        "to_encode%10#0"
+      ],
+      "stack_out": [
+        "to_encode%10#0"
+      ]
+    },
+    "362": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%2#0"
+      ]
+    },
+    "363": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "364": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "365": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%77#0"
+      ],
+      "stack_out": [
+        "tmp%77#0"
+      ]
+    },
+    "366": {
+      "op": "log",
+      "stack_out": []
+    },
+    "367": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "368": {
+      "op": "return",
+      "stack_out": []
+    },
+    "369": {
+      "block": "main_unpause_staking_route@16",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%68#0"
+      ],
+      "stack_out": [
+        "tmp%68#0"
+      ]
+    },
+    "371": {
+      "op": "!",
+      "defined_out": [
+        "tmp%69#0"
+      ],
+      "stack_out": [
+        "tmp%69#0"
+      ]
+    },
+    "372": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "373": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%70#0"
+      ],
+      "stack_out": [
+        "tmp%70#0"
+      ]
+    },
+    "375": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "376": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.unpause_staking",
+      "op": "callsub unpause_staking",
+      "defined_out": [
+        "to_encode%9#0"
+      ],
+      "stack_out": [
+        "to_encode%9#0"
+      ]
+    },
+    "379": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%9#0",
+        "to_encode%9#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%9#0",
+        "to_encode%9#0 (copy)"
+      ]
+    },
+    "380": {
+      "op": "len",
+      "defined_out": [
+        "length%7#0",
+        "to_encode%9#0"
+      ],
+      "stack_out": [
+        "to_encode%9#0",
+        "length%7#0"
+      ]
+    },
+    "381": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%7#0",
+        "to_encode%9#0"
+      ],
+      "stack_out": [
+        "to_encode%9#0",
+        "as_bytes%7#0"
+      ]
+    },
+    "382": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%7#0",
+        "to_encode%9#0"
+      ],
+      "stack_out": [
+        "to_encode%9#0",
+        "length_uint16%7#0"
+      ]
+    },
+    "385": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%7#0",
+        "to_encode%9#0"
+      ]
+    },
+    "386": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%7#0"
+      ],
+      "stack_out": [
+        "encoded_value%7#0"
+      ]
+    },
+    "387": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%7#0"
+      ],
+      "stack_out": [
+        "encoded_value%7#0",
+        "0x151f7c75"
+      ]
+    },
+    "388": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%7#0"
+      ]
+    },
+    "389": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%72#0"
+      ],
+      "stack_out": [
+        "tmp%72#0"
+      ]
+    },
+    "390": {
+      "op": "log",
+      "stack_out": []
+    },
+    "391": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "392": {
+      "op": "return",
+      "stack_out": []
+    },
+    "393": {
+      "block": "main_pause_staking_route@15",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%63#0"
+      ],
+      "stack_out": [
+        "tmp%63#0"
+      ]
+    },
+    "395": {
+      "op": "!",
+      "defined_out": [
+        "tmp%64#0"
+      ],
+      "stack_out": [
+        "tmp%64#0"
+      ]
+    },
+    "396": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "397": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%65#0"
+      ],
+      "stack_out": [
+        "tmp%65#0"
+      ]
+    },
+    "399": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "400": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.pause_staking",
+      "op": "callsub pause_staking",
+      "defined_out": [
+        "to_encode%8#0"
+      ],
+      "stack_out": [
+        "to_encode%8#0"
+      ]
+    },
+    "403": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%8#0",
+        "to_encode%8#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%8#0",
+        "to_encode%8#0 (copy)"
+      ]
+    },
+    "404": {
+      "op": "len",
+      "defined_out": [
+        "length%6#0",
+        "to_encode%8#0"
+      ],
+      "stack_out": [
+        "to_encode%8#0",
+        "length%6#0"
+      ]
+    },
+    "405": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%6#0",
+        "to_encode%8#0"
+      ],
+      "stack_out": [
+        "to_encode%8#0",
+        "as_bytes%6#0"
+      ]
+    },
+    "406": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%6#0",
+        "to_encode%8#0"
+      ],
+      "stack_out": [
+        "to_encode%8#0",
+        "length_uint16%6#0"
+      ]
+    },
+    "409": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%6#0",
+        "to_encode%8#0"
+      ]
+    },
+    "410": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%6#0"
+      ],
+      "stack_out": [
+        "encoded_value%6#0"
+      ]
+    },
+    "411": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%6#0"
+      ],
+      "stack_out": [
+        "encoded_value%6#0",
+        "0x151f7c75"
+      ]
+    },
+    "412": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%6#0"
+      ]
+    },
+    "413": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%67#0"
+      ],
+      "stack_out": [
+        "tmp%67#0"
+      ]
+    },
+    "414": {
+      "op": "log",
+      "stack_out": []
+    },
+    "415": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "416": {
+      "op": "return",
+      "stack_out": []
+    },
+    "417": {
+      "block": "main_emergency_withdraw_route@14",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%58#0"
+      ],
+      "stack_out": [
+        "tmp%58#0"
+      ]
+    },
+    "419": {
+      "op": "!",
+      "defined_out": [
+        "tmp%59#0"
+      ],
+      "stack_out": [
+        "tmp%59#0"
+      ]
+    },
+    "420": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "421": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%60#0"
+      ],
+      "stack_out": [
+        "tmp%60#0"
+      ]
+    },
+    "423": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "424": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.emergency_withdraw",
+      "op": "callsub emergency_withdraw",
+      "defined_out": [
+        "to_encode%7#0"
+      ],
+      "stack_out": [
+        "to_encode%7#0"
+      ]
+    },
+    "427": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%7#0",
+        "to_encode%7#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%7#0",
+        "to_encode%7#0 (copy)"
+      ]
+    },
+    "428": {
+      "op": "len",
+      "defined_out": [
+        "length%5#0",
+        "to_encode%7#0"
+      ],
+      "stack_out": [
+        "to_encode%7#0",
+        "length%5#0"
+      ]
+    },
+    "429": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%5#0",
+        "to_encode%7#0"
+      ],
+      "stack_out": [
+        "to_encode%7#0",
+        "as_bytes%5#0"
+      ]
+    },
+    "430": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%5#0",
+        "to_encode%7#0"
+      ],
+      "stack_out": [
+        "to_encode%7#0",
+        "length_uint16%5#0"
+      ]
+    },
+    "433": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%5#0",
+        "to_encode%7#0"
+      ]
+    },
+    "434": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%5#0"
+      ],
+      "stack_out": [
+        "encoded_value%5#0"
+      ]
+    },
+    "435": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%5#0"
+      ],
+      "stack_out": [
+        "encoded_value%5#0",
+        "0x151f7c75"
+      ]
+    },
+    "436": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%5#0"
+      ]
+    },
+    "437": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%62#0"
+      ],
+      "stack_out": [
+        "tmp%62#0"
+      ]
+    },
+    "438": {
+      "op": "log",
+      "stack_out": []
+    },
+    "439": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "440": {
+      "op": "return",
+      "stack_out": []
+    },
+    "441": {
+      "block": "main_update_reward_parameters_route@13",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%51#0"
+      ],
+      "stack_out": [
+        "tmp%51#0"
+      ]
+    },
+    "443": {
+      "op": "!",
+      "defined_out": [
+        "tmp%52#0"
+      ],
+      "stack_out": [
+        "tmp%52#0"
+      ]
+    },
+    "444": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "445": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%53#0"
+      ],
+      "stack_out": [
+        "tmp%53#0"
+      ]
+    },
+    "447": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "448": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%2#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%2#0"
+      ]
+    },
+    "451": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%55#0"
+      ],
+      "stack_out": [
+        "tmp%55#0"
+      ]
+    },
+    "452": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%3#0",
+        "tmp%55#0"
+      ],
+      "stack_out": [
+        "tmp%55#0",
+        "reinterpret_bytes[8]%3#0"
+      ]
+    },
+    "455": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%55#0",
+        "tmp%56#0"
+      ],
+      "stack_out": [
+        "tmp%55#0",
+        "tmp%56#0"
+      ]
+    },
+    "456": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.update_reward_parameters",
+      "op": "callsub update_reward_parameters",
+      "defined_out": [
+        "to_encode%6#0"
+      ],
+      "stack_out": [
+        "to_encode%6#0"
+      ]
+    },
+    "459": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%6#0",
+        "to_encode%6#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%6#0",
+        "to_encode%6#0 (copy)"
+      ]
+    },
+    "460": {
+      "op": "len",
+      "defined_out": [
+        "length%4#0",
+        "to_encode%6#0"
+      ],
+      "stack_out": [
+        "to_encode%6#0",
+        "length%4#0"
+      ]
+    },
+    "461": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%4#0",
+        "to_encode%6#0"
+      ],
+      "stack_out": [
+        "to_encode%6#0",
+        "as_bytes%4#0"
+      ]
+    },
+    "462": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%4#0",
+        "to_encode%6#0"
+      ],
+      "stack_out": [
+        "to_encode%6#0",
+        "length_uint16%4#0"
+      ]
+    },
+    "465": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%4#0",
+        "to_encode%6#0"
+      ]
+    },
+    "466": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%4#0"
+      ],
+      "stack_out": [
+        "encoded_value%4#0"
+      ]
+    },
+    "467": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%4#0"
+      ],
+      "stack_out": [
+        "encoded_value%4#0",
+        "0x151f7c75"
+      ]
+    },
+    "468": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%4#0"
+      ]
+    },
+    "469": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%57#0"
+      ],
+      "stack_out": [
+        "tmp%57#0"
+      ]
+    },
+    "470": {
+      "op": "log",
+      "stack_out": []
+    },
+    "471": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "472": {
+      "op": "return",
+      "stack_out": []
+    },
+    "473": {
+      "block": "main_get_reward_rate_route@12",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%46#0"
+      ],
+      "stack_out": [
+        "tmp%46#0"
+      ]
+    },
+    "475": {
+      "op": "!",
+      "defined_out": [
+        "tmp%47#0"
+      ],
+      "stack_out": [
+        "tmp%47#0"
+      ]
+    },
+    "476": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "477": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%48#0"
+      ],
+      "stack_out": [
+        "tmp%48#0"
+      ]
+    },
+    "479": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "480": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.get_reward_rate",
+      "op": "callsub get_reward_rate",
+      "defined_out": [
+        "to_encode%5#0"
+      ],
+      "stack_out": [
+        "to_encode%5#0"
+      ]
+    },
+    "483": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%1#0"
+      ]
+    },
+    "484": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "485": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "486": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%50#0"
+      ],
+      "stack_out": [
+        "tmp%50#0"
+      ]
+    },
+    "487": {
+      "op": "log",
+      "stack_out": []
+    },
+    "488": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "489": {
+      "op": "return",
+      "stack_out": []
+    },
+    "490": {
+      "block": "main_get_staking_info_route@11",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0"
+      ]
+    },
+    "492": {
+      "op": "!",
+      "defined_out": [
+        "tmp%41#0"
+      ],
+      "stack_out": [
+        "tmp%41#0"
+      ]
+    },
+    "493": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "494": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%42#0"
+      ],
+      "stack_out": [
+        "tmp%42#0"
+      ]
+    },
+    "496": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "497": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.get_staking_info",
+      "op": "callsub get_staking_info",
+      "defined_out": [
+        "tmp%44#0"
+      ],
+      "stack_out": [
+        "tmp%44#0"
+      ]
+    },
+    "500": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%44#0"
+      ],
+      "stack_out": [
+        "tmp%44#0",
+        "0x151f7c75"
+      ]
+    },
+    "501": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%44#0"
+      ]
+    },
+    "502": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%45#0"
+      ],
+      "stack_out": [
+        "tmp%45#0"
+      ]
+    },
+    "503": {
+      "op": "log",
+      "stack_out": []
+    },
+    "504": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "505": {
+      "op": "return",
+      "stack_out": []
+    },
+    "506": {
+      "block": "main_get_user_info_route@10",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%34#0"
+      ]
+    },
+    "508": {
+      "op": "!",
+      "defined_out": [
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0"
+      ]
+    },
+    "509": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "510": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%36#0"
+      ]
+    },
+    "512": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "513": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.get_user_info",
+      "op": "callsub get_user_info",
+      "defined_out": [
+        "tmp%38#0"
+      ],
+      "stack_out": [
+        "tmp%38#0"
+      ]
+    },
+    "516": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%38#0"
+      ],
+      "stack_out": [
+        "tmp%38#0",
+        "0x151f7c75"
+      ]
+    },
+    "517": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%38#0"
+      ]
+    },
+    "518": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%39#0"
+      ],
+      "stack_out": [
+        "tmp%39#0"
+      ]
+    },
+    "519": {
+      "op": "log",
+      "stack_out": []
+    },
+    "520": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "521": {
+      "op": "return",
+      "stack_out": []
+    },
+    "522": {
+      "block": "main_calculate_pending_rewards_route@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "524": {
+      "op": "!",
+      "defined_out": [
+        "tmp%30#0"
+      ],
+      "stack_out": [
+        "tmp%30#0"
+      ]
+    },
+    "525": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "526": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "528": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "529": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.calculate_pending_rewards",
+      "op": "callsub calculate_pending_rewards",
+      "defined_out": [
+        "to_encode%4#0"
+      ],
+      "stack_out": [
+        "to_encode%4#0"
+      ]
+    },
+    "532": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "533": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "534": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "535": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%33#0"
+      ]
+    },
+    "536": {
+      "op": "log",
+      "stack_out": []
+    },
+    "537": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "538": {
+      "op": "return",
+      "stack_out": []
+    },
+    "539": {
+      "block": "main_claim_rewards_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%24#0"
+      ]
+    },
+    "541": {
+      "op": "!",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "542": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "543": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
+      ]
+    },
+    "545": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "546": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.claim_rewards",
+      "op": "callsub claim_rewards",
+      "defined_out": [
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0"
+      ]
+    },
+    "549": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%3#0",
+        "to_encode%3#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%3#0",
+        "to_encode%3#0 (copy)"
+      ]
+    },
+    "550": {
+      "op": "len",
+      "defined_out": [
+        "length%3#0",
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0",
+        "length%3#0"
+      ]
+    },
+    "551": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%3#0",
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0",
+        "as_bytes%3#0"
+      ]
+    },
+    "552": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%3#0",
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0",
+        "length_uint16%3#0"
+      ]
+    },
+    "555": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%3#0",
+        "to_encode%3#0"
+      ]
+    },
+    "556": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%3#0"
+      ],
+      "stack_out": [
+        "encoded_value%3#0"
+      ]
+    },
+    "557": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%3#0"
+      ],
+      "stack_out": [
+        "encoded_value%3#0",
+        "0x151f7c75"
+      ]
+    },
+    "558": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%3#0"
+      ]
+    },
+    "559": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%28#0"
+      ]
+    },
+    "560": {
+      "op": "log",
+      "stack_out": []
+    },
+    "561": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "562": {
+      "op": "return",
+      "stack_out": []
+    },
+    "563": {
+      "block": "main_unstake_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "565": {
+      "op": "!",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "566": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "567": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "569": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "570": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%1#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%1#0"
+      ]
+    },
+    "573": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "574": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.unstake",
+      "op": "callsub unstake",
+      "defined_out": [
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0"
+      ]
+    },
+    "577": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ]
+    },
+    "578": {
+      "op": "len",
+      "defined_out": [
+        "length%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "length%2#0"
+      ]
+    },
+    "579": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "as_bytes%2#0"
+      ]
+    },
+    "580": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "length_uint16%2#0"
+      ]
+    },
+    "583": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%2#0",
+        "to_encode%2#0"
+      ]
+    },
+    "584": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%2#0"
+      ],
+      "stack_out": [
+        "encoded_value%2#0"
+      ]
+    },
+    "585": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%2#0"
+      ],
+      "stack_out": [
+        "encoded_value%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "586": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%2#0"
+      ]
+    },
+    "587": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "588": {
+      "op": "log",
+      "stack_out": []
+    },
+    "589": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "590": {
+      "op": "return",
+      "stack_out": []
+    },
+    "591": {
+      "block": "main_stake_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "593": {
+      "op": "!",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "594": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "595": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "597": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "598": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "601": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "602": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.stake",
+      "op": "callsub stake",
+      "defined_out": [
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0"
+      ]
+    },
+    "605": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ]
+    },
+    "606": {
+      "op": "len",
+      "defined_out": [
+        "length%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "length%1#0"
+      ]
+    },
+    "607": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "as_bytes%1#0"
+      ]
+    },
+    "608": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "length_uint16%1#0"
+      ]
+    },
+    "611": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%1#0",
+        "to_encode%1#0"
+      ]
+    },
+    "612": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%1#0"
+      ]
+    },
+    "613": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "614": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%1#0"
+      ]
+    },
+    "615": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "616": {
+      "op": "log",
+      "stack_out": []
+    },
+    "617": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "618": {
+      "op": "return",
+      "stack_out": []
+    },
+    "619": {
+      "block": "main_initialize_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "621": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "622": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "623": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "625": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "626": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "629": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "632": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "635": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0"
+      ]
+    },
+    "638": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp.initialize",
+      "op": "callsub initialize",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "641": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ]
+    },
+    "642": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length%0#0"
+      ]
+    },
+    "643": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "644": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "647": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ]
+    },
+    "648": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0"
+      ]
+    },
+    "649": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "650": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ]
+    },
+    "651": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "652": {
+      "op": "log",
+      "stack_out": []
+    },
+    "653": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "654": {
+      "op": "return",
+      "stack_out": []
+    },
+    "655": {
+      "block": "main_bare_routing@19",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%83#0"
+      ],
+      "stack_out": [
+        "tmp%83#0"
+      ]
+    },
+    "657": {
+      "op": "bnz main_after_if_else@21",
+      "stack_out": []
+    },
+    "660": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%84#0"
+      ],
+      "stack_out": [
+        "tmp%84#0"
+      ]
+    },
+    "662": {
+      "op": "!",
+      "defined_out": [
+        "tmp%85#0"
+      ],
+      "stack_out": [
+        "tmp%85#0"
+      ]
+    },
+    "663": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "664": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "665": {
+      "op": "return",
+      "stack_out": []
+    },
+    "666": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.initialize",
+      "params": {
+        "reward_name#0": "bytes",
+        "reward_symbol#0": "bytes"
+      },
+      "block": "initialize",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "669": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "671": {
+      "op": "global CreatorAddress",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "673": {
+      "op": "==",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "674": {
+      "error": "Only creator can initialize",
+      "op": "assert // Only creator can initialize",
+      "stack_out": []
+    },
+    "675": {
+      "op": "bytec 8 // \"admin\"",
+      "defined_out": [
+        "\"admin\""
+      ],
+      "stack_out": [
+        "\"admin\""
+      ]
+    },
+    "677": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"admin\"",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "\"admin\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "679": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "680": {
+      "op": "pushbytes \"reward_name\"",
+      "defined_out": [
+        "\"reward_name\""
+      ],
+      "stack_out": [
+        "\"reward_name\""
+      ]
+    },
+    "693": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"reward_name\"",
+        "reward_name#0 (copy)"
+      ],
+      "stack_out": [
+        "\"reward_name\"",
+        "reward_name#0 (copy)"
+      ]
+    },
+    "695": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "696": {
+      "op": "pushbytes \"reward_symbol\"",
+      "defined_out": [
+        "\"reward_symbol\""
+      ],
+      "stack_out": [
+        "\"reward_symbol\""
+      ]
+    },
+    "711": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"reward_symbol\"",
+        "reward_symbol#0 (copy)"
+      ],
+      "stack_out": [
+        "\"reward_symbol\"",
+        "reward_symbol#0 (copy)"
+      ]
+    },
+    "713": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "714": {
+      "op": "bytec_3 // \"is_paused\"",
+      "defined_out": [
+        "\"is_paused\""
+      ],
+      "stack_out": [
+        "\"is_paused\""
+      ]
+    },
+    "715": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"is_paused\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"is_paused\"",
+        "0"
+      ]
+    },
+    "716": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "717": {
+      "op": "bytec_1 // \"total_staked\"",
+      "defined_out": [
+        "\"total_staked\""
+      ],
+      "stack_out": [
+        "\"total_staked\""
+      ]
+    },
+    "718": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"total_staked\"",
+        "0"
+      ]
+    },
+    "719": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "720": {
+      "op": "bytec 9 // \"total_rewards_distributed\"",
+      "defined_out": [
+        "\"total_rewards_distributed\""
+      ],
+      "stack_out": [
+        "\"total_rewards_distributed\""
+      ]
+    },
+    "722": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"total_rewards_distributed\"",
+        "0"
+      ]
+    },
+    "723": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "724": {
+      "op": "pushbytes 0x5374616b696e674461707020696e697469616c697a6564",
+      "defined_out": [
+        "0x5374616b696e674461707020696e697469616c697a6564"
+      ],
+      "stack_out": [
+        "0x5374616b696e674461707020696e697469616c697a6564"
+      ]
+    },
+    "749": {
+      "op": "log",
+      "stack_out": []
+    },
+    "750": {
+      "op": "pushbytes \"Staking contract initialized successfully\"",
+      "defined_out": [
+        "\"Staking contract initialized successfully\""
+      ],
+      "stack_out": [
+        "\"Staking contract initialized successfully\""
+      ]
+    },
+    "793": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "794": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.stake",
+      "params": {
+        "amount#0": "uint64"
+      },
+      "block": "stake",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "797": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "798": {
+      "op": "bytec_3 // \"is_paused\"",
+      "defined_out": [
+        "\"is_paused\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"is_paused\""
+      ]
+    },
+    "799": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "800": {
+      "error": "check self.is_paused exists",
+      "op": "assert // check self.is_paused exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "801": {
+      "op": "!",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "802": {
+      "error": "Staking is paused",
+      "op": "assert // Staking is paused",
+      "stack_out": []
+    },
+    "803": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "amount#0 (copy)"
+      ],
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "805": {
+      "error": "Amount must be positive",
+      "op": "assert // Amount must be positive",
+      "stack_out": []
+    },
+    "806": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp._update_rewards",
+      "op": "callsub _update_rewards"
+    },
+    "809": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "811": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%2#0",
+        "0"
+      ]
+    },
+    "812": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "defined_out": [
+        "\"staked_amount\"",
+        "0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "0",
+        "\"staked_amount\""
+      ]
+    },
+    "813": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_staked#0",
+        "maybe_exists%1#0"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "814": {
+      "error": "check self.staked_amount exists for account",
+      "op": "assert // check self.staked_amount exists for account",
+      "stack_out": [
+        "current_staked#0"
+      ]
+    },
+    "815": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "current_staked#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "817": {
+      "op": "+",
+      "defined_out": [
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0"
+      ]
+    },
+    "818": {
+      "op": "txn Sender",
+      "defined_out": [
+        "materialized_values%0#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%3#0"
+      ]
+    },
+    "820": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%3#0",
+        "\"staked_amount\""
+      ]
+    },
+    "821": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%3#0",
+        "\"staked_amount\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "823": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "824": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "825": {
+      "op": "bytec_1 // \"total_staked\"",
+      "defined_out": [
+        "\"total_staked\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_staked\""
+      ]
+    },
+    "826": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "827": {
+      "error": "check self.total_staked exists",
+      "op": "assert // check self.total_staked exists",
+      "stack_out": [
+        "maybe_value%2#0"
+      ]
+    },
+    "828": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "maybe_value%2#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "830": {
+      "op": "+",
+      "defined_out": [
+        "materialized_values%1#0"
+      ],
+      "stack_out": [
+        "materialized_values%1#0"
+      ]
+    },
+    "831": {
+      "op": "bytec_1 // \"total_staked\"",
+      "stack_out": [
+        "materialized_values%1#0",
+        "\"total_staked\""
+      ]
+    },
+    "832": {
+      "op": "swap",
+      "stack_out": [
+        "\"total_staked\"",
+        "materialized_values%1#0"
+      ]
+    },
+    "833": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "834": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "836": {
+      "op": "bytec 7 // \"last_reward_time\"",
+      "defined_out": [
+        "\"last_reward_time\"",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0",
+        "\"last_reward_time\""
+      ]
+    },
+    "838": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "\"last_reward_time\"",
+        "materialized_values%2#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0",
+        "\"last_reward_time\"",
+        "materialized_values%2#0"
+      ]
+    },
+    "840": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "841": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "843": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "844": {
+      "op": "pushbytes 0x546f6b656e73207374616b6564202d20416d6f756e743a20",
+      "defined_out": [
+        "0x546f6b656e73207374616b6564202d20416d6f756e743a20",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0",
+        "0x546f6b656e73207374616b6564202d20416d6f756e743a20"
+      ]
+    },
+    "870": {
+      "op": "swap",
+      "stack_out": [
+        "0x546f6b656e73207374616b6564202d20416d6f756e743a20",
+        "tmp%5#0"
+      ]
+    },
+    "871": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "872": {
+      "op": "log",
+      "stack_out": []
+    },
+    "873": {
+      "op": "pushbytes \"Tokens staked successfully\"",
+      "defined_out": [
+        "\"Tokens staked successfully\""
+      ],
+      "stack_out": [
+        "\"Tokens staked successfully\""
+      ]
+    },
+    "901": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "902": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.unstake",
+      "params": {
+        "amount#0": "uint64"
+      },
+      "block": "unstake",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "905": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "906": {
+      "op": "bytec_3 // \"is_paused\"",
+      "defined_out": [
+        "\"is_paused\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"is_paused\""
+      ]
+    },
+    "907": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "908": {
+      "error": "check self.is_paused exists",
+      "op": "assert // check self.is_paused exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "909": {
+      "op": "!",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "910": {
+      "error": "Staking is paused",
+      "op": "assert // Staking is paused",
+      "stack_out": []
+    },
+    "911": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "amount#0 (copy)"
+      ],
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "913": {
+      "error": "Amount must be positive",
+      "op": "assert // Amount must be positive",
+      "stack_out": []
+    },
+    "914": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "916": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%2#0",
+        "0"
+      ]
+    },
+    "917": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "defined_out": [
+        "\"staked_amount\"",
+        "0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "0",
+        "\"staked_amount\""
+      ]
+    },
+    "918": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_staked#0",
+        "maybe_exists%1#0"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "919": {
+      "error": "check self.staked_amount exists for account",
+      "op": "assert // check self.staked_amount exists for account",
+      "stack_out": [
+        "current_staked#0"
+      ]
+    },
+    "920": {
+      "op": "dup",
+      "defined_out": [
+        "current_staked#0",
+        "current_staked#0 (copy)"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "current_staked#0 (copy)"
+      ]
+    },
+    "921": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "current_staked#0",
+        "current_staked#0 (copy)",
+        "amount#0 (copy)"
+      ]
+    },
+    "923": {
+      "op": ">=",
+      "defined_out": [
+        "current_staked#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "tmp%3#0"
+      ]
+    },
+    "924": {
+      "error": "Insufficient staked amount",
+      "op": "assert // Insufficient staked amount",
+      "stack_out": [
+        "current_staked#0"
+      ]
+    },
+    "925": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp._update_rewards",
+      "op": "callsub _update_rewards"
+    },
+    "928": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "current_staked#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "930": {
+      "op": "-",
+      "defined_out": [
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0"
+      ]
+    },
+    "931": {
+      "op": "txn Sender",
+      "defined_out": [
+        "materialized_values%0#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%4#0"
+      ]
+    },
+    "933": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "stack_out": [
+        "materialized_values%0#0",
+        "tmp%4#0",
+        "\"staked_amount\""
+      ]
+    },
+    "934": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%4#0",
+        "\"staked_amount\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "936": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "937": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "938": {
+      "op": "bytec_1 // \"total_staked\"",
+      "defined_out": [
+        "\"total_staked\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_staked\""
+      ]
+    },
+    "939": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "940": {
+      "error": "check self.total_staked exists",
+      "op": "assert // check self.total_staked exists",
+      "stack_out": [
+        "maybe_value%2#0"
+      ]
+    },
+    "941": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "maybe_value%2#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "943": {
+      "op": "-",
+      "defined_out": [
+        "materialized_values%1#0"
+      ],
+      "stack_out": [
+        "materialized_values%1#0"
+      ]
+    },
+    "944": {
+      "op": "bytec_1 // \"total_staked\"",
+      "stack_out": [
+        "materialized_values%1#0",
+        "\"total_staked\""
+      ]
+    },
+    "945": {
+      "op": "swap",
+      "stack_out": [
+        "\"total_staked\"",
+        "materialized_values%1#0"
+      ]
+    },
+    "946": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "947": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "949": {
+      "op": "bytec 7 // \"last_reward_time\"",
+      "defined_out": [
+        "\"last_reward_time\"",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0",
+        "\"last_reward_time\""
+      ]
+    },
+    "951": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "\"last_reward_time\"",
+        "materialized_values%2#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0",
+        "\"last_reward_time\"",
+        "materialized_values%2#0"
+      ]
+    },
+    "953": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "954": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "amount#0 (copy)"
+      ]
+    },
+    "956": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "957": {
+      "op": "pushbytes 0x546f6b656e7320756e7374616b6564202d20416d6f756e743a20",
+      "defined_out": [
+        "0x546f6b656e7320756e7374616b6564202d20416d6f756e743a20",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0",
+        "0x546f6b656e7320756e7374616b6564202d20416d6f756e743a20"
+      ]
+    },
+    "985": {
+      "op": "swap",
+      "stack_out": [
+        "0x546f6b656e7320756e7374616b6564202d20416d6f756e743a20",
+        "tmp%6#0"
+      ]
+    },
+    "986": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "987": {
+      "op": "log",
+      "stack_out": []
+    },
+    "988": {
+      "op": "pushbytes \"Tokens unstaked successfully\"",
+      "defined_out": [
+        "\"Tokens unstaked successfully\""
+      ],
+      "stack_out": [
+        "\"Tokens unstaked successfully\""
+      ]
+    },
+    "1018": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1019": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.claim_rewards",
+      "params": {},
+      "block": "claim_rewards",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1020": {
+      "op": "bytec_3 // \"is_paused\"",
+      "defined_out": [
+        "\"is_paused\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"is_paused\""
+      ]
+    },
+    "1021": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1022": {
+      "error": "check self.is_paused exists",
+      "op": "assert // check self.is_paused exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1023": {
+      "op": "!",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1024": {
+      "error": "Staking is paused",
+      "op": "assert // Staking is paused",
+      "stack_out": []
+    },
+    "1025": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp._update_rewards",
+      "op": "callsub _update_rewards"
+    },
+    "1028": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1030": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%1#0",
+        "0"
+      ]
+    },
+    "1031": {
+      "op": "bytec 4 // \"reward_balance\"",
+      "defined_out": [
+        "\"reward_balance\"",
+        "0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0",
+        "0",
+        "\"reward_balance\""
+      ]
+    },
+    "1033": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_reward_balance#0",
+        "maybe_exists%1#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1034": {
+      "error": "check self.reward_balance exists for account",
+      "op": "assert // check self.reward_balance exists for account",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1035": {
+      "op": "dup",
+      "defined_out": [
+        "current_reward_balance#0",
+        "current_reward_balance#0 (copy)"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "current_reward_balance#0 (copy)"
+      ]
+    },
+    "1036": {
+      "error": "No rewards to claim",
+      "op": "assert // No rewards to claim",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1037": {
+      "op": "txn Sender",
+      "defined_out": [
+        "current_reward_balance#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%3#0"
+      ]
+    },
+    "1039": {
+      "op": "bytec 4 // \"reward_balance\"",
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%3#0",
+        "\"reward_balance\""
+      ]
+    },
+    "1041": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%3#0",
+        "\"reward_balance\"",
+        "0"
+      ]
+    },
+    "1042": {
+      "op": "app_local_put",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1043": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_reward_balance#0",
+        "0"
+      ]
+    },
+    "1044": {
+      "op": "bytec 9 // \"total_rewards_distributed\"",
+      "defined_out": [
+        "\"total_rewards_distributed\"",
+        "0",
+        "current_reward_balance#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "0",
+        "\"total_rewards_distributed\""
+      ]
+    },
+    "1046": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "current_reward_balance#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1047": {
+      "error": "check self.total_rewards_distributed exists",
+      "op": "assert // check self.total_rewards_distributed exists",
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "1048": {
+      "op": "dig 1",
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_value%2#0",
+        "current_reward_balance#0 (copy)"
+      ]
+    },
+    "1050": {
+      "op": "+",
+      "defined_out": [
+        "current_reward_balance#0",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "materialized_values%0#0"
+      ]
+    },
+    "1051": {
+      "op": "bytec 9 // \"total_rewards_distributed\"",
+      "stack_out": [
+        "current_reward_balance#0",
+        "materialized_values%0#0",
+        "\"total_rewards_distributed\""
+      ]
+    },
+    "1053": {
+      "op": "swap",
+      "stack_out": [
+        "current_reward_balance#0",
+        "\"total_rewards_distributed\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "1054": {
+      "op": "app_global_put",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1055": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "1056": {
+      "op": "pushbytes 0x5265776172647320636c61696d6564202d20416d6f756e743a20",
+      "defined_out": [
+        "0x5265776172647320636c61696d6564202d20416d6f756e743a20",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0",
+        "0x5265776172647320636c61696d6564202d20416d6f756e743a20"
+      ]
+    },
+    "1084": {
+      "op": "swap",
+      "stack_out": [
+        "0x5265776172647320636c61696d6564202d20416d6f756e743a20",
+        "tmp%4#0"
+      ]
+    },
+    "1085": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "1086": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1087": {
+      "op": "pushbytes \"Rewards claimed successfully\"",
+      "defined_out": [
+        "\"Rewards claimed successfully\""
+      ],
+      "stack_out": [
+        "\"Rewards claimed successfully\""
+      ]
+    },
+    "1117": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1118": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.calculate_pending_rewards",
+      "params": {},
+      "block": "calculate_pending_rewards",
+      "stack_in": [],
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp._calculate_reward_internal",
+      "op": "callsub _calculate_reward_internal",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1121": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1122": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.get_user_info",
+      "params": {},
+      "block": "get_user_info",
+      "stack_in": [],
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp._calculate_reward_internal",
+      "op": "callsub _calculate_reward_internal",
+      "defined_out": [
+        "pending_rewards#0"
+      ],
+      "stack_out": [
+        "pending_rewards#0"
+      ]
+    },
+    "1125": {
+      "op": "txn Sender",
+      "defined_out": [
+        "pending_rewards#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "pending_rewards#0",
+        "tmp%0#0"
+      ]
+    },
+    "1127": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "pending_rewards#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "pending_rewards#0",
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1128": {
+      "op": "bytec 4 // \"reward_balance\"",
+      "defined_out": [
+        "\"reward_balance\"",
+        "0",
+        "pending_rewards#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "pending_rewards#0",
+        "tmp%0#0",
+        "0",
+        "\"reward_balance\""
+      ]
+    },
+    "1130": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "pending_rewards#0"
+      ],
+      "stack_out": [
+        "pending_rewards#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1131": {
+      "error": "check self.reward_balance exists for account",
+      "op": "assert // check self.reward_balance exists for account",
+      "stack_out": [
+        "pending_rewards#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1132": {
+      "op": "+",
+      "defined_out": [
+        "total_rewards#0"
+      ],
+      "stack_out": [
+        "total_rewards#0"
+      ]
+    },
+    "1133": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%1#0",
+        "total_rewards#0"
+      ],
+      "stack_out": [
+        "total_rewards#0",
+        "tmp%1#0"
+      ]
+    },
+    "1135": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "total_rewards#0",
+        "tmp%1#0",
+        "0"
+      ]
+    },
+    "1136": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "defined_out": [
+        "\"staked_amount\"",
+        "0",
+        "tmp%1#0",
+        "total_rewards#0"
+      ],
+      "stack_out": [
+        "total_rewards#0",
+        "tmp%1#0",
+        "0",
+        "\"staked_amount\""
+      ]
+    },
+    "1137": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "total_rewards#0"
+      ],
+      "stack_out": [
+        "total_rewards#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1138": {
+      "error": "check self.staked_amount exists for account",
+      "op": "assert // check self.staked_amount exists for account",
+      "stack_out": [
+        "total_rewards#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1139": {
+      "op": "itob",
+      "defined_out": [
+        "total_rewards#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "total_rewards#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "1140": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%2#0",
+        "total_rewards#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "total_rewards#0",
+        "val_as_bytes%0#0",
+        "tmp%2#0"
+      ]
+    },
+    "1142": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "total_rewards#0",
+        "val_as_bytes%0#0",
+        "tmp%2#0",
+        "0"
+      ]
+    },
+    "1143": {
+      "op": "bytec 4 // \"reward_balance\"",
+      "stack_out": [
+        "total_rewards#0",
+        "val_as_bytes%0#0",
+        "tmp%2#0",
+        "0",
+        "\"reward_balance\""
+      ]
+    },
+    "1145": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "total_rewards#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "total_rewards#0",
+        "val_as_bytes%0#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1146": {
+      "error": "check self.reward_balance exists for account",
+      "op": "assert // check self.reward_balance exists for account",
+      "stack_out": [
+        "total_rewards#0",
+        "val_as_bytes%0#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "1147": {
+      "op": "itob",
+      "defined_out": [
+        "total_rewards#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "total_rewards#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "1148": {
+      "op": "uncover 2",
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "total_rewards#0"
+      ]
+    },
+    "1150": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "1151": {
+      "op": "cover 2",
+      "stack_out": [
+        "val_as_bytes%2#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "1153": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%2#0",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%2#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "1154": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_tuple_buffer%2#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "1155": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "1156": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1157": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.get_staking_info",
+      "params": {},
+      "block": "get_staking_info",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1158": {
+      "op": "bytec_1 // \"total_staked\"",
+      "defined_out": [
+        "\"total_staked\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_staked\""
+      ]
+    },
+    "1159": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1160": {
+      "error": "check self.total_staked exists",
+      "op": "assert // check self.total_staked exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1161": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "1162": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "0"
+      ]
+    },
+    "1163": {
+      "op": "bytec 9 // \"total_rewards_distributed\"",
+      "defined_out": [
+        "\"total_rewards_distributed\"",
+        "0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "0",
+        "\"total_rewards_distributed\""
+      ]
+    },
+    "1165": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1166": {
+      "error": "check self.total_rewards_distributed exists",
+      "op": "assert // check self.total_rewards_distributed exists",
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1167": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "1168": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0"
+      ]
+    },
+    "1169": {
+      "op": "bytec 5 // \"reward_amount\"",
+      "defined_out": [
+        "\"reward_amount\"",
+        "0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "0",
+        "\"reward_amount\""
+      ]
+    },
+    "1171": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1172": {
+      "error": "check self.reward_amount exists",
+      "op": "assert // check self.reward_amount exists",
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "1173": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "1174": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "0"
+      ]
+    },
+    "1175": {
+      "op": "bytec 6 // \"reward_interval\"",
+      "defined_out": [
+        "\"reward_interval\"",
+        "0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "0",
+        "\"reward_interval\""
+      ]
+    },
+    "1177": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "1178": {
+      "error": "check self.reward_interval exists",
+      "op": "assert // check self.reward_interval exists",
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "1179": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ]
+    },
+    "1180": {
+      "op": "uncover 3",
+      "stack_out": [
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "1182": {
+      "op": "uncover 3",
+      "stack_out": [
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "1184": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%2#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "1185": {
+      "op": "uncover 2",
+      "stack_out": [
+        "val_as_bytes%3#0",
+        "encoded_tuple_buffer%2#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "1187": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%3#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "1188": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_tuple_buffer%3#0",
+        "val_as_bytes%3#0"
+      ]
+    },
+    "1189": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%4#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "1190": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1191": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.get_reward_rate",
+      "params": {},
+      "block": "get_reward_rate",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1192": {
+      "op": "bytec 5 // \"reward_amount\"",
+      "defined_out": [
+        "\"reward_amount\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"reward_amount\""
+      ]
+    },
+    "1194": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1195": {
+      "error": "check self.reward_amount exists",
+      "op": "assert // check self.reward_amount exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1196": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "1197": {
+      "op": "bytec 10 // \"precision_factor\"",
+      "defined_out": [
+        "\"precision_factor\"",
+        "0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "0",
+        "\"precision_factor\""
+      ]
+    },
+    "1199": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1200": {
+      "error": "check self.precision_factor exists",
+      "op": "assert // check self.precision_factor exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1201": {
+      "op": "*",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1202": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1203": {
+      "op": "bytec 6 // \"reward_interval\"",
+      "defined_out": [
+        "\"reward_interval\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"reward_interval\""
+      ]
+    },
+    "1205": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1206": {
+      "error": "check self.reward_interval exists",
+      "op": "assert // check self.reward_interval exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "1207": {
+      "op": "/",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1208": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1209": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.update_reward_parameters",
+      "params": {
+        "new_reward_amount#0": "uint64",
+        "new_reward_interval#0": "uint64"
+      },
+      "block": "update_reward_parameters",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "1212": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1214": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1215": {
+      "op": "bytec 8 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"admin\""
+      ]
+    },
+    "1217": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1218": {
+      "error": "check self.admin exists",
+      "op": "assert // check self.admin exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1219": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1220": {
+      "error": "Only admin can update",
+      "op": "assert // Only admin can update",
+      "stack_out": []
+    },
+    "1221": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "new_reward_amount#0 (copy)"
+      ],
+      "stack_out": [
+        "new_reward_amount#0 (copy)"
+      ]
+    },
+    "1223": {
+      "error": "Reward amount must be positive",
+      "op": "assert // Reward amount must be positive",
+      "stack_out": []
+    },
+    "1224": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "new_reward_interval#0 (copy)"
+      ],
+      "stack_out": [
+        "new_reward_interval#0 (copy)"
+      ]
+    },
+    "1226": {
+      "error": "Reward interval must be positive",
+      "op": "assert // Reward interval must be positive",
+      "stack_out": []
+    },
+    "1227": {
+      "op": "bytec 5 // \"reward_amount\"",
+      "defined_out": [
+        "\"reward_amount\""
+      ],
+      "stack_out": [
+        "\"reward_amount\""
+      ]
+    },
+    "1229": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "\"reward_amount\"",
+        "new_reward_amount#0 (copy)"
+      ]
+    },
+    "1231": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "1232": {
+      "op": "bytec 6 // \"reward_interval\"",
+      "defined_out": [
+        "\"reward_interval\""
+      ],
+      "stack_out": [
+        "\"reward_interval\""
+      ]
+    },
+    "1234": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "\"reward_interval\"",
+        "new_reward_interval#0 (copy)"
+      ]
+    },
+    "1236": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "1237": {
+      "op": "pushbytes 0x52657761726420706172616d65746572732075706461746564",
+      "defined_out": [
+        "0x52657761726420706172616d65746572732075706461746564"
+      ],
+      "stack_out": [
+        "0x52657761726420706172616d65746572732075706461746564"
+      ]
+    },
+    "1264": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1265": {
+      "op": "pushbytes \"Reward parameters updated successfully\"",
+      "defined_out": [
+        "\"Reward parameters updated successfully\""
+      ],
+      "stack_out": [
+        "\"Reward parameters updated successfully\""
+      ]
+    },
+    "1305": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1306": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.emergency_withdraw",
+      "params": {},
+      "block": "emergency_withdraw",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1308": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1309": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "defined_out": [
+        "\"staked_amount\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"staked_amount\""
+      ]
+    },
+    "1310": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_staked#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1311": {
+      "error": "check self.staked_amount exists for account",
+      "op": "assert // check self.staked_amount exists for account",
+      "stack_out": [
+        "current_staked#0"
+      ]
+    },
+    "1312": {
+      "op": "dup",
+      "defined_out": [
+        "current_staked#0",
+        "current_staked#0 (copy)"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "current_staked#0 (copy)"
+      ]
+    },
+    "1313": {
+      "error": "No tokens staked",
+      "op": "assert // No tokens staked",
+      "stack_out": [
+        "current_staked#0"
+      ]
+    },
+    "1314": {
+      "op": "txn Sender",
+      "defined_out": [
+        "current_staked#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "tmp%2#0"
+      ]
+    },
+    "1316": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "stack_out": [
+        "current_staked#0",
+        "tmp%2#0",
+        "\"staked_amount\""
+      ]
+    },
+    "1317": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_staked#0",
+        "tmp%2#0",
+        "\"staked_amount\"",
+        "0"
+      ]
+    },
+    "1318": {
+      "op": "app_local_put",
+      "stack_out": [
+        "current_staked#0"
+      ]
+    },
+    "1319": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_staked#0",
+        "0"
+      ]
+    },
+    "1320": {
+      "op": "bytec_1 // \"total_staked\"",
+      "defined_out": [
+        "\"total_staked\"",
+        "0",
+        "current_staked#0"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "0",
+        "\"total_staked\""
+      ]
+    },
+    "1321": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "current_staked#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1322": {
+      "error": "check self.total_staked exists",
+      "op": "assert // check self.total_staked exists",
+      "stack_out": [
+        "current_staked#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "1323": {
+      "op": "dig 1",
+      "stack_out": [
+        "current_staked#0",
+        "maybe_value%1#0",
+        "current_staked#0 (copy)"
+      ]
+    },
+    "1325": {
+      "op": "-",
+      "defined_out": [
+        "current_staked#0",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "current_staked#0",
+        "materialized_values%0#0"
+      ]
+    },
+    "1326": {
+      "op": "bytec_1 // \"total_staked\"",
+      "stack_out": [
+        "current_staked#0",
+        "materialized_values%0#0",
+        "\"total_staked\""
+      ]
+    },
+    "1327": {
+      "op": "swap",
+      "stack_out": [
+        "current_staked#0",
+        "\"total_staked\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "1328": {
+      "op": "app_global_put",
+      "stack_out": [
+        "current_staked#0"
+      ]
+    },
+    "1329": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "1330": {
+      "op": "pushbytes 0x456d657267656e6379207769746864726177616c202d20416d6f756e743a20",
+      "defined_out": [
+        "0x456d657267656e6379207769746864726177616c202d20416d6f756e743a20",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "0x456d657267656e6379207769746864726177616c202d20416d6f756e743a20"
+      ]
+    },
+    "1363": {
+      "op": "swap",
+      "stack_out": [
+        "0x456d657267656e6379207769746864726177616c202d20416d6f756e743a20",
+        "tmp%3#0"
+      ]
+    },
+    "1364": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "1365": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1366": {
+      "op": "pushbytes \"Emergency withdrawal completed\"",
+      "defined_out": [
+        "\"Emergency withdrawal completed\""
+      ],
+      "stack_out": [
+        "\"Emergency withdrawal completed\""
+      ]
+    },
+    "1398": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1399": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.pause_staking",
+      "params": {},
+      "block": "pause_staking",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1401": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1402": {
+      "op": "bytec 8 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"admin\""
+      ]
+    },
+    "1404": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1405": {
+      "error": "check self.admin exists",
+      "op": "assert // check self.admin exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1406": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1407": {
+      "error": "Only admin can pause",
+      "op": "assert // Only admin can pause",
+      "stack_out": []
+    },
+    "1408": {
+      "op": "bytec_3 // \"is_paused\"",
+      "defined_out": [
+        "\"is_paused\""
+      ],
+      "stack_out": [
+        "\"is_paused\""
+      ]
+    },
+    "1409": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "\"is_paused\"",
+        "1"
+      ],
+      "stack_out": [
+        "\"is_paused\"",
+        "1"
+      ]
+    },
+    "1410": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "1411": {
+      "op": "bytec 11 // 0x5374616b696e6720706175736564",
+      "defined_out": [
+        "0x5374616b696e6720706175736564"
+      ],
+      "stack_out": [
+        "0x5374616b696e6720706175736564"
+      ]
+    },
+    "1413": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1414": {
+      "op": "bytec 11 // \"Staking paused\"",
+      "defined_out": [
+        "\"Staking paused\""
+      ],
+      "stack_out": [
+        "\"Staking paused\""
+      ]
+    },
+    "1416": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1417": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.unpause_staking",
+      "params": {},
+      "block": "unpause_staking",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1419": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1420": {
+      "op": "bytec 8 // \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"admin\""
+      ]
+    },
+    "1422": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1423": {
+      "error": "check self.admin exists",
+      "op": "assert // check self.admin exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "1424": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1425": {
+      "error": "Only admin can unpause",
+      "op": "assert // Only admin can unpause",
+      "stack_out": []
+    },
+    "1426": {
+      "op": "bytec_3 // \"is_paused\"",
+      "defined_out": [
+        "\"is_paused\""
+      ],
+      "stack_out": [
+        "\"is_paused\""
+      ]
+    },
+    "1427": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"is_paused\"",
+        "0"
+      ]
+    },
+    "1428": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "1429": {
+      "op": "bytec 12 // 0x5374616b696e6720756e706175736564",
+      "defined_out": [
+        "0x5374616b696e6720756e706175736564"
+      ],
+      "stack_out": [
+        "0x5374616b696e6720756e706175736564"
+      ]
+    },
+    "1431": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1432": {
+      "op": "bytec 12 // \"Staking unpaused\"",
+      "defined_out": [
+        "\"Staking unpaused\""
+      ],
+      "stack_out": [
+        "\"Staking unpaused\""
+      ]
+    },
+    "1434": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1435": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.is_staking_paused",
+      "params": {},
+      "block": "is_staking_paused",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1436": {
+      "op": "bytec_3 // \"is_paused\"",
+      "defined_out": [
+        "\"is_paused\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"is_paused\""
+      ]
+    },
+    "1437": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1438": {
+      "error": "check self.is_paused exists",
+      "op": "assert // check self.is_paused exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1439": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1440": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp._update_rewards",
+      "params": {},
+      "block": "_update_rewards",
+      "stack_in": [],
+      "op": "proto 0 0"
+    },
+    "1443": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp._calculate_reward_internal",
+      "op": "callsub _calculate_reward_internal",
+      "defined_out": [
+        "pending_reward#0"
+      ],
+      "stack_out": [
+        "pending_reward#0"
+      ]
+    },
+    "1446": {
+      "op": "dup",
+      "defined_out": [
+        "pending_reward#0"
+      ],
+      "stack_out": [
+        "pending_reward#0",
+        "pending_reward#0"
+      ]
+    },
+    "1447": {
+      "op": "bz _update_rewards_after_if_else@2",
+      "stack_out": [
+        "pending_reward#0"
+      ]
+    },
+    "1450": {
+      "op": "txn Sender",
+      "defined_out": [
+        "pending_reward#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "pending_reward#0",
+        "tmp%1#0"
+      ]
+    },
+    "1452": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "pending_reward#0",
+        "tmp%1#0",
+        "0"
+      ]
+    },
+    "1453": {
+      "op": "bytec 4 // \"reward_balance\"",
+      "defined_out": [
+        "\"reward_balance\"",
+        "0",
+        "pending_reward#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "pending_reward#0",
+        "tmp%1#0",
+        "0",
+        "\"reward_balance\""
+      ]
+    },
+    "1455": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_balance#0",
+        "maybe_exists%0#0",
+        "pending_reward#0"
+      ],
+      "stack_out": [
+        "pending_reward#0",
+        "current_balance#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1456": {
+      "error": "check self.reward_balance exists for account",
+      "op": "assert // check self.reward_balance exists for account",
+      "stack_out": [
+        "pending_reward#0",
+        "current_balance#0"
+      ]
+    },
+    "1457": {
+      "op": "frame_dig 0",
+      "stack_out": [
+        "pending_reward#0",
+        "current_balance#0",
+        "pending_reward#0"
+      ]
+    },
+    "1459": {
+      "op": "+",
+      "defined_out": [
+        "materialized_values%0#0",
+        "pending_reward#0"
+      ],
+      "stack_out": [
+        "pending_reward#0",
+        "materialized_values%0#0"
+      ]
+    },
+    "1460": {
+      "op": "txn Sender",
+      "defined_out": [
+        "materialized_values%0#0",
+        "pending_reward#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "pending_reward#0",
+        "materialized_values%0#0",
+        "tmp%2#0"
+      ]
+    },
+    "1462": {
+      "op": "bytec 4 // \"reward_balance\"",
+      "stack_out": [
+        "pending_reward#0",
+        "materialized_values%0#0",
+        "tmp%2#0",
+        "\"reward_balance\""
+      ]
+    },
+    "1464": {
+      "op": "uncover 2",
+      "stack_out": [
+        "pending_reward#0",
+        "tmp%2#0",
+        "\"reward_balance\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "1466": {
+      "op": "app_local_put",
+      "stack_out": [
+        "pending_reward#0"
+      ]
+    },
+    "1467": {
+      "block": "_update_rewards_after_if_else@2",
+      "stack_in": [
+        "pending_reward#0"
+      ],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "pending_reward#0",
+        "tmp%3#0"
+      ]
+    },
+    "1469": {
+      "op": "bytec 7 // \"last_reward_time\"",
+      "defined_out": [
+        "\"last_reward_time\"",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "pending_reward#0",
+        "tmp%3#0",
+        "\"last_reward_time\""
+      ]
+    },
+    "1471": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "\"last_reward_time\"",
+        "materialized_values%1#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "pending_reward#0",
+        "tmp%3#0",
+        "\"last_reward_time\"",
+        "materialized_values%1#0"
+      ]
+    },
+    "1473": {
+      "op": "app_local_put",
+      "stack_out": [
+        "pending_reward#0"
+      ]
+    },
+    "1474": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1475": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp._calculate_reward_internal",
+      "params": {},
+      "block": "_calculate_reward_internal",
+      "stack_in": [],
+      "op": "proto 0 1"
+    },
+    "1478": {
+      "op": "pushbytes \"\"",
+      "stack_out": [
+        "current_time#0"
+      ]
+    },
+    "1480": {
+      "op": "dup",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0"
+      ]
+    },
+    "1481": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "tmp%0#0"
+      ]
+    },
+    "1483": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "1484": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "defined_out": [
+        "\"staked_amount\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "tmp%0#0",
+        "0",
+        "\"staked_amount\""
+      ]
+    },
+    "1485": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "user_staked#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1486": {
+      "op": "swap",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "maybe_exists%0#0",
+        "user_staked#0"
+      ]
+    },
+    "1487": {
+      "op": "dup",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "maybe_exists%0#0",
+        "user_staked#0",
+        "user_staked#0 (copy)"
+      ]
+    },
+    "1488": {
+      "op": "uncover 2",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "user_staked#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "user_staked#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1490": {
+      "error": "check self.staked_amount exists for account",
+      "op": "assert // check self.staked_amount exists for account",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "user_staked#0"
+      ]
+    },
+    "1491": {
+      "op": "bnz _calculate_reward_internal_after_if_else@2",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0"
+      ]
+    },
+    "1494": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "0"
+      ]
+    },
+    "1495": {
+      "op": "frame_bury 0"
+    },
+    "1497": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1498": {
+      "block": "_calculate_reward_internal_after_if_else@2",
+      "stack_in": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0"
+      ],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%2#0"
+      ]
+    },
+    "1500": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%2#0",
+        "0"
+      ]
+    },
+    "1501": {
+      "op": "bytec 7 // \"last_reward_time\"",
+      "defined_out": [
+        "\"last_reward_time\"",
+        "0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%2#0",
+        "0",
+        "\"last_reward_time\""
+      ]
+    },
+    "1503": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "last_time#0",
+        "maybe_exists%1#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "last_time#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1504": {
+      "op": "swap",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "maybe_exists%1#0",
+        "last_time#0"
+      ]
+    },
+    "1505": {
+      "op": "dup",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "maybe_exists%1#0",
+        "last_time#0",
+        "last_time#0 (copy)"
+      ]
+    },
+    "1506": {
+      "op": "cover 2",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "last_time#0",
+        "maybe_exists%1#0",
+        "last_time#0"
+      ]
+    },
+    "1508": {
+      "op": "frame_bury 1",
+      "defined_out": [
+        "last_time#0",
+        "maybe_exists%1#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "last_time#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1510": {
+      "error": "check self.last_reward_time exists for account",
+      "op": "assert // check self.last_reward_time exists for account",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "last_time#0"
+      ]
+    },
+    "1511": {
+      "op": "global LatestTimestamp"
+    },
+    "1513": {
+      "op": "dup",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "last_time#0",
+        "current_time#0",
+        "current_time#0"
+      ]
+    },
+    "1514": {
+      "op": "frame_bury 0",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "last_time#0",
+        "current_time#0"
+      ]
+    },
+    "1516": {
+      "op": ">=",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%3#0"
+      ]
+    },
+    "1517": {
+      "op": "bz _calculate_reward_internal_after_if_else@4",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0"
+      ]
+    },
+    "1520": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "0"
+      ]
+    },
+    "1521": {
+      "op": "frame_bury 0"
+    },
+    "1523": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1524": {
+      "block": "_calculate_reward_internal_after_if_else@4",
+      "stack_in": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0"
+      ],
+      "op": "frame_dig 0",
+      "defined_out": [
+        "current_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "current_time#0"
+      ]
+    },
+    "1526": {
+      "op": "frame_dig 1",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "current_time#0",
+        "last_time#0"
+      ]
+    },
+    "1528": {
+      "op": "-",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0",
+        "time_passed#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "time_passed#0"
+      ]
+    },
+    "1529": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "current_time#0",
+        "last_time#0",
+        "time_passed#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "time_passed#0",
+        "0"
+      ]
+    },
+    "1530": {
+      "op": "bytec 6 // \"reward_interval\"",
+      "defined_out": [
+        "\"reward_interval\"",
+        "0",
+        "current_time#0",
+        "last_time#0",
+        "time_passed#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "time_passed#0",
+        "0",
+        "\"reward_interval\""
+      ]
+    },
+    "1532": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "time_passed#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "time_passed#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1533": {
+      "error": "check self.reward_interval exists",
+      "op": "assert // check self.reward_interval exists",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "time_passed#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "1534": {
+      "op": "/",
+      "defined_out": [
+        "current_time#0",
+        "intervals#0",
+        "last_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "intervals#0"
+      ]
+    },
+    "1535": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "intervals#0",
+        "0"
+      ]
+    },
+    "1536": {
+      "op": "bytec 5 // \"reward_amount\"",
+      "defined_out": [
+        "\"reward_amount\"",
+        "0",
+        "current_time#0",
+        "intervals#0",
+        "last_time#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "intervals#0",
+        "0",
+        "\"reward_amount\""
+      ]
+    },
+    "1538": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "current_time#0",
+        "intervals#0",
+        "last_time#0",
+        "maybe_exists%3#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "intervals#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "1539": {
+      "error": "check self.reward_amount exists",
+      "op": "assert // check self.reward_amount exists",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "intervals#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "1540": {
+      "op": "*",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%4#0"
+      ]
+    },
+    "1541": {
+      "op": "frame_dig 2",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0",
+        "tmp%4#0",
+        "user_staked#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%4#0",
+        "user_staked#0"
+      ]
+    },
+    "1543": {
+      "op": "*",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0",
+        "tmp%5#0",
+        "user_staked#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%5#0"
+      ]
+    },
+    "1544": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%5#0",
+        "0"
+      ]
+    },
+    "1545": {
+      "op": "bytec 10 // \"precision_factor\"",
+      "defined_out": [
+        "\"precision_factor\"",
+        "0",
+        "current_time#0",
+        "last_time#0",
+        "tmp%5#0",
+        "user_staked#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%5#0",
+        "0",
+        "\"precision_factor\""
+      ]
+    },
+    "1547": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0",
+        "maybe_exists%4#0",
+        "maybe_value%4#0",
+        "tmp%5#0",
+        "user_staked#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%5#0",
+        "maybe_value%4#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "1548": {
+      "error": "check self.precision_factor exists",
+      "op": "assert // check self.precision_factor exists",
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "tmp%5#0",
+        "maybe_value%4#0"
+      ]
+    },
+    "1549": {
+      "op": "/",
+      "defined_out": [
+        "current_time#0",
+        "last_time#0",
+        "reward#0",
+        "user_staked#0"
+      ],
+      "stack_out": [
+        "current_time#0",
+        "last_time#0",
+        "user_staked#0",
+        "reward#0"
+      ]
+    },
+    "1550": {
+      "op": "frame_bury 0"
+    },
+    "1552": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1553": {
+      "subroutine": "smart_contracts.staking_dapp.contract.StakingDapp.compound_rewards",
+      "params": {},
+      "block": "compound_rewards",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "1554": {
+      "op": "bytec_3 // \"is_paused\"",
+      "defined_out": [
+        "\"is_paused\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"is_paused\""
+      ]
+    },
+    "1555": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "1556": {
+      "error": "check self.is_paused exists",
+      "op": "assert // check self.is_paused exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "1557": {
+      "op": "!",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "1558": {
+      "error": "Staking is paused",
+      "op": "assert // Staking is paused",
+      "stack_out": []
+    },
+    "1559": {
+      "callsub": "smart_contracts.staking_dapp.contract.StakingDapp._update_rewards",
+      "op": "callsub _update_rewards"
+    },
+    "1562": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "1564": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%1#0",
+        "0"
+      ]
+    },
+    "1565": {
+      "op": "bytec 4 // \"reward_balance\"",
+      "defined_out": [
+        "\"reward_balance\"",
+        "0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0",
+        "0",
+        "\"reward_balance\""
+      ]
+    },
+    "1567": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_reward_balance#0",
+        "maybe_exists%1#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "1568": {
+      "error": "check self.reward_balance exists for account",
+      "op": "assert // check self.reward_balance exists for account",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1569": {
+      "op": "dup",
+      "defined_out": [
+        "current_reward_balance#0",
+        "current_reward_balance#0 (copy)"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "current_reward_balance#0 (copy)"
+      ]
+    },
+    "1570": {
+      "error": "No rewards to compound",
+      "op": "assert // No rewards to compound",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1571": {
+      "op": "txn Sender",
+      "defined_out": [
+        "current_reward_balance#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%3#0"
+      ]
+    },
+    "1573": {
+      "op": "bytec 4 // \"reward_balance\"",
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%3#0",
+        "\"reward_balance\""
+      ]
+    },
+    "1575": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%3#0",
+        "\"reward_balance\"",
+        "0"
+      ]
+    },
+    "1576": {
+      "op": "app_local_put",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1577": {
+      "op": "txn Sender",
+      "defined_out": [
+        "current_reward_balance#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%4#0"
+      ]
+    },
+    "1579": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%4#0",
+        "0"
+      ]
+    },
+    "1580": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "defined_out": [
+        "\"staked_amount\"",
+        "0",
+        "current_reward_balance#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%4#0",
+        "0",
+        "\"staked_amount\""
+      ]
+    },
+    "1581": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "current_reward_balance#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "1582": {
+      "error": "check self.staked_amount exists for account",
+      "op": "assert // check self.staked_amount exists for account",
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "1583": {
+      "op": "dig 1",
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_value%2#0",
+        "current_reward_balance#0 (copy)"
+      ]
+    },
+    "1585": {
+      "op": "+",
+      "defined_out": [
+        "current_reward_balance#0",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "materialized_values%0#0"
+      ]
+    },
+    "1586": {
+      "op": "txn Sender",
+      "defined_out": [
+        "current_reward_balance#0",
+        "materialized_values%0#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "materialized_values%0#0",
+        "tmp%5#0"
+      ]
+    },
+    "1588": {
+      "op": "bytec_2 // \"staked_amount\"",
+      "stack_out": [
+        "current_reward_balance#0",
+        "materialized_values%0#0",
+        "tmp%5#0",
+        "\"staked_amount\""
+      ]
+    },
+    "1589": {
+      "op": "uncover 2",
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%5#0",
+        "\"staked_amount\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "1591": {
+      "op": "app_local_put",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1592": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "current_reward_balance#0",
+        "0"
+      ]
+    },
+    "1593": {
+      "op": "bytec_1 // \"total_staked\"",
+      "defined_out": [
+        "\"total_staked\"",
+        "0",
+        "current_reward_balance#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "0",
+        "\"total_staked\""
+      ]
+    },
+    "1594": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "current_reward_balance#0",
+        "maybe_exists%3#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "1595": {
+      "error": "check self.total_staked exists",
+      "op": "assert // check self.total_staked exists",
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "1596": {
+      "op": "dig 1",
+      "stack_out": [
+        "current_reward_balance#0",
+        "maybe_value%3#0",
+        "current_reward_balance#0 (copy)"
+      ]
+    },
+    "1598": {
+      "op": "+",
+      "defined_out": [
+        "current_reward_balance#0",
+        "materialized_values%1#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "materialized_values%1#0"
+      ]
+    },
+    "1599": {
+      "op": "bytec_1 // \"total_staked\"",
+      "stack_out": [
+        "current_reward_balance#0",
+        "materialized_values%1#0",
+        "\"total_staked\""
+      ]
+    },
+    "1600": {
+      "op": "swap",
+      "stack_out": [
+        "current_reward_balance#0",
+        "\"total_staked\"",
+        "materialized_values%1#0"
+      ]
+    },
+    "1601": {
+      "op": "app_global_put",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1602": {
+      "op": "txn Sender",
+      "defined_out": [
+        "current_reward_balance#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%6#0"
+      ]
+    },
+    "1604": {
+      "op": "bytec 7 // \"last_reward_time\"",
+      "defined_out": [
+        "\"last_reward_time\"",
+        "current_reward_balance#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%6#0",
+        "\"last_reward_time\""
+      ]
+    },
+    "1606": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "\"last_reward_time\"",
+        "current_reward_balance#0",
+        "materialized_values%2#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "current_reward_balance#0",
+        "tmp%6#0",
+        "\"last_reward_time\"",
+        "materialized_values%2#0"
+      ]
+    },
+    "1608": {
+      "op": "app_local_put",
+      "stack_out": [
+        "current_reward_balance#0"
+      ]
+    },
+    "1609": {
+      "op": "itob",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "1610": {
+      "op": "pushbytes 0x5265776172647320636f6d706f756e646564202d20416d6f756e743a20",
+      "defined_out": [
+        "0x5265776172647320636f6d706f756e646564202d20416d6f756e743a20",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "0x5265776172647320636f6d706f756e646564202d20416d6f756e743a20"
+      ]
+    },
+    "1641": {
+      "op": "swap",
+      "stack_out": [
+        "0x5265776172647320636f6d706f756e646564202d20416d6f756e743a20",
+        "tmp%7#0"
+      ]
+    },
+    "1642": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "1643": {
+      "op": "log",
+      "stack_out": []
+    },
+    "1644": {
+      "op": "pushbytes \"Rewards compounded successfully\"",
+      "defined_out": [
+        "\"Rewards compounded successfully\""
+      ],
+      "stack_out": [
+        "\"Rewards compounded successfully\""
+      ]
+    },
+    "1677": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}

@@ -1,0 +1,857 @@
+#pragma version 10
+#pragma typetrack false
+
+// smart_contracts.pt_token.contract.PTToken.__algopy_entrypoint_with_init() -> uint64:
+main:
+    intcblock 0 1
+    bytecblock 0x151f7c75 "balance" "total_supply" "owner" "allowance" "maturity" "name" "symbol" "decimals"
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@18
+    pushbytess 0x4b986d3a 0x792da1ca 0x723c153b 0x7b5f6f57 0x60a55ce6 0x46909355 0x4f373e88 0x84ac58ad 0x4663afd1 0x5b1f97fe 0x2a15c988 0xc955fd83 0xbeeee619 // method "initialize(string,string,uint64)string", method "mint(byte[],uint64)string", method "burn(uint64)string", method "transfer(byte[],uint64)string", method "balance_of(byte[])uint64", method "get_total_supply()uint64", method "get_maturity()uint64", method "is_mature()uint64", method "get_token_info()(string,string,uint64,uint64)", method "approve(byte[],uint64)string", method "get_allowance(byte[],byte[])uint64", method "transfer_from(byte[],byte[],uint64)string", method "update_owner(byte[])string"
+    txna ApplicationArgs 0
+    match main_initialize_route@5 main_mint_route@6 main_burn_route@7 main_transfer_route@8 main_balance_of_route@9 main_get_total_supply_route@10 main_get_maturity_route@11 main_is_mature_route@12 main_get_token_info_route@13 main_approve_route@14 main_get_allowance_route@15 main_transfer_from_route@16 main_update_owner_route@17
+
+main_after_if_else@20:
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    intc_0 // 0
+    return
+
+main_update_owner_route@17:
+    // smart_contracts/pt_token/contract.py:183
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    // smart_contracts/pt_token/contract.py:183
+    // @arc4.abimethod
+    callsub update_owner
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_transfer_from_route@16:
+    // smart_contracts/pt_token/contract.py:163
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    extract 2 0
+    txna ApplicationArgs 3
+    btoi
+    // smart_contracts/pt_token/contract.py:163
+    // @arc4.abimethod
+    callsub transfer_from
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_allowance_route@15:
+    // smart_contracts/pt_token/contract.py:157
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    extract 2 0
+    // smart_contracts/pt_token/contract.py:157
+    // @arc4.abimethod(readonly=True)
+    callsub get_allowance
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_approve_route@14:
+    // smart_contracts/pt_token/contract.py:149
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/pt_token/contract.py:149
+    // @arc4.abimethod
+    callsub approve
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_token_info_route@13:
+    // smart_contracts/pt_token/contract.py:139
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_token_info
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_is_mature_route@12:
+    // smart_contracts/pt_token/contract.py:131
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub is_mature
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_maturity_route@11:
+    // smart_contracts/pt_token/contract.py:126
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_maturity
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_get_total_supply_route@10:
+    // smart_contracts/pt_token/contract.py:121
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_total_supply
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_balance_of_route@9:
+    // smart_contracts/pt_token/contract.py:115
+    // @arc4.abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    // smart_contracts/pt_token/contract.py:115
+    // @arc4.abimethod(readonly=True)
+    callsub balance_of
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_transfer_route@8:
+    // smart_contracts/pt_token/contract.py:98
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/pt_token/contract.py:98
+    // @arc4.abimethod
+    callsub transfer
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_burn_route@7:
+    // smart_contracts/pt_token/contract.py:83
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    // smart_contracts/pt_token/contract.py:83
+    // @arc4.abimethod
+    callsub burn
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_mint_route@6:
+    // smart_contracts/pt_token/contract.py:67
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/pt_token/contract.py:67
+    // @arc4.abimethod
+    callsub mint
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_initialize_route@5:
+    // smart_contracts/pt_token/contract.py:46
+    // @arc4.abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    extract 2 0
+    txna ApplicationArgs 3
+    btoi
+    // smart_contracts/pt_token/contract.py:46
+    // @arc4.abimethod
+    callsub initialize
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_bare_routing@18:
+    // smart_contracts/pt_token/contract.py:30
+    // class PTToken(ARC4Contract):
+    txn OnCompletion
+    bnz main_after_if_else@20
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_1 // 1
+    return
+
+
+// smart_contracts.pt_token.contract.PTToken.initialize(name: bytes, symbol: bytes, maturity_timestamp: uint64) -> bytes:
+initialize:
+    // smart_contracts/pt_token/contract.py:46-52
+    // @arc4.abimethod
+    // def initialize(
+    //     self,
+    //     name: String,
+    //     symbol: String,
+    //     maturity_timestamp: UInt64,
+    // ) -> String:
+    proto 3 1
+    // smart_contracts/pt_token/contract.py:54
+    // assert Txn.sender == Global.creator_address, "Only creator can initialize"
+    txn Sender
+    global CreatorAddress
+    ==
+    assert // Only creator can initialize
+    // smart_contracts/pt_token/contract.py:55
+    // assert maturity_timestamp > Global.latest_timestamp, "Maturity must be in future"
+    frame_dig -1
+    global LatestTimestamp
+    >
+    assert // Maturity must be in future
+    // smart_contracts/pt_token/contract.py:57
+    // self.owner.value = Txn.sender.bytes
+    bytec_3 // "owner"
+    txn Sender
+    app_global_put
+    // smart_contracts/pt_token/contract.py:58
+    // self.name.value = name
+    bytec 6 // "name"
+    frame_dig -3
+    app_global_put
+    // smart_contracts/pt_token/contract.py:59
+    // self.symbol.value = symbol
+    bytec 7 // "symbol"
+    frame_dig -2
+    app_global_put
+    // smart_contracts/pt_token/contract.py:60
+    // self.maturity.value = maturity_timestamp
+    bytec 5 // "maturity"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/pt_token/contract.py:61
+    // self.total_supply.value = UInt64(0)
+    bytec_2 // "total_supply"
+    intc_0 // 0
+    app_global_put
+    // smart_contracts/pt_token/contract.py:62
+    // self.decimals.value = UInt64(8)
+    bytec 8 // "decimals"
+    pushint 8 // 8
+    app_global_put
+    // smart_contracts/pt_token/contract.py:64
+    // log(b"PT Token initialized - Maturity: " + op.itob(maturity_timestamp))
+    frame_dig -1
+    itob
+    pushbytes 0x505420546f6b656e20696e697469616c697a6564202d204d617475726974793a20
+    swap
+    concat
+    log
+    // smart_contracts/pt_token/contract.py:65
+    // return String("PT Token initialized successfully")
+    pushbytes "PT Token initialized successfully"
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.mint(to: bytes, amount: uint64) -> bytes:
+mint:
+    // smart_contracts/pt_token/contract.py:67-68
+    // @arc4.abimethod
+    // def mint(self, to: Bytes, amount: UInt64) -> String:
+    proto 2 1
+    // smart_contracts/pt_token/contract.py:70
+    // assert Txn.sender.bytes == self.owner.value, "Only owner can mint"
+    txn Sender
+    intc_0 // 0
+    bytec_3 // "owner"
+    app_global_get_ex
+    assert // check self.owner exists
+    ==
+    assert // Only owner can mint
+    // smart_contracts/pt_token/contract.py:71
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/pt_token/contract.py:73-74
+    // # Update total supply
+    // self.total_supply.value = self.total_supply.value + amount
+    intc_0 // 0
+    bytec_2 // "total_supply"
+    app_global_get_ex
+    assert // check self.total_supply exists
+    frame_dig -1
+    +
+    bytec_2 // "total_supply"
+    swap
+    app_global_put
+    // smart_contracts/pt_token/contract.py:76-78
+    // # Update recipient balance (simplified - in production would need proper address handling)
+    // # For now, mint to sender
+    // self.balance[Txn.sender] = self.balance[Txn.sender] + amount
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "balance"
+    app_local_get_ex
+    assert // check self.balance exists for account
+    frame_dig -1
+    +
+    txn Sender
+    bytec_1 // "balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/pt_token/contract.py:80
+    // log(b"PT tokens minted - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x505420746f6b656e73206d696e746564202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/pt_token/contract.py:81
+    // return String("PT tokens minted successfully")
+    pushbytes "PT tokens minted successfully"
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.burn(amount: uint64) -> bytes:
+burn:
+    // smart_contracts/pt_token/contract.py:83-84
+    // @arc4.abimethod
+    // def burn(self, amount: UInt64) -> String:
+    proto 1 1
+    // smart_contracts/pt_token/contract.py:86
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/pt_token/contract.py:88
+    // current_balance = self.balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "balance"
+    app_local_get_ex
+    assert // check self.balance exists for account
+    // smart_contracts/pt_token/contract.py:89
+    // assert current_balance >= amount, "Insufficient balance"
+    dup
+    frame_dig -1
+    >=
+    assert // Insufficient balance
+    // smart_contracts/pt_token/contract.py:91-92
+    // # Update balances
+    // self.balance[Txn.sender] = current_balance - amount
+    frame_dig -1
+    -
+    txn Sender
+    bytec_1 // "balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/pt_token/contract.py:93
+    // self.total_supply.value = self.total_supply.value - amount
+    intc_0 // 0
+    bytec_2 // "total_supply"
+    app_global_get_ex
+    assert // check self.total_supply exists
+    frame_dig -1
+    -
+    bytec_2 // "total_supply"
+    swap
+    app_global_put
+    // smart_contracts/pt_token/contract.py:95
+    // log(b"PT tokens burned - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x505420746f6b656e73206275726e6564202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/pt_token/contract.py:96
+    // return String("PT tokens burned successfully")
+    pushbytes "PT tokens burned successfully"
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.transfer(to: bytes, amount: uint64) -> bytes:
+transfer:
+    // smart_contracts/pt_token/contract.py:98-99
+    // @arc4.abimethod
+    // def transfer(self, to: Bytes, amount: UInt64) -> String:
+    proto 2 1
+    // smart_contracts/pt_token/contract.py:101
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/pt_token/contract.py:103
+    // sender_balance = self.balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "balance"
+    app_local_get_ex
+    assert // check self.balance exists for account
+    // smart_contracts/pt_token/contract.py:104
+    // assert sender_balance >= amount, "Insufficient balance"
+    dup
+    frame_dig -1
+    >=
+    assert // Insufficient balance
+    // smart_contracts/pt_token/contract.py:106-107
+    // # Update sender balance
+    // self.balance[Txn.sender] = sender_balance - amount
+    frame_dig -1
+    -
+    txn Sender
+    bytec_1 // "balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/pt_token/contract.py:112
+    // log(b"PT tokens transferred - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x505420746f6b656e73207472616e73666572726564202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/pt_token/contract.py:113
+    // return String("PT tokens transferred successfully")
+    pushbytes "PT tokens transferred successfully"
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.balance_of(account: bytes) -> uint64:
+balance_of:
+    // smart_contracts/pt_token/contract.py:115-116
+    // @arc4.abimethod(readonly=True)
+    // def balance_of(self, account: Bytes) -> UInt64:
+    proto 1 1
+    // smart_contracts/pt_token/contract.py:118-119
+    // # Simplified - returns sender's balance
+    // return self.balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "balance"
+    app_local_get_ex
+    assert // check self.balance exists for account
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.get_total_supply() -> uint64:
+get_total_supply:
+    // smart_contracts/pt_token/contract.py:124
+    // return self.total_supply.value
+    intc_0 // 0
+    bytec_2 // "total_supply"
+    app_global_get_ex
+    assert // check self.total_supply exists
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.get_maturity() -> uint64:
+get_maturity:
+    // smart_contracts/pt_token/contract.py:129
+    // return self.maturity.value
+    intc_0 // 0
+    bytec 5 // "maturity"
+    app_global_get_ex
+    assert // check self.maturity exists
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.is_mature() -> uint64:
+is_mature:
+    // smart_contracts/pt_token/contract.py:134
+    // if Global.latest_timestamp >= self.maturity.value:
+    global LatestTimestamp
+    intc_0 // 0
+    bytec 5 // "maturity"
+    app_global_get_ex
+    assert // check self.maturity exists
+    >=
+    bz is_mature_else_body@2
+    // smart_contracts/pt_token/contract.py:135
+    // return UInt64(1)  # True
+    intc_1 // 1
+    retsub
+
+is_mature_else_body@2:
+    // smart_contracts/pt_token/contract.py:137
+    // return UInt64(0)  # False
+    intc_0 // 0
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.get_token_info() -> bytes:
+get_token_info:
+    // smart_contracts/pt_token/contract.py:143
+    // arc4.String(self.name.value),
+    intc_0 // 0
+    bytec 6 // "name"
+    app_global_get_ex
+    assert // check self.name exists
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    // smart_contracts/pt_token/contract.py:144
+    // arc4.String(self.symbol.value),
+    intc_0 // 0
+    bytec 7 // "symbol"
+    app_global_get_ex
+    assert // check self.symbol exists
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    // smart_contracts/pt_token/contract.py:145
+    // arc4.UInt64(self.decimals.value),
+    intc_0 // 0
+    bytec 8 // "decimals"
+    app_global_get_ex
+    assert // check self.decimals exists
+    itob
+    // smart_contracts/pt_token/contract.py:146
+    // arc4.UInt64(self.total_supply.value)
+    intc_0 // 0
+    bytec_2 // "total_supply"
+    app_global_get_ex
+    assert // check self.total_supply exists
+    itob
+    // smart_contracts/pt_token/contract.py:142-147
+    // return arc4.Tuple((
+    //     arc4.String(self.name.value),
+    //     arc4.String(self.symbol.value),
+    //     arc4.UInt64(self.decimals.value),
+    //     arc4.UInt64(self.total_supply.value)
+    // ))
+    dig 3
+    len
+    pushint 20 // 20
+    +
+    itob
+    extract 6 2
+    pushbytes 0x0014
+    swap
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.approve(spender: bytes, amount: uint64) -> bytes:
+approve:
+    // smart_contracts/pt_token/contract.py:149-150
+    // @arc4.abimethod
+    // def approve(self, spender: Bytes, amount: UInt64) -> String:
+    proto 2 1
+    // smart_contracts/pt_token/contract.py:152
+    // self.allowance[Txn.sender] = amount
+    txn Sender
+    bytec 4 // "allowance"
+    frame_dig -1
+    app_local_put
+    // smart_contracts/pt_token/contract.py:154
+    // log(b"Approval set - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x417070726f76616c20736574202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/pt_token/contract.py:155
+    // return String("Approval set successfully")
+    pushbytes "Approval set successfully"
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.get_allowance(owner: bytes, spender: bytes) -> uint64:
+get_allowance:
+    // smart_contracts/pt_token/contract.py:157-158
+    // @arc4.abimethod(readonly=True)
+    // def get_allowance(self, owner: Bytes, spender: Bytes) -> UInt64:
+    proto 2 1
+    // smart_contracts/pt_token/contract.py:160-161
+    // # Simplified - returns sender's allowance
+    // return self.allowance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "allowance"
+    app_local_get_ex
+    assert // check self.allowance exists for account
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.transfer_from(from_addr: bytes, to: bytes, amount: uint64) -> bytes:
+transfer_from:
+    // smart_contracts/pt_token/contract.py:163-164
+    // @arc4.abimethod
+    // def transfer_from(self, from_addr: Bytes, to: Bytes, amount: UInt64) -> String:
+    proto 3 1
+    // smart_contracts/pt_token/contract.py:166
+    // assert amount > UInt64(0), "Amount must be positive"
+    frame_dig -1
+    assert // Amount must be positive
+    // smart_contracts/pt_token/contract.py:168-169
+    // # Check allowance (simplified)
+    // current_allowance = self.allowance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec 4 // "allowance"
+    app_local_get_ex
+    assert // check self.allowance exists for account
+    // smart_contracts/pt_token/contract.py:170
+    // assert current_allowance >= amount, "Insufficient allowance"
+    dup
+    frame_dig -1
+    >=
+    assert // Insufficient allowance
+    // smart_contracts/pt_token/contract.py:172-173
+    // # Check balance (simplified - checking sender's balance)
+    // sender_balance = self.balance[Txn.sender]
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "balance"
+    app_local_get_ex
+    assert // check self.balance exists for account
+    // smart_contracts/pt_token/contract.py:174
+    // assert sender_balance >= amount, "Insufficient balance"
+    dup
+    frame_dig -1
+    >=
+    assert // Insufficient balance
+    // smart_contracts/pt_token/contract.py:176-177
+    // # Update balances and allowance
+    // self.balance[Txn.sender] = sender_balance - amount
+    frame_dig -1
+    -
+    txn Sender
+    bytec_1 // "balance"
+    uncover 2
+    app_local_put
+    // smart_contracts/pt_token/contract.py:178
+    // self.allowance[Txn.sender] = current_allowance - amount
+    frame_dig -1
+    -
+    txn Sender
+    bytec 4 // "allowance"
+    uncover 2
+    app_local_put
+    // smart_contracts/pt_token/contract.py:180
+    // log(b"Tokens transferred from - Amount: " + op.itob(amount))
+    frame_dig -1
+    itob
+    pushbytes 0x546f6b656e73207472616e736665727265642066726f6d202d20416d6f756e743a20
+    swap
+    concat
+    log
+    // smart_contracts/pt_token/contract.py:181
+    // return String("Tokens transferred successfully")
+    pushbytes "Tokens transferred successfully"
+    retsub
+
+
+// smart_contracts.pt_token.contract.PTToken.update_owner(new_owner: bytes) -> bytes:
+update_owner:
+    // smart_contracts/pt_token/contract.py:183-184
+    // @arc4.abimethod
+    // def update_owner(self, new_owner: Bytes) -> String:
+    proto 1 1
+    // smart_contracts/pt_token/contract.py:186
+    // assert Txn.sender.bytes == self.owner.value, "Only owner can update"
+    txn Sender
+    intc_0 // 0
+    bytec_3 // "owner"
+    app_global_get_ex
+    assert // check self.owner exists
+    ==
+    assert // Only owner can update
+    // smart_contracts/pt_token/contract.py:188
+    // self.owner.value = new_owner
+    bytec_3 // "owner"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/pt_token/contract.py:190
+    // log(b"Owner updated")
+    pushbytes 0x4f776e65722075706461746564
+    log
+    // smart_contracts/pt_token/contract.py:191
+    // return String("Owner updated successfully")
+    pushbytes "Owner updated successfully"
+    retsub
