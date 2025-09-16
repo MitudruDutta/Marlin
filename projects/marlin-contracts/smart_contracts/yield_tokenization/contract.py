@@ -203,3 +203,5 @@ class YieldTokenization(ARC4Contract):
             maturity_timestamp > Global.latest_timestamp and 
             maturity_timestamp <= Global.latest_timestamp + one_year
         )
+
+

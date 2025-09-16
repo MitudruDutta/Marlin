@@ -300,3 +300,5 @@ class SimpleAMM(ARC4Contract):
             counter = counter + UInt64(1)
         
         return z
+
+

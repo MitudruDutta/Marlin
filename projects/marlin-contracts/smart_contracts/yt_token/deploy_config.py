@@ -56,3 +56,5 @@ def deploy() -> None:
     
     print(f"YT Token contract deployed successfully! App ID: {app_id}")
     print(f"Transaction ID: {tx_id}")
+
+

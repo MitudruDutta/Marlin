@@ -56,3 +56,5 @@ def deploy() -> None:
     
     print(f"Simple AMM contract deployed successfully! App ID: {app_id}")
     print(f"Transaction ID: {tx_id}")
+
+

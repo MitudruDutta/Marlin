@@ -229,3 +229,5 @@ class YTToken(ARC4Contract):
         
         log(b"Owner updated")
         return String("Owner updated successfully")
+
+
