@@ -1,4 +1,4 @@
-### Marlin 
+# Marlin 
 
 <div align="center">
   <img src="https://img.shields.io/badge/Algorand-DeFi-blue?style=for-the-badge" alt="Algorand DeFi" />
@@ -8,7 +8,7 @@
 
 **Marlin** is an AI-powered DeFi protocol built on Algorand that revolutionizes yield farming through intelligent yield tokenization. The protocol splits yield-bearing assets into Principal Tokens (PT) and Yield Tokens (YT), enabling sophisticated investment strategies powered by machine learning and real-time market analysis.
 
-# Deploy link: https://marlin-brown.vercel.app/
+## Deploy link: https://marlin-brown.vercel.app/
 
 ## 🚀 Key Features
 
@@ -44,7 +44,7 @@ marlin/
 └── marlin.code-workspace
 ```
 
-## Smart Contract Address: F4LJEOORT6CQRBLJ6JEKHDWXTRFT67ARW5VLF7NFCWUCMA2ENKKGYWYC7Y
+### Smart Contract Address: F4LJEOORT6CQRBLJ6JEKHDWXTRFT67ARW5VLF7NFCWUCMA2ENKKGYWYC7Y
 
 ### 📋 Smart Contracts (`marlin-contracts/`)
 
