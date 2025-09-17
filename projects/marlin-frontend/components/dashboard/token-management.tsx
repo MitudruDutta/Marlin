@@ -10,6 +10,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Separator } from "@/components/ui/separator"
 import { Copy, Send, Clock, Coins } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
+import { useAlgorandTransaction } from "@/hooks/useAlgorandTransaction"
+import { useWallet } from "@/components/WalletProvider"
 
 export function TokenManagement() {
   const [ptTransferAmount, setPtTransferAmount] = useState("")
@@ -18,6 +20,14 @@ export function TokenManagement() {
   const [ytTransferTo, setYtTransferTo] = useState("")
   const [burnAmount, setBurnAmount] = useState("")
   const { toast } = useToast()
+  const { activeAddress } = useWallet()
+  const { 
+    transferPT, 
+    transferYT, 
+    burnPT, 
+    burnYT, 
+    isLoading: isTransactionLoading 
+  } = useAlgorandTransaction()
 
   // Mock data - in real app this would come from contract calls
   const tokenData = {
@@ -48,28 +58,120 @@ export function TokenManagement() {
     })
   }
 
-  const handlePTTransfer = () => {
-    console.log("PT Transfer:", { amount: ptTransferAmount, to: ptTransferTo })
-    toast({
-      title: "Transfer initiated",
-      description: `Transferring ${ptTransferAmount} PT tokens`,
-    })
+  const handlePTTransfer = async () => {
+    if (!ptTransferAmount || !ptTransferTo) {
+      toast({
+        title: "Invalid input",
+        description: "Please enter amount and recipient address",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to transfer tokens",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await transferPT(
+        ptTransferTo,
+        parseFloat(ptTransferAmount),
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: "PT transfer successful",
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setPtTransferAmount("")
+            setPtTransferTo("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error("PT transfer failed:", error)
+    }
   }
 
-  const handleYTTransfer = () => {
-    console.log("YT Transfer:", { amount: ytTransferAmount, to: ytTransferTo })
-    toast({
-      title: "Transfer initiated",
-      description: `Transferring ${ytTransferAmount} YT tokens`,
-    })
+  const handleYTTransfer = async () => {
+    if (!ytTransferAmount || !ytTransferTo) {
+      toast({
+        title: "Invalid input",
+        description: "Please enter amount and recipient address",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to transfer tokens",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await transferYT(
+        ytTransferTo,
+        parseFloat(ytTransferAmount),
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: "YT transfer successful",
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setYtTransferAmount("")
+            setYtTransferTo("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error("YT transfer failed:", error)
+    }
   }
 
-  const handleBurn = (tokenType: "pt" | "yt") => {
-    console.log(`Burning ${tokenType.toUpperCase()}:`, burnAmount)
-    toast({
-      title: "Burn initiated",
-      description: `Burning ${burnAmount} ${tokenType.toUpperCase()} tokens`,
-    })
+  const handleBurn = async (tokenType: "pt" | "yt") => {
+    if (!burnAmount) {
+      toast({
+        title: "Invalid input",
+        description: "Please enter an amount to burn",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to burn tokens",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const burnFunction = tokenType === "pt" ? burnPT : burnYT
+      const txId = await burnFunction(
+        parseFloat(burnAmount),
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: `${tokenType.toUpperCase()} burn successful`,
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setBurnAmount("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error(`${tokenType.toUpperCase()} burn failed:`, error)
+    }
   }
 
   const formatTimeToMaturity = (maturity: number) => {
@@ -187,9 +289,13 @@ export function TokenManagement() {
                   />
                   <p className="text-xs text-muted-foreground">Max: {tokenData.pt.balance.toLocaleString()} PT</p>
                 </div>
-                <Button onClick={handlePTTransfer} className="w-full" disabled={!ptTransferAmount || !ptTransferTo}>
+                <Button 
+                  onClick={handlePTTransfer} 
+                  className="w-full" 
+                  disabled={!ptTransferAmount || !ptTransferTo || !activeAddress || isTransactionLoading}
+                >
                   <Send className="h-4 w-4 mr-2" />
-                  Transfer PT
+                  {isTransactionLoading ? "Transferring..." : "Transfer PT"}
                 </Button>
               </CardContent>
             </Card>
@@ -226,9 +332,13 @@ export function TokenManagement() {
                   />
                   <p className="text-xs text-muted-foreground">Max: {tokenData.yt.balance.toLocaleString()} YT</p>
                 </div>
-                <Button onClick={handleYTTransfer} className="w-full" disabled={!ytTransferAmount || !ytTransferTo}>
+                <Button 
+                  onClick={handleYTTransfer} 
+                  className="w-full" 
+                  disabled={!ytTransferAmount || !ytTransferTo || !activeAddress || isTransactionLoading}
+                >
                   <Send className="h-4 w-4 mr-2" />
-                  Transfer YT
+                  {isTransactionLoading ? "Transferring..." : "Transfer YT"}
                 </Button>
               </CardContent>
             </Card>
@@ -263,9 +373,9 @@ export function TokenManagement() {
                     onClick={() => handleBurn("pt")}
                     variant="destructive"
                     className="w-full"
-                    disabled={!burnAmount}
+                    disabled={!burnAmount || !activeAddress || isTransactionLoading}
                   >
-                    Burn PT Tokens
+                    {isTransactionLoading ? "Burning..." : "Burn PT Tokens"}
                   </Button>
                 </div>
 
@@ -289,9 +399,9 @@ export function TokenManagement() {
                     onClick={() => handleBurn("yt")}
                     variant="destructive"
                     className="w-full"
-                    disabled={!burnAmount}
+                    disabled={!burnAmount || !activeAddress || isTransactionLoading}
                   >
-                    Burn YT Tokens
+                    {isTransactionLoading ? "Burning..." : "Burn YT Tokens"}
                   </Button>
                 </div>
               </div>

@@ -10,6 +10,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
 import { AlertTriangle, Shield, TrendingUp, Users, Settings } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
+import { useAlgorandTransaction } from "@/hooks/useAlgorandTransaction"
+import { useWallet } from "@/components/WalletProvider"
 
 export function PriceOracleMonitor() {
   const [newPrice, setNewPrice] = useState("")
@@ -18,6 +20,13 @@ export function PriceOracleMonitor() {
   const [updaterAddress, setUpdaterAddress] = useState("")
   const [currentTime, setCurrentTime] = useState(Date.now())
   const { toast } = useToast()
+  const { activeAddress } = useWallet()
+  const { 
+    updatePrice, 
+    setPriceThreshold, 
+    toggleCircuitBreaker, 
+    isLoading: isTransactionLoading 
+  } = useAlgorandTransaction()
 
   // Update current time every second
   useEffect(() => {
@@ -52,22 +61,80 @@ export function PriceOracleMonitor() {
     ],
   }
 
-  const handleUpdatePrice = () => {
-    if (!newPrice || !confidence) return
-    console.log("Update price:", { price: newPrice, confidence })
-    toast({
-      title: "Price update submitted",
-      description: `New price: $${newPrice} with ${confidence}% confidence`,
-    })
+  const handleUpdatePrice = async () => {
+    if (!newPrice || !confidence) {
+      toast({
+        title: "Invalid input",
+        description: "Please enter both price and confidence values",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to update the price oracle",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await updatePrice(
+        parseFloat(newPrice),
+        parseInt(confidence),
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: "Price update successful",
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setNewPrice("")
+            setConfidence("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error("Price update failed:", error)
+    }
   }
 
-  const handleSetThreshold = () => {
-    if (!threshold) return
-    console.log("Set threshold:", threshold)
-    toast({
-      title: "Threshold updated",
-      description: `New threshold set to $${threshold}`,
-    })
+  const handleSetThreshold = async () => {
+    if (!threshold) {
+      toast({
+        title: "Invalid input",
+        description: "Please enter a threshold value",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to set the threshold",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await setPriceThreshold(
+        parseFloat(threshold),
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: "Threshold updated successfully",
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setThreshold("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error("Threshold update failed:", error)
+    }
   }
 
   const handleAddUpdater = () => {
@@ -79,12 +146,28 @@ export function PriceOracleMonitor() {
     })
   }
 
-  const handleCircuitBreaker = () => {
-    console.log("Toggle circuit breaker")
-    toast({
-      title: "Circuit breaker toggled",
-      description: oracleData.circuitBreakerActive ? "Circuit breaker deactivated" : "Circuit breaker activated",
-    })
+  const handleCircuitBreaker = async () => {
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to toggle circuit breaker",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await toggleCircuitBreaker({
+        onSuccess: (txId) => {
+          toast({
+            title: "Circuit breaker toggled successfully",
+            description: `Transaction: ${txId.slice(0, 8)}...`,
+          })
+        }
+      })
+    } catch (error) {
+      console.error("Circuit breaker toggle failed:", error)
+    }
   }
 
   const getPriceStatus = () => {
@@ -265,10 +348,10 @@ export function PriceOracleMonitor() {
               <Button
                 onClick={handleUpdatePrice}
                 className="w-full"
-                disabled={!newPrice || !confidence || oracleData.circuitBreakerActive}
+                disabled={!newPrice || !confidence || oracleData.circuitBreakerActive || !activeAddress || isTransactionLoading}
               >
                 <TrendingUp className="h-4 w-4 mr-2" />
-                Update Price
+                {isTransactionLoading ? "Updating..." : "Update Price"}
               </Button>
             </CardContent>
           </Card>
@@ -298,8 +381,12 @@ export function PriceOracleMonitor() {
                   <p className="text-xs text-muted-foreground">Current: ${oracleData.thresholdPrice.toFixed(4)}</p>
                 </div>
 
-                <Button onClick={handleSetThreshold} className="w-full" disabled={!threshold}>
-                  Set Threshold
+                <Button 
+                  onClick={handleSetThreshold} 
+                  className="w-full" 
+                  disabled={!threshold || !activeAddress || isTransactionLoading}
+                >
+                  {isTransactionLoading ? "Setting..." : "Set Threshold"}
                 </Button>
               </CardContent>
             </Card>
@@ -329,9 +416,10 @@ export function PriceOracleMonitor() {
                   onClick={handleCircuitBreaker}
                   variant={oracleData.circuitBreakerActive ? "default" : "destructive"}
                   className="w-full"
+                  disabled={!activeAddress || isTransactionLoading}
                 >
                   <Shield className="h-4 w-4 mr-2" />
-                  {oracleData.circuitBreakerActive ? "Deactivate" : "Activate"} Circuit Breaker
+                  {isTransactionLoading ? "Toggling..." : oracleData.circuitBreakerActive ? "Deactivate" : "Activate"} Circuit Breaker
                 </Button>
               </CardContent>
             </Card>

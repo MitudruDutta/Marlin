@@ -10,6 +10,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Split, Merge, Clock, Calendar, TrendingUp, Coins } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
+import { useAlgorandTransaction } from "@/hooks/useAlgorandTransaction"
+import { useWallet } from "@/components/WalletProvider"
 
 export function AMMInterface() {
   const [splitAmount, setSplitAmount] = useState("")
@@ -18,6 +20,13 @@ export function AMMInterface() {
   const [redeemMaturity, setRedeemMaturity] = useState("")
   const [newMaturityDate, setNewMaturityDate] = useState("")
   const { toast } = useToast()
+  const { activeAddress } = useWallet()
+  const { 
+    splitTokens, 
+    redeemTokens, 
+    createMaturity, 
+    isLoading: isTransactionLoading 
+  } = useAlgorandTransaction()
 
   // Mock data - in real app this would come from contract calls
   const tokenizationData = {
@@ -61,31 +70,119 @@ export function AMMInterface() {
     totalRedemptions: 8500,
   }
 
-  const handleSplitTokens = () => {
-    if (!splitAmount || !selectedMaturity) return
-    console.log("Split tokens:", { amount: splitAmount, maturity: selectedMaturity })
-    toast({
-      title: "Tokens split successfully",
-      description: `Split ${splitAmount} SY into ${splitAmount} PT and ${splitAmount} YT`,
-    })
+  const handleSplitTokens = async () => {
+    if (!splitAmount || !selectedMaturity) {
+      toast({
+        title: "Invalid input",
+        description: "Please enter amount and select maturity",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to split tokens",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await splitTokens(
+        parseFloat(splitAmount),
+        parseInt(selectedMaturity),
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: "Tokens split successfully",
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setSplitAmount("")
+            setSelectedMaturity("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error("Token split failed:", error)
+    }
   }
 
-  const handleRedeemTokens = () => {
-    if (!redeemAmount || !redeemMaturity) return
-    console.log("Redeem tokens:", { amount: redeemAmount, maturity: redeemMaturity })
-    toast({
-      title: "Tokens redeemed",
-      description: `Redeemed ${redeemAmount} PT for ${redeemAmount} SY`,
-    })
+  const handleRedeemTokens = async () => {
+    if (!redeemAmount || !redeemMaturity) {
+      toast({
+        title: "Invalid input",
+        description: "Please enter amount and select maturity",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to redeem tokens",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await redeemTokens(
+        parseFloat(redeemAmount),
+        parseInt(redeemMaturity),
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: "Tokens redeemed successfully",
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setRedeemAmount("")
+            setRedeemMaturity("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error("Token redemption failed:", error)
+    }
   }
 
-  const handleCreateMaturity = () => {
-    if (!newMaturityDate) return
-    console.log("Create maturity:", newMaturityDate)
-    toast({
-      title: "New maturity created",
-      description: `Created maturity for ${new Date(newMaturityDate).toLocaleDateString()}`,
-    })
+  const handleCreateMaturity = async () => {
+    if (!newMaturityDate) {
+      toast({
+        title: "Invalid input",
+        description: "Please select a maturity date",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to create maturity",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await createMaturity(
+        newMaturityDate,
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: "Maturity created successfully",
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setNewMaturityDate("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error("Maturity creation failed:", error)
+    }
   }
 
   const getMaturityStatus = (timestamp: number) => {
@@ -255,10 +352,10 @@ export function AMMInterface() {
               <Button
                 onClick={handleSplitTokens}
                 className="w-full"
-                disabled={!splitAmount || !selectedMaturity || tokenizationData.isPaused}
+                disabled={!splitAmount || !selectedMaturity || tokenizationData.isPaused || !activeAddress || isTransactionLoading}
               >
                 <Split className="h-4 w-4 mr-2" />
-                Split Tokens
+                {isTransactionLoading ? "Splitting..." : "Split Tokens"}
               </Button>
             </CardContent>
           </Card>
@@ -319,9 +416,13 @@ export function AMMInterface() {
                 <p className="text-xs text-muted-foreground mt-2">1:1 redemption ratio at maturity</p>
               </div>
 
-              <Button onClick={handleRedeemTokens} className="w-full" disabled={!redeemAmount || !redeemMaturity}>
+              <Button 
+                onClick={handleRedeemTokens} 
+                className="w-full" 
+                disabled={!redeemAmount || !redeemMaturity || !activeAddress || isTransactionLoading}
+              >
                 <Merge className="h-4 w-4 mr-2" />
-                Redeem Tokens
+                {isTransactionLoading ? "Redeeming..." : "Redeem Tokens"}
               </Button>
             </CardContent>
           </Card>
@@ -348,9 +449,13 @@ export function AMMInterface() {
                 />
               </div>
 
-              <Button onClick={handleCreateMaturity} className="w-full" disabled={!newMaturityDate}>
+              <Button 
+                onClick={handleCreateMaturity} 
+                className="w-full" 
+                disabled={!newMaturityDate || !activeAddress || isTransactionLoading}
+              >
                 <Calendar className="h-4 w-4 mr-2" />
-                Create Maturity
+                {isTransactionLoading ? "Creating..." : "Create Maturity"}
               </Button>
             </CardContent>
           </Card>

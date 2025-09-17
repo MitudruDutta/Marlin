@@ -414,10 +414,10 @@ export function AIAnalyticsDashboard() {
               <Button
                 onClick={handleManualOptimize}
                 className="w-full"
-                disabled={!investmentAmount || !isHealthy}
+                disabled={!investmentAmount || !isHealthy || isLoading}
               >
                 <Brain className="h-4 w-4 mr-2" />
-                Get AI Recommendation
+                {isLoading ? "Getting Recommendation..." : "Get AI Recommendation"}
               </Button>
             </CardContent>
           </Card>

@@ -9,10 +9,21 @@ import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator"
 import { Coins, TrendingUp, Clock, AlertCircle } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
+import { useAlgorandTransaction } from "@/hooks/useAlgorandTransaction"
+import { useWallet } from "@/components/WalletProvider"
 
 export function StakingDashboard() {
   const [stakeAmount, setStakeAmount] = useState("")
   const [unstakeAmount, setUnstakeAmount] = useState("")
+  const { toast } = useToast()
+  const { activeAddress } = useWallet()
+  const { 
+    stakeTokens, 
+    unstakeTokens, 
+    claimRewards, 
+    isLoading: isTransactionLoading 
+  } = useAlgorandTransaction()
 
   // Mock data - in real app this would come from contract calls
   const stakingData = {
@@ -25,19 +36,102 @@ export function StakingDashboard() {
     totalRewardsDistributed: 50000,
   }
 
-  const handleStake = () => {
-    console.log("Staking:", stakeAmount)
-    // Contract interaction would go here
+  const handleStake = async () => {
+    if (!stakeAmount) {
+      toast({
+        title: "Invalid input",
+        description: "Please enter an amount to stake",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to stake tokens",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await stakeTokens(
+        parseFloat(stakeAmount),
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: "Staking successful",
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setStakeAmount("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error("Staking failed:", error)
+    }
   }
 
-  const handleUnstake = () => {
-    console.log("Unstaking:", unstakeAmount)
-    // Contract interaction would go here
+  const handleUnstake = async () => {
+    if (!unstakeAmount) {
+      toast({
+        title: "Invalid input",
+        description: "Please enter an amount to unstake",
+        variant: "destructive"
+      })
+      return
+    }
+
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to unstake tokens",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await unstakeTokens(
+        parseFloat(unstakeAmount),
+        {
+          onSuccess: (txId) => {
+            toast({
+              title: "Unstaking successful",
+              description: `Transaction: ${txId.slice(0, 8)}...`,
+            })
+            setUnstakeAmount("")
+          }
+        }
+      )
+    } catch (error) {
+      console.error("Unstaking failed:", error)
+    }
   }
 
-  const handleClaimRewards = () => {
-    console.log("Claiming rewards")
-    // Contract interaction would go here
+  const handleClaimRewards = async () => {
+    if (!activeAddress) {
+      toast({
+        title: "Wallet not connected",
+        description: "Please connect your wallet to claim rewards",
+        variant: "destructive"
+      })
+      return
+    }
+
+    try {
+      const txId = await claimRewards({
+        onSuccess: (txId) => {
+          toast({
+            title: "Rewards claimed successfully",
+            description: `Transaction: ${txId.slice(0, 8)}...`,
+          })
+        }
+      })
+    } catch (error) {
+      console.error("Claim rewards failed:", error)
+    }
   }
 
   return (
@@ -117,8 +211,12 @@ export function StakingDashboard() {
                 disabled={stakingData.isPaused}
               />
             </div>
-            <Button onClick={handleStake} className="w-full" disabled={!stakeAmount || stakingData.isPaused}>
-              Stake Tokens
+            <Button 
+              onClick={handleStake} 
+              className="w-full" 
+              disabled={!stakeAmount || stakingData.isPaused || !activeAddress || isTransactionLoading}
+            >
+              {isTransactionLoading ? "Staking..." : "Stake Tokens"}
             </Button>
           </CardContent>
         </Card>
@@ -145,9 +243,9 @@ export function StakingDashboard() {
               onClick={handleUnstake}
               variant="outline"
               className="w-full bg-transparent"
-              disabled={!unstakeAmount || stakingData.userStaked === 0}
+              disabled={!unstakeAmount || stakingData.userStaked === 0 || !activeAddress || isTransactionLoading}
             >
-              Unstake Tokens
+              {isTransactionLoading ? "Unstaking..." : "Unstake Tokens"}
             </Button>
           </CardContent>
         </Card>
@@ -164,8 +262,11 @@ export function StakingDashboard() {
               <p className="text-sm font-medium">Available Rewards</p>
               <p className="text-2xl font-bold text-primary">{stakingData.rewardBalance} tokens</p>
             </div>
-            <Button onClick={handleClaimRewards} disabled={stakingData.rewardBalance === 0}>
-              Claim Rewards
+            <Button 
+              onClick={handleClaimRewards} 
+              disabled={stakingData.rewardBalance === 0 || !activeAddress || isTransactionLoading}
+            >
+              {isTransactionLoading ? "Claiming..." : "Claim Rewards"}
             </Button>
           </div>
 
