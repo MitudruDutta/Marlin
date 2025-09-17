@@ -1,10 +1,11 @@
-import { StakingDashboard } from "@/components/dashboard/staking-dashboard"
+import { EnhancedStakingDashboard } from "@/components/dashboard/enhanced-staking-dashboard"
 import { TokenManagement } from "@/components/dashboard/token-management"
-import { YieldTokenizationDashboard as AMMInterface } from "@/components/dashboard/amm-interface"
+import { AMMInterface } from "@/components/dashboard/amm-interface"
 import { YieldTokenizationDashboard } from "@/components/dashboard/yield-tokenization-dashboard"
 import { PriceOracleMonitor } from "@/components/dashboard/price-oracle-monitor"
 import { AutoConverterInterface } from "@/components/dashboard/auto-converter-interface"
 import { WrapperInterface } from "@/components/dashboard/wrapper-interface"
+import { AIAnalyticsDashboard } from "@/components/dashboard/ai-analytics-dashboard"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function DashboardPage() {
@@ -18,19 +19,26 @@ export default function DashboardPage() {
       </header>
 
       <main className="container mx-auto px-4 py-8">
-        <Tabs defaultValue="staking" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-7">
-            <TabsTrigger value="staking">Staking</TabsTrigger>
-            <TabsTrigger value="tokens">Tokens</TabsTrigger>
-            <TabsTrigger value="amm">AMM</TabsTrigger>
-            <TabsTrigger value="tokenization">Tokenization</TabsTrigger>
-            <TabsTrigger value="oracle">Oracle</TabsTrigger>
-            <TabsTrigger value="converter">Converter</TabsTrigger>
-            <TabsTrigger value="wrapper">Wrapper</TabsTrigger>
-          </TabsList>
+        <Tabs defaultValue="ai-analytics" className="space-y-6">
+          <div className="overflow-x-auto scrollbar-hide">
+            <TabsList className="inline-flex w-max min-w-full h-auto p-1">
+              <TabsTrigger value="ai-analytics" className="whitespace-nowrap px-3 py-2 text-sm">AI Analytics</TabsTrigger>
+              <TabsTrigger value="staking" className="whitespace-nowrap px-3 py-2 text-sm">Staking</TabsTrigger>
+              <TabsTrigger value="tokens" className="whitespace-nowrap px-3 py-2 text-sm">Tokens</TabsTrigger>
+              <TabsTrigger value="amm" className="whitespace-nowrap px-3 py-2 text-sm">AMM</TabsTrigger>
+              <TabsTrigger value="tokenization" className="whitespace-nowrap px-3 py-2 text-sm">Tokenization</TabsTrigger>
+              <TabsTrigger value="oracle" className="whitespace-nowrap px-3 py-2 text-sm">Oracle</TabsTrigger>
+              <TabsTrigger value="converter" className="whitespace-nowrap px-3 py-2 text-sm">Converter</TabsTrigger>
+              <TabsTrigger value="wrapper" className="whitespace-nowrap px-3 py-2 text-sm">Wrapper</TabsTrigger>
+            </TabsList>
+          </div>
+
+          <TabsContent value="ai-analytics">
+            <AIAnalyticsDashboard />
+          </TabsContent>
 
           <TabsContent value="staking">
-            <StakingDashboard />
+            <EnhancedStakingDashboard />
           </TabsContent>
 
           <TabsContent value="tokens">

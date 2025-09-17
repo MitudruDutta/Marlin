@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Split, Merge, Clock, Calendar, TrendingUp, Coins } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 
-export function YieldTokenizationDashboard() {
+export function AMMInterface() {
   const [splitAmount, setSplitAmount] = useState("")
   const [selectedMaturity, setSelectedMaturity] = useState("")
   const [redeemAmount, setRedeemAmount] = useState("")
