@@ -13,23 +13,26 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-background">
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-6">
-          <h1 className="text-3xl font-bold text-foreground">DeFi Yield Protocol Dashboard</h1>
-          <p className="text-muted-foreground mt-2">Manage your yield tokenization positions and strategies</p>
+          <div className="flex items-center justify-between">
+            <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
+            <div className="flex items-center space-x-4">
+            </div>
+          </div>
         </div>
       </header>
 
       <main className="container mx-auto px-4 py-8">
         <Tabs defaultValue="ai-analytics" className="space-y-6">
           <div className="overflow-x-auto scrollbar-hide">
-            <TabsList className="inline-flex w-max min-w-full h-auto p-1">
-              <TabsTrigger value="ai-analytics" className="whitespace-nowrap px-3 py-2 text-sm">AI Analytics</TabsTrigger>
-              <TabsTrigger value="staking" className="whitespace-nowrap px-3 py-2 text-sm">Staking</TabsTrigger>
-              <TabsTrigger value="tokens" className="whitespace-nowrap px-3 py-2 text-sm">Tokens</TabsTrigger>
-              <TabsTrigger value="amm" className="whitespace-nowrap px-3 py-2 text-sm">AMM</TabsTrigger>
-              <TabsTrigger value="tokenization" className="whitespace-nowrap px-3 py-2 text-sm">Tokenization</TabsTrigger>
-              <TabsTrigger value="oracle" className="whitespace-nowrap px-3 py-2 text-sm">Oracle</TabsTrigger>
-              <TabsTrigger value="converter" className="whitespace-nowrap px-3 py-2 text-sm">Converter</TabsTrigger>
-              <TabsTrigger value="wrapper" className="whitespace-nowrap px-3 py-2 text-sm">Wrapper</TabsTrigger>
+            <TabsList className="inline-flex w-full h-auto p-1 justify-between">
+              <TabsTrigger value="ai-analytics" className="whitespace-nowrap px-3 py-2 text-sm flex-1">AI Analytics</TabsTrigger>
+              <TabsTrigger value="staking" className="whitespace-nowrap px-3 py-2 text-sm flex-1">Staking</TabsTrigger>
+              <TabsTrigger value="tokens" className="whitespace-nowrap px-3 py-2 text-sm flex-1">Tokens</TabsTrigger>
+              <TabsTrigger value="amm" className="whitespace-nowrap px-3 py-2 text-sm flex-1">AMM</TabsTrigger>
+              <TabsTrigger value="tokenization" className="whitespace-nowrap px-3 py-2 text-sm flex-1">Tokenization</TabsTrigger>
+              <TabsTrigger value="oracle" className="whitespace-nowrap px-3 py-2 text-sm flex-1">Oracle</TabsTrigger>
+              <TabsTrigger value="converter" className="whitespace-nowrap px-3 py-2 text-sm flex-1">Converter</TabsTrigger>
+              <TabsTrigger value="wrapper" className="whitespace-nowrap px-3 py-2 text-sm flex-1">Wrapper</TabsTrigger>
             </TabsList>
           </div>
 

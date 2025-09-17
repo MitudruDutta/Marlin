@@ -1,21 +1,21 @@
 import { useState } from 'react';
-import { getPTYTOptimization } from '../api';
+import { getAlgorandPTYTOptimization } from '../app/api/ptytoptimization';
 import type {
-  PTYTOptimizationInputs,
-  PTYTOptimizationResponse
-} from '../api';
+  AlgorandPTYTOptimizationInputs,
+  AlgorandPTYTOptimizationResponse
+} from '../app/api/ptytoptimization';
 
 export const usePTYTOptimization = () => {
-  const [optimization, setOptimization] = useState<PTYTOptimizationResponse | null>(null);
+  const [optimization, setOptimization] = useState<AlgorandPTYTOptimizationResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchOptimization = async (inputs: PTYTOptimizationInputs) => {
+  const fetchOptimization = async (inputs: AlgorandPTYTOptimizationInputs) => {
     setLoading(true);
     setError(null);
     
     try {
-      const result = await getPTYTOptimization(inputs);
+      const result = await getAlgorandPTYTOptimization(inputs);
       setOptimization(result);
       return result;
     } catch (err) {

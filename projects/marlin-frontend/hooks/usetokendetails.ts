@@ -1,8 +1,8 @@
 // src/hooks/useTokenDetails.ts
 import { useQuery } from '@tanstack/react-query';
-import { tokendetails } from '@/api/tokendetails';
+import { getAlgorandAssetDetails } from '../app/api/algorandtokendetails';
 
-export function useTokenDetails(coinId: string | null) {
+export function useTokenDetails(assetId: number | null) {
   const {
     data,
     error,
@@ -11,12 +11,12 @@ export function useTokenDetails(coinId: string | null) {
     isError,
     isFetching,
   } = useQuery({
-    queryKey: ['tokenDetails', coinId],
+    queryKey: ['tokenDetails', assetId],
     queryFn: () => {
-      if (!coinId) throw new Error('Coin ID is required');
-      return tokendetails(coinId);
+      if (!assetId) throw new Error('Asset ID is required');
+      return getAlgorandAssetDetails(assetId);
     },
-    enabled: !!coinId, // Only run query if coinId is provided
+    enabled: !!assetId, // Only run query if assetId is provided
     staleTime: 1000 * 60 * 5, // 5 minutes
     retry: 2,
   });

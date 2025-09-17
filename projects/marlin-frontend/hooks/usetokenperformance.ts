@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { tokenperformance } from '@/api/tokenperformance';
+import { optimizePerformance } from '../app/api/algorandtokenperformance';
 
 type RiskProfile = "conservative" | "aggressive" | "moderate";
 
@@ -15,7 +15,7 @@ export function useTokenPerformance(coinId: string | null, risk: RiskProfile = "
     queryKey: ['tokenPerformance', coinId, risk],
     queryFn: () => {
       if (!coinId) throw new Error('Coin ID is required');
-      return tokenperformance(coinId, risk);
+      return optimizePerformance(coinId, risk);
     },
     enabled: !!coinId, // Only run query if coinId is provided
     staleTime: 1000 * 60 * 5, // 5 minutes

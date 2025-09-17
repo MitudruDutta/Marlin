@@ -1,6 +1,6 @@
 // src/hooks/useTokenHistory.ts
 import { useQuery } from '@tanstack/react-query';
-import { tokenhistory } from '../api/tokenhistory';
+import { tokenhistory } from '../app/api/algorandtokenhistory';
 
 export function useTokenHistory(coinId: string | null, days: number = 30) {
   const {
