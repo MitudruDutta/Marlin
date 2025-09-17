@@ -1,4 +1,4 @@
-# Marlin Protocol
+# Marlin 
 
 <div align="center">
   <img src="https://img.shields.io/badge/Algorand-DeFi-blue?style=for-the-badge" alt="Algorand DeFi" />
