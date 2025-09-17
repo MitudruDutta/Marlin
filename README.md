@@ -42,6 +42,8 @@ marlin/
 └── marlin.code-workspace
 ```
 
+## Smart Contract Address: F4LJEOORT6CQRBLJ6JEKHDWXTRFT67ARW5VLF7NFCWUCMA2ENKKGYWYC7Y
+
 ### 📋 Smart Contracts (`marlin-contracts/`)
 
 **Core Protocol Contracts:**
