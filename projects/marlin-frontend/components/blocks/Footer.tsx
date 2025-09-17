@@ -30,30 +30,17 @@ export default function FooterGlow() {
       <div className="glass relative mx-auto flex max-w-6xl flex-col items-center gap-8 rounded-2xl px-6 py-10 md:flex-row md:items-start md:justify-between md:gap-12">
         <div className="flex flex-col items-center md:items-start">
           <a href="#" className="mb-4 flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-rose-400 to-rose-700 text-2xl font-extrabold text-white shadow-md">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                className="h-5 w-5"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-            </span>
+            <img 
+              src="/images/logo.png" 
+              alt="Marlin Protocol Logo" 
+              className="h-9 w-9 object-contain"
+            />
             <span className="bg-gradient-to-br from-black to-black bg-clip-text text-xl font-semibold tracking-tight text-transparent">
-              Algorand
+              Marlin
             </span>
           </a>
           <p className="text-foreground mb-6 max-w-xs text-center text-sm md:text-left">
-            Mvpblocks provides a set of reusable components and utilities to
-            help you create beautiful and responsive user interfaces quickly and
-            efficiently.
+            Marlin Protocol enables yield tokenization on Algorand, allowing users to split yield-bearing assets into Principal and Yield tokens for advanced DeFi strategies.
           </p>
           <div className="mt-2 flex gap-3 text-black">
             <a
@@ -66,7 +53,7 @@ export default function FooterGlow() {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://github.com/MitudruDutta/Marlin.git"
               aria-label="GitHub"
               className="hover:text-foreground transition"
             >
@@ -170,7 +157,7 @@ export default function FooterGlow() {
         </nav>
       </div>
       <div className="text-foreground relative z-10 mt-10 text-center text-xs">
-        <span>&copy; 2025 Algorand. All rights reserved.</span>
+        <span>&copy; 2025 Marlin. All rights reserved.</span>
       </div>
     </footer>
   );

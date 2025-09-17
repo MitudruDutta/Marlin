@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AlgoTrader",
+  title: "Marlin",
   description: "AI-powered Algorand trading and portfolio management platform",
 };
 
