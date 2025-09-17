@@ -140,7 +140,7 @@ export function HeroSection() {
                                     </Link>
                         
                                     <h1 className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem] font-extrabold tracking-tight  ">
-                                       <span className="text-white">TRADE. LEARN. EVOLVE.</span>
+                                       <span className="text-white">SPLIT. TRADE. AUTOMATE.</span>
                                     <br />
                                       <span className="text-white italic text-4xl md:text-5xl lg:text-6xl">
                                          Autonomously on Algorand
@@ -148,7 +148,7 @@ export function HeroSection() {
                                     </h1>
 
                                     <p className="text-white/80 text-lg md:text-2xl mb-12 max-w-2xl leading-relaxed font-light center mx-auto pt-10">
-                                      Your intelligent portfolio partner—analyzing data, predicting moves, and trading instantly on Algorand's fast, low-cost network.
+                                    A DeFi platform on Algorand that lets you wrap, split, trade, and automate yield — turning future rewards into today’s opportunities.
                                       </p>
                                     
                                 </AnimatedGroup>
@@ -162,7 +162,7 @@ export function HeroSection() {
                                                 key={2}
                                                 onClick={() => router.push('/dashboard')}
                                                 size="lg"
-                                                className="h-10.5 rounded-xl px-5 bg-white text-black hover:bg-white/90">
+                                                className="h-11 rounded-xl px-12 py-4 text-xl bg-white text-black hover:bg-white/90 font-semibold">
                                                 <span>Dashboard</span>
                                             </Button>
                                         </>
@@ -303,12 +303,25 @@ const HeroHeader = () => {
                 <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
                         <div className="flex w-full justify-between lg:w-auto">
-                            <Link
-                                href="/"
-                                aria-label="home"
-                                className="flex items-center space-x-2 text-white">
-                                <Logo />
-                            </Link>
+                            <div className="flex items-center space-x-3">
+                                <div className="flex items-center space-x-2">
+                                    <img 
+                                        src="/images/logo.png" 
+                                        alt="Marlin Logo" 
+                                        className="w-8 h-8 rounded"
+                                        onError={(e) => {
+                                            e.currentTarget.style.display = 'none';
+                                        }}
+                                    />
+                                    <Link
+                                        href="/"
+                                        aria-label="home"
+                                        className="text-white font-bold text-xl">
+                                        MARLIN
+                                    </Link>
+                                </div>
+                                
+                            </div>
 
                             <button
                                 onClick={() => setMenuState(!menuState)}
